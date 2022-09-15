@@ -1,3 +1,7 @@
+//		Programme :	mycat3
+//		TP:		PSYST2 / TP1
+// 		Compilation :	gcc -Wall -o mycat3 mycat3.c ouvrir.c
+
 #include <stdio.h>
 #include "ouvrir.h"
 #include <unistd.h>
