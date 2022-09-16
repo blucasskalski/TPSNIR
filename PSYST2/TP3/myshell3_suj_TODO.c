@@ -128,11 +128,9 @@ int main(int argc, char **argv)
 			}
 		 }else{
 			fils2(cmd);
-			printf("%s\n", cmd);
 		 }
 	 }else{
 		fils1(cmd);
-		printf("%s\n", cmd);
 	 }
 
 }
