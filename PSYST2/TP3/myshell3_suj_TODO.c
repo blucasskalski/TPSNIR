@@ -15,8 +15,8 @@
 
 //Q1
 //creation des 2 tblx de descripteurs
-	int fd12[2];     //fils1 vers fils2   
-	int fd21[2];	 //fils2 vers fils1 
+int fd12[2];     //fils1 vers fils2   
+int fd21[2];	 //fils2 vers fils1 
 
 char cmd[50];
 
@@ -114,10 +114,8 @@ int main(int argc, char **argv)
 		if((pid2=fork()) > 0){
 			close(fd12[1]);
 			close(fd21[1]);
-			while(fd12[0] & fd21[0]){
-				wait(fd12);
-				wait(fd21);
-			}
+			wait(fd12);
+			wait(fd21);
 			int nb, pidexit;
 			nb = 2;
 			while(nb){
