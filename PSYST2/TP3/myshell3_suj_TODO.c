@@ -18,6 +18,8 @@
 	int fd12[2];     //fils1 vers fils2   
 	int fd21[2];	 //fils2 vers fils1 
 
+char cmd[50];
+
 /* descripteur des processus */
 int pid1;
 int pid2;
@@ -82,7 +84,7 @@ int main(int argc, char **argv)
 		printf("arg[%d] --> %s\n",i,list_arg[i]);
 
 	//Q3 lancement des commandes
-	char cmd[50];
+	//char cmd[50];
 	sprintf(cmd,"/bin/%s", list_arg[0]);
 
 	int pid = fork();
@@ -103,36 +105,37 @@ int main(int argc, char **argv)
 	//puts(" ce programme ne fera rien sans votre code du TP Myshell 2...");
 
 	//Q1 creer les 2 tubes
-	// TODO …
 	pipe(fd12);
 	pipe(fd21);
 
 
-	 //Q2 Algorithme principal CF annexe 2 du sujet
-	 if(pid1=fork() > 0){
-		 if(pid2=fork() > 0){
-			 close(fd12[1]);
-			 close(fd21[1]);
-			 while(fd12[0] & fd21[0]){
-				 wait()
-			 }
-			 int nb, pidexit;
-			 nb = 2;
-			 while(nb){
-				 pidexit = wait(0);
-				 if(pidexit = pid1){
-					 --nb;
-				 }else if(pidexit = pid2){
-					 --nb;
+	//Q2 Algorithme principal CF annexe 2 du sujet
+	if((pid1=fork()) > 0){
+		if((pid2=fork()) > 0){
+			close(fd12[1]);
+			close(fd21[1]);
+			while(fd12[0] & fd21[0]){
+				wait(fd12);
+				wait(fd21);
+			}
+			int nb, pidexit;
+			nb = 2;
+			while(nb){
+				pidexit = wait(0);
+				if(pidexit == pid1){
+					--nb;
+				 }else if(pidexit == pid2){
+					--nb;
 				 }
-			 }
+			}
 		 }else{
-			 fils2(cmd);
+			fils2(cmd);
+			printf("%s\n", cmd);
 		 }
 	 }else{
-		 fils1(cmd);
+		fils1(cmd);
+		printf("%s\n", cmd);
 	 }
-	//TODO …
 
 }
 
