@@ -32,11 +32,11 @@ int main() {
 	pthread_create(&th1, NULL, f1, &a);
 	pthread_create(&th2, NULL, f2, &b);
 	/* Attendre la fin de leur exécutions */
-	pthread_join(th1, *ret1);
-	pthread_join(th2, *ret2);
+	pthread_join(th1, &ret1);
+	pthread_join(th2, &ret2);
 
-	printf("main) th1 : *ret1 = %3d, &res = %p\n", *ret1, ret1);
-	printf("main) th2 : *ret2 = %3d, &res = %p\n", *ret2, ret2);
+	printf("(main) th1 : *ret1 = %3d, &res = %p\n", *ret1, ret1);
+	printf("(main) th2 : *ret2 = %3d, &res = %p\n", *ret2, ret2);
 	return 0;
 }
 
