@@ -29,8 +29,8 @@ int main() {
 	a = 10;
 	b = 20;
 	/* création des deux threads */
-	pthread_create(&th1, NULL, f1, &a);
-	pthread_create(&th2, NULL, f2, &b);
+	pthread_create(&th1, NULL, (void *)f1, &a);
+	pthread_create(&th2, NULL, (void *)f2, &b);
 	/* Attendre la fin de leur exécutions */
 	pthread_join(th1, &ret1);
 	pthread_join(th2, &ret2);
