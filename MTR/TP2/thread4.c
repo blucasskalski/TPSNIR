@@ -5,65 +5,56 @@
 #include <stdlib.h>
 #include <semaphore.h>
 pthread_t tid[4];
-sem_t M_Lect;
-sem_t M_Red;
-sem_t Red;
+sem_t M_Lect, M_Red, Red;
 int Lect;
+int tab[2];
 
-
-void commencerLect()
-{
+void commencerLire(){
 	sem_wait(&M_Lect);
 	Lect++;
-	if (Lect == 1)
-		{
-			sem_wait(&Red);
-		}
+	if (Lect == 1){
+		sem_wait(&Red);
+	}
 	sem_post(&M_Lect);
 }
 
-void finiLect()
-{
+void finirLecture(){
 	sem_wait(&M_Lect);
 	Lect--;
-	if (Lect == 0)
-		{
+	if (!Lect){
 			sem_post(&Red);
 		}
 	sem_post(&M_Lect);
 }
 
-void commencerEcr ()
-{
+void commencerEcrire(){
 	sem_wait(&M_Red);
 	sem_wait(&Red);
 }
 
-void finiEcr ()
-{
+void finirEcrire(){
 	sem_post(&Red);
 	sem_post(&M_Red);
 }
 
-void algoPro ()
-{
-
+void algoProd (){
+	commencerEcrire();
+	//TODO écrire entier dans tab[1];
+	finirEcrire();
 }
 
-void algoRed ()
-{
+void algoCons (){
 
 }
-int main ()
-{
+int main (){
 	sem_init(&M_Lect, 0, 1);
-	sem_init(&M_Red, 0, 1);
-	sem_init(&Red, 0, 1);
-	pthread_create(&(tid[0]), NULL, (void *) algoPro, NULL);
-	pthread_create(&(tid[1]), NULL, (void *) algoPro, NULL);
-	pthread_create(&(tid[2]), NULL, (void *) algoPro, NULL );
-	pthread_create(&(tid[3]), NULL, (void *) algoRed, NULL);
-	pthread_create(&(tid[3]), NULL, (void *) algoRed, NULL);
+	sem_init(&M_Red	, 0, 1);
+	sem_init(&Red	, 0, 1);
+	pthread_create(&(tid[0]), NULL, (void *) algoPro	, NULL);
+	pthread_create(&(tid[1]), NULL, (void *) algoPro	, NULL);
+	pthread_create(&(tid[2]), NULL, (void *) algoPro	, NULL);
+	pthread_create(&(tid[3]), NULL, (void *) algoCons	, NULL);
+	pthread_create(&(tid[3]), NULL, (void *) algoCons	, NULL);
 	pthread_join(tid[0], NULL);
 	pthread_join(tid[1], NULL);
 	pthread_join(tid[2], NULL);
