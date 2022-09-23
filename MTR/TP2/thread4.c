@@ -77,22 +77,16 @@ void algoProd() {
 	int r = rand();
 	printf("alogProd\n");
 	commencerEcrire();
-	//TODO écrire entier dans tab[1];
-	//printf("\nalgoProd\n\tentier rand: %i\n", r);
 	tab[Ecr] = r;
-	//printf("\tLect : %i\n", Lect);
-	//printf("\tEcr : %i\n", Ecr);
 	finirEcrire();
 }
 
 void algoCons() {
 	printf("alogCons\n");
 	commencerLire();
-	//TODO Copie des entiers vers var locale puis affichage
 	int loc0, loc1;
 	loc0 = tab[0];
 	loc1 = tab[1];
 	printf("\n\tvaleur de tab[0] : %i\n\tvaleur de tab[1] : %i\n", loc0, loc1);
-	//printf("\tLect : %i\n", Lect);
 	finirLecture();
 }
