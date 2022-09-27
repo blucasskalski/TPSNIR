@@ -28,6 +28,7 @@
 #include <stdlib.h>     /* for atoi() and exit() */
 #include <string.h>     /* for memset() */
 #include <unistd.h>     /* for close() */
+#include <signal.h>     /* for signal() */
 
 #define MAXPENDING 5    /* Maximum outstanding connection requests */
 #define true 1
