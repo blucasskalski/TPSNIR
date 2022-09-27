@@ -81,10 +81,6 @@ void parser(char* req,char** ret);
 /* fonction de traitement du serveur Web*/
 void HandleTCPClient(int client_socket);
 
-
-
-
-
 void parser(char* req,char** ret); // fonction de découpage de la requête
 
 void HandleTCPClient(int client_socket){
@@ -187,7 +183,9 @@ void HandleTCPClient(int client_socket){
     close(client_socket);
 
 
-}    
+}
+
+void get_blody_signal(int sig);
 
 
 
