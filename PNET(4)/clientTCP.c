@@ -19,5 +19,17 @@ int main(int argc, char** argv, char** env) {
 	memcpy(&to.sin_addr.s_addr, toinfo->h_addr_list[0], toinfo->h_length);
 	to.sin_port = htons(7777);
 
+
+	//Creation socket
+	int dsc = socket(AF_INET, SOCK_STREAM, 0);
+	if (connect(dsc, (struct sockaddr*)&to, sizeof(to)) == -1){
+		perror("Erreur de connection : "); return -1;
+	}
+
+	int retour = send(dsc, argv[1], sizeof(argv[1]), 0);
+
+	if (retour == -1){
+		perror("Erreur d'envoi des données : "); return -1;
+	}
 	return 0;
 }
