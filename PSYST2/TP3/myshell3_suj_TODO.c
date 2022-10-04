@@ -10,6 +10,7 @@
 #include <signal.h>
 #include <stdlib.h>
 #include <sys/wait.h>
+#include <sys/types.h>
 
 #define N_ARGS 12
 
@@ -84,19 +85,8 @@ int main(int argc, char **argv)
 		printf("arg[%d] --> %s\n",i,list_arg[i]);
 
 	//Q3 lancement des commandes
-	//char cmd[50];
 	sprintf(cmd,"/bin/%s", list_arg[0]);
-
-	int pid = fork();
-	if(!pid){
-		execl(cmd,list_arg[0],list_arg[1],(char*)0);
-
-		printf("|[Child of PID %d]|\n", getpid());
-		sleep(2);
-	}else{
-		printf("|[Parent of PID %d]|\n", getpid());
-		wait(0);
-	}
+	printf("%s", cmd);
 
 	
         
@@ -105,31 +95,32 @@ int main(int argc, char **argv)
 	//puts(" ce programme ne fera rien sans votre code du TP Myshell 2...");
 
 	//Q1 creer les 2 tubes
-	pipe(fd12);
-	pipe(fd21);
+	if (pipe(fd12) == -1 || pipe(fd21) == -1) {
+		perror("Erreur pipe(): ");
+		return -1;
+	}
 
 
 	//Q2 Algorithme principal CF annexe 2 du sujet
 	if((pid1=fork()) > 0){
 		if((pid2=fork()) > 0){
+			int nb, pidexit;
 			close(fd12[1]);
 			close(fd21[1]);
-			wait(fd12);
-			wait(fd21);
-			int nb, pidexit;
 			nb = 2;
 			while(nb){
 				pidexit = wait(0);
 				if(pidexit == pid1){
-					--nb;
+					nb = nb - 1;
 				 }else if(pidexit == pid2){
-					--nb;
+					 nb = nb - 1;
 				 }
 			}
 		 }else{
-			fils2(cmd);
-		 }
+			fils2(list_arg[3]);
+		}
 	 }else{
+		sprintf(cmd, "%s %s", list_arg[0], list_arg[1]);
 		fils1(cmd);
 	 }
 
@@ -137,28 +128,25 @@ int main(int argc, char **argv)
 
 void fils1(char *cmd)
 {
+	close(1);
+	dup(fd12[0]);
         //fermeture descripteurs inutiles
 		close(fd12[0]);
-		close(fd21[1]);	
+		close(fd21[1]);
 		printf("je suis le fils 1 de pid ---> %d, lit sur fd%d et ecrit sur fd%d\n",getpid(),\
 			fd21[0],fd12[1]);
 		
-        //redirection flux stdout vers la sortie tube fils1 vers fils2
-        //TO DO Q3
-    
-        //appel à dup(   );
-
+        //redirection flux stdout vers la sortie tube fils1 vers fils
+		execl("/bin/sh", "sh", "-c", cmd, (char*)0);
 		sleep(2);
-        //TO DO Q3
-		//appel de execl();   //envoi 1ere cde
-		
-
-		exit( 0);
+		exit(0);
 }
 
 
 void fils2(char *cmd)
 {
+	close(0);
+	dup(fd12[1]);
         //fermeture descripteurs inutiles
 		close(fd12[1]);
 		close(fd21[0]);
@@ -167,15 +155,9 @@ void fils2(char *cmd)
 				
     
         //redirection flux stdin vers l'entree tube fils1 vers fils2
-        //TO DO Q3
-    
-        //appel à dup();
-		
-        sleep(2);
-        //appel de execl();   //envoi 2eme cde
-    
-		
-		exit( 0);
+		execl("/bin/sh", "sh", "-c", cmd, (char*)0);
+		sleep(2);
+		exit(0);
 
 
 }

@@ -40,7 +40,9 @@ extern int fin ;
 void DieWithError(char *errorMessage);  /* Error handling function */
 void HandleTCPClient(int client_socket);/* TCP client handling function */
 
-void get_blody_signal(int sig);
+void get_blody_signal(int sig) {
+
+}
 
 void DieWithError(char *errorMessage)
 {
