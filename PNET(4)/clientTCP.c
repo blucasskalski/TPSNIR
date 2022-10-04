@@ -36,7 +36,7 @@ int main(int argc, char** argv, char** env) {
 		return -1;
 	}
 	
-	int rtr = send(desc, argv[2], sizeof(argv[2]), 0);
+	int rtr = send(desc, argv[2], strlen(argv[2]), 0);
 	if (rtr == -1) {
 		perror("erreur d'envoi");
 		return -1;
