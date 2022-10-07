@@ -22,9 +22,21 @@ int main(int argc, char** argv, char** env) {
 		return -1;
 	}
 
+	int zero;
+
+	zero = 9a;
+
 	if (bind(liso, (struct sockaddr*)&localaddr, sizeof(localaddr)) == SO_ERROR) {
 		perror("Erreur de bind");
 		return -1;
 	}
+
+	rtr = recvfrom(desc, buffer, sizeof(buffer), 0, (struct sockaddr*)&from, &fromlen);
+	if (rtr == -1) {
+		perror("Erreur de reception");
+		return -1;
+	}
+	printf("%s\n", buffer);
+
 	return 0;
 }
