@@ -43,7 +43,7 @@ int main(int argc, char **argv, char **env)
     if (bind(descripteur, (struct sockaddr *)&to,
              sizeof(to)) == SO_ERROR)
     {
-        perror("bind");
+        perror("bind ");
     }
 
     unsigned int fromlen = sizeof(to);
