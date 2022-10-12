@@ -15,6 +15,7 @@ int main(int argc, char** argv, char** env) {
 
 	struct sockaddr_in to;
 	struct hostent* toinfo;
+
 	int desc = socket(AF_INET, SOCK_STREAM, 0);
 	if (desc == -1) {
 		perror("Erreur socket");
@@ -27,8 +28,12 @@ int main(int argc, char** argv, char** env) {
 		return -1;
 	}
 	memcpy(&to.sin_addr.s_addr, toinfo->h_addr_list[0], toinfo->h_length);
-	//printf("%d.%d.%d.%d", to.sin_addr.s_addr & 0xFF000000, to.sin_addr.s_addr & 0x00FF0000 >> 8, to.sin_addr.s_addr & 0x0000FF00 >> 16, to.sin_addr.s_addr & 0x000000FF >> 24);
-	//printf("%ls\n", toinfo->h_addr_list[0] & 0x0000FF000);
+	printf("Adresse : %d.%d.%d.%d\n",
+		to.sin_addr.s_addr & 0xFF,
+		(to.sin_addr.s_addr & 0xFF00) >> 8,
+		(to.sin_addr.s_addr & 0xFF0000) >> 16,
+		(to.sin_addr.s_addr & 0xFF000000) >> 24
+	);
 	to.sin_port = htons(7777);
 
 	if (connect(desc, (struct sockaddr*)&to, sizeof(to)) == -1) {
