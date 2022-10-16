@@ -10,7 +10,7 @@
 int main(int argc, char** argv, char** env) {
 	struct sockaddr_in to;
 	struct hostent* toinfo;
-	/* to */
+	
 	if (argc < 2) {
 		fprintf(stderr, "Format : %s <serveur>\n", argv[0]);
 		return(1);
@@ -30,7 +30,7 @@ int main(int argc, char** argv, char** env) {
 		(to.sin_addr.s_addr & 0xFF0000) >> 16,
 		(to.sin_addr.s_addr & 0xFF000000) >> 24
 	);
-	/* fin to*/
+	
 	int desc = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
 	if (desc == -1) {
 		perror("Erreur socket");

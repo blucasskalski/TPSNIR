@@ -2,40 +2,55 @@
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <netdb.h>
 #include <string.h>
 #include <unistd.h>
-#include <arpa/inet.h>
-#include <netdb.h>
+#include <time.h>
 
-#define PORT 9999
+int main(int argc, char** argv, char** env)
+{
+    struct sockaddr_in localaddr, from;
+    char buffer[1024];
+    unsigned int fromlen;
+    localaddr.sin_family = PF_INET;
+    localaddr.sin_addr.s_addr = htonl(INADDR_ANY);
 
-int main(int argc, char** argv, char** env) {
-	inet_addr("127.0.0.1");
-	char buffer[64];
-	struct sockaddr_in localaddr;
-	localaddr.sin_family = PF_INET;
-	localaddr.sin_addr.s_addr = htonl(INADDR_ANY);
-	localaddr.sin_port = htons(PORT);
+    localaddr.sin_port = htons(9999);
 
-	int liso = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
-	if (liso == -1) {
-		perror("Erreur socket");
-		return -1;
-	}
+    int desc = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
 
-	if (bind(liso, (struct sockaddr*)&localaddr, sizeof(localaddr)) == SO_ERROR) {
-		perror("Erreur de bind");
-		return -1;
-	}
+    while (1)
+    {
+        if (bind(desc, (struct sockaddr*)&localaddr, sizeof(localaddr)) == SO_ERROR)
+        {
+            perror("erreur bind()");
+        }
+        fromlen = sizeof(from);
 
-	unsigned from, fromlen;
+        int retour = recvfrom(desc, buffer, sizeof(buffer), 0, (struct sockaddr*)&from, &fromlen);
 
-	int rtr = recvfrom(liso, buffer, sizeof(buffer), 0, (struct sockaddr*)&from, &fromlen);
-	if (rtr == -1) {
-		perror("Erreur de reception");
-		return -1;
-	}
-	printf("%s\n", buffer);
+        if (retour == -1)
+        {
+            perror("erreur recvfrom()");
+            return -1;
+        }
+        printf("message reçu côté client :%s\n", buffer);
 
-	return 0;
+        time_t timestamp = time(NULL);
+        struct tm* loctime = localtime(&timestamp);
+
+        strftime(buffer, 80, "%d/%m/%Y %H:%M:%S", loctime);
+
+        printf("%d.%d.%d.%d\n", (from.sin_addr.s_addr & 0xFF), (from.sin_addr.s_addr & 0xFF00) >> 8, (from.sin_addr.s_addr & 0xFF0000) >> 16, (from.sin_addr.s_addr & 0xFF000000) >> 24);
+
+        retour = sendto(desc, buffer, strlen(buffer), 0, (struct sockaddr*)&from, sizeof(from));
+
+        if (retour == -1){
+            perror("erreur sendto()");
+            return -1;
+        }
+    }
+    close(desc);
+
+    return (0);
 }
