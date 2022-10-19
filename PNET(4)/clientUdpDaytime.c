@@ -22,7 +22,7 @@ int main(int argc, char** argv, char** env) {
 		perror("Erreur de gethostbyname()");
 		return -1;
 	}
-	to.sin_port = htons(13);
+	to.sin_port = htons(9999);
 	memcpy(&to.sin_addr.s_addr, toinfo->h_addr_list[0], toinfo->h_length);
 	printf("Adresse : %d.%d.%d.%d\n",
 		to.sin_addr.s_addr & 0xFF,
