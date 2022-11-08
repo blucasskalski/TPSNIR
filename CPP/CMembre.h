@@ -3,13 +3,15 @@
  *  Type        :   INTERFACE
  *  Sujet       :   Definition de la classe CMembre
  *
- *  Auteur      :   Sonny ESNAULT
+ *  Auteur      :   Bryan LUCAS SKALSKI
  *  Version     :   0.1
- *  Creation    :   19/10/2022
+ *  Creation    :   20/10/2022
  *
  *  Fabrication :
  *------------------------------------------------------------------------
  */
+
+#define NMAX 100
 
 #ifndef CMEMBRE_H
 #define CMEMBRE_H
@@ -47,6 +49,12 @@ public:
   void setDATENAISS(CDate dateNaiss);
 
   void set(std::string nom, std::string prenom, CDate dateNaiss);
+};
+
+class CClubSportif {
+  // private:
+public:
+  bool ajoute(const CMembre &membre);
 };
 
 std::ostream &operator<<(std::ostream &s, const CMembre &date);
