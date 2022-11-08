@@ -15,8 +15,7 @@ int main(int argc, char **argv) {
   int iLibre;
   iLibre = spot_libre_membre();
   if (iLibre == -1)
-    // cout << "Aucune place libre" << '\n';
-    perror("Aucune place trouvée");
+    cout << "Aucune place libre" << '\n';
   else
     printf("Place trouvée\n");
   cout << "Index retenu : " << iLibre << '\n';
@@ -27,7 +26,7 @@ int spot_libre_membre() {
   int idx = 0;
   while (membres[idx] != 0) {
     if (idx > 100) {
-      return -1;
+      idx = -1;
     } else {
       idx++;
     }
