@@ -13,7 +13,7 @@
 #ifndef CMEMBRE_H
 #define CMEMBRE_H
 
-#include "tmonth.h"
+#include "tdate.h"
 #include <string>
 #include <ostream>
 
