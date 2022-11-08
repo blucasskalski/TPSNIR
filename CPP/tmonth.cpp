@@ -19,5 +19,7 @@ char mm[12][10] = {"janvier",   "février", "mars",     "avril",
 const char *strMonth(TMonth month) {
   if (month >= 0 && month <= 12) {
     return mm[month - 1];
+  } else {
+    return mm[0];
   }
 }

@@ -11,8 +11,6 @@
  *------------------------------------------------------------------------
  */
 
-#define NMAX 100
-
 #ifndef CMEMBRE_H
 #define CMEMBRE_H
 #include "cdate.h"
@@ -49,12 +47,6 @@ public:
   void setDATENAISS(CDate dateNaiss);
 
   void set(std::string nom, std::string prenom, CDate dateNaiss);
-};
-
-class CClubSportif {
-  // private:
-public:
-  bool ajoute(const CMembre &membre);
 };
 
 std::ostream &operator<<(std::ostream &s, const CMembre &date);
