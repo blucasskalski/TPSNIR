@@ -1,5 +1,4 @@
 #include "CMembre.h"
-#include "cdate.h"
 
 std::string CMembre::getNOM() const { return (std::string)nom; }
 

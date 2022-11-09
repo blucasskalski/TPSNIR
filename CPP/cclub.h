@@ -9,10 +9,21 @@
 #include <sstream>
 #include <string>
 
+void init();
+bool ajoute(const CMembre &membre);
+void list();
+
+// class CClubSportif {
+// private:
+//   std::string nom;
+//   // public:
+// };
+
 class CClubSportif {
-  // private:
 public:
-  bool ajoute(const CMembre &membre);
+  std::string nom;
+
+private:
 };
 
 #endif
