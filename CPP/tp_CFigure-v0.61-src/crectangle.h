@@ -21,7 +21,7 @@ public:
   double getPerimeter() const { return 2 * (std::fabs(dx) + std::fabs(dy)); }
 
   virtual std::string draw() { return "CRectangle::draw()"; }
-  // void draw(CDraft &dr) const;
+  void draw(CDraft &dr) const {}
 
   virtual std::string className() const { return "CRectangle"; }
 };
