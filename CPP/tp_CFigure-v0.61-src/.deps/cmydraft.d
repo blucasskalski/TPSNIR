@@ -1,5 +1,6 @@
 .objs/cmydraft.o: cmydraft.cpp cmydraft.h cbutton.h clabel.h cfigure.h \
- cdraft.h cpoint.h /home/bryanls/Desktop/XamGraph/src/xamgraph.h \
+ cdraft.h cpoint.h \
+ /home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/xamgraph.h \
  /usr/include/SDL/SDL.h /usr/include/SDL/SDL_main.h \
  /usr/include/SDL/SDL_stdinc.h /usr/include/SDL/SDL_config.h \
  /usr/include/SDL/SDL_platform.h /usr/include/SDL/begin_code.h \
@@ -15,18 +16,18 @@
  /usr/include/SDL/SDL_timer.h /usr/include/SDL/SDL_version.h \
  /usr/include/SDL/SDL_image.h /usr/include/SDL/SDL.h \
  /usr/include/SDL/SDL_ttf.h \
- /home/bryanls/Desktop/XamGraph/src/xamgraphdef.h \
- /home/bryanls/Desktop/XamGraph/src/../_ABOUT \
- /home/bryanls/Desktop/XamGraph/src/../_VERSION \
- /home/bryanls/Desktop/XamGraph/src/xamgraphclass.h crectangle.h \
- cvector.h clozenge.h csquare.h
+ /home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/xamgraphdef.h \
+ /home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/../_ABOUT \
+ /home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/../_VERSION \
+ /home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/xamgraphclass.h \
+ crectangle.h cvector.h clozenge.h csquare.h
 cmydraft.h:
 cbutton.h:
 clabel.h:
 cfigure.h:
 cdraft.h:
 cpoint.h:
-/home/bryanls/Desktop/XamGraph/src/xamgraph.h:
+/home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/xamgraph.h:
 /usr/include/SDL/SDL.h:
 /usr/include/SDL/SDL_main.h:
 /usr/include/SDL/SDL_stdinc.h:
@@ -56,10 +57,10 @@ cpoint.h:
 /usr/include/SDL/SDL_image.h:
 /usr/include/SDL/SDL.h:
 /usr/include/SDL/SDL_ttf.h:
-/home/bryanls/Desktop/XamGraph/src/xamgraphdef.h:
-/home/bryanls/Desktop/XamGraph/src/../_ABOUT:
-/home/bryanls/Desktop/XamGraph/src/../_VERSION:
-/home/bryanls/Desktop/XamGraph/src/xamgraphclass.h:
+/home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/xamgraphdef.h:
+/home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/../_ABOUT:
+/home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/../_VERSION:
+/home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src/xamgraphclass.h:
 crectangle.h:
 cvector.h:
 clozenge.h:

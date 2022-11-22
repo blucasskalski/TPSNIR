@@ -18,7 +18,7 @@
 COMPILER	= g++
 TARGET		= cfigure
 VERSION		= 0.61
-XAMRELDIR	= /home/bryanls/Desktop/XamGraph/src/
+XAMRELDIR	= /home/bryanls/TPSNIR/CPP/5-CFigure/XamGraph/src
 SRC			= main.cpp cdraft.cpp cmydraft.cpp cpoint.cpp cvector.cpp
 INC			= cbutton.h ccircle.h cmydraft.h cdraft.h cfigure.h clabel.h clozenge.h \
 			  cpoint.h cpolygon.h crectangle.h csquare.h cvector.h
