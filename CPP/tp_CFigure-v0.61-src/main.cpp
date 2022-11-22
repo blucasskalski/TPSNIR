@@ -80,20 +80,28 @@ int main(int argc, char **argv) {
   draft.draw(L1);
   draft.draw(b1);
 
-  /*
   CFigure *figure[6];
   figure[0] = new CVector(4, -1.6);
   figure[0]->setPos(CPoint(-5, -4));
   figure[0]->setColor(XAM_RED);
   figure[0]->setVisible(true);
+
   figure[0]->draw(draft);
 
-  figure[1] = new CLabel("MY_CLABEL1");
-  figure[1]->setColor(XAM_DARK_GREEN);
-  figure[1]->setPos(CPoint(-8.0, -2.0));
+  figure[1] = new CRectangle(1.0, 3.14);
+  figure[1]->setPos(CPoint(-8.5, 2));
+  figure[1]->setColor(XAM_BLUE);
   figure[1]->setVisible(true);
+  figure[1]->setFill(true);
+
   figure[1]->draw(draft);
-  */
+
+  figure[4] = new CLabel("MY_CLABEL2");
+  figure[4]->setColor(XAM_GREEN);
+  figure[4]->setPos(CPoint(-6.5, 2.0));
+  figure[4]->setVisible(true);
+
+  figure[4]->draw(draft);
 
   draft.updateScreen();
   draft.draw(v1);

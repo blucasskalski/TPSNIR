@@ -60,3 +60,20 @@ void CMydraft::draw(const CButton &b) {
   r.setPos(b.getPos());
   CDraft::text(b, b.getText());
 }
+
+void CVector::draw(CDraft &dr) const {
+  if (!isVisible())
+    return;
+  dr.line(getPos(), getEnd(), getColor());
+}
+
+void CRectangle::draw(CDraft &dr) const {
+  if (!isVisible())
+    return;
+  CPoint tab[4]{CPoint(CRectangle::getX(), CRectangle::getY()),
+                CPoint(CRectangle::getX(), CRectangle::getYEnd()),
+                CPoint(CRectangle::getXEnd(), CRectangle::getYEnd()),
+                CPoint(CRectangle::getXEnd(), CRectangle::getY())};
+  dr.poly(CPoint(CRectangle::getX(), CRectangle::getY()), 4, tab,
+          CRectangle::getColor(), isFill());
+}
