@@ -67,8 +67,6 @@ int main(int argc, char **argv) {
   L1.setVisible(true);
 
   CButton b1(CPoint(5.5, -5.2), 4, 1, "MY_CBUTTON1");
-  // CButton b1(CPoint(4.0, 1.0), 5.5, -5.2, "MY_CBUTTON1");
-  b1.setPos(CPoint(5.5, -5.2));
   b1.setFill(true);
   b1.setColor(XAM_LAVENDER);
   b1.setVisible(true);
@@ -87,14 +85,14 @@ int main(int argc, char **argv) {
   figure[0]->setVisible(true);
 
   figure[0]->draw(draft);
-
-  figure[1] = new CRectangle(1.0, 3.14);
-  figure[1]->setPos(CPoint(-8.5, 2));
-  figure[1]->setColor(XAM_BLUE);
-  figure[1]->setVisible(true);
-  figure[1]->setFill(true);
-
-  figure[1]->draw(draft);
+  //
+  // figure[1] = new CRectangle(1.0, 3.14);
+  // figure[1]->setPos(CPoint(-8.5, 2));
+  // figure[1]->setColor(XAM_BLUE);
+  // figure[1]->setVisible(true);
+  // figure[1]->setFill(true);
+  //
+  // figure[1]->draw(draft);
 
   figure[4] = new CLabel("MY_CLABEL2");
   figure[4]->setColor(XAM_GREEN);
