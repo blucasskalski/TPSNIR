@@ -67,6 +67,8 @@ int main(int argc, char **argv) {
   L1.setVisible(true);
 
   CButton b1(CPoint(5.5, -5.2), 4, 1, "MY_CBUTTON1");
+  // CButton b1(CPoint(4.0, 1.0), 5.5, -5.2, "MY_CBUTTON1");
+  b1.setPos(CPoint(5.5, -5.2));
   b1.setFill(true);
   b1.setColor(XAM_LAVENDER);
   b1.setVisible(true);

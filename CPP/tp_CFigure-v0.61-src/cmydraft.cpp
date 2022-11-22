@@ -50,9 +50,13 @@ void CMydraft::draw(const CLabel &L) {
 void CMydraft::draw(const CButton &b) {
   if (!b.isVisible())
     return;
-  CRectangle r_loc(b.getXEnd(), b.getYEnd());
-  r_loc.setColor(b.getColor());
-  r_loc.setVisible(true);
-  CMydraft::draw(r_loc);
-  CDraft::text(b.getPos(), b.getText(), b.getColor());
+  CRectangle r(b.getXEnd(), b.getYEnd());
+  CPoint tab[4]{CPoint(b.getX(), b.getY()), CPoint(b.getXEnd(), b.getY()),
+                CPoint(b.getXEnd(), b.getYEnd()),
+                CPoint(b.getX(), b.getYEnd())};
+  poly(b.getPos(), 4, tab, b.getColor(), b.isFill());
+
+  r.setVisible(true);
+  r.setPos(b.getPos());
+  CDraft::text(b, b.getText());
 }
