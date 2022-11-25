@@ -18,7 +18,7 @@ public:
   virtual std::string draw() {
     return CRectangle::draw() + " + " + CLabel::draw();
   }
-  void draw(CDraft &dr) const {}
+  void draw(CDraft &dr) const;
 
   virtual double area() const { return CRectangle::area(); }
   virtual std::string className() const { return "CButton"; }

@@ -77,3 +77,20 @@ void CRectangle::draw(CDraft &dr) const {
   dr.poly(CPoint(CRectangle::getX(), CRectangle::getY()), 4, tab,
           CRectangle::getColor(), isFill());
 }
+
+void CLozenge::draw(CDraft &dr) const {
+  if (!isVisible())
+    return;
+  CPoint tab[4]{
+      CPoint(CLozenge::getX() + (CLozenge::getXEnd() - CLozenge::getX()) / 2,
+             CLozenge::getY()),
+      CPoint(CLozenge::getX(),
+             CLozenge::getYEnd() -
+                 (CLozenge::getYEnd() - CLozenge::getY()) / 2),
+      CPoint(CLozenge::getXEnd() - (CLozenge::getXEnd() - CLozenge::getX()) / 2,
+             CLozenge::getYEnd()),
+      CPoint(CLozenge::getXEnd(),
+             CLozenge::getY() + (CLozenge::getYEnd() - CLozenge::getY()) / 2)};
+  dr.poly(CPoint(CLozenge::getPos()), 4, tab, CLozenge::getColor(),
+          CLozenge::isFill());
+}

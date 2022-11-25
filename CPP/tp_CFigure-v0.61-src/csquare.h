@@ -14,7 +14,7 @@ public:
   std::string draw() { return "CSquare::draw()"; }
 
   virtual std::string className() const { return "CSquare"; }
-  void draw(CDraft &dr) const {}
+  void draw(CDraft &dr) const;
 };
 
 #endif

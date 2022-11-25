@@ -85,14 +85,29 @@ int main(int argc, char **argv) {
   figure[0]->setVisible(true);
 
   figure[0]->draw(draft);
-  //
-  // figure[1] = new CRectangle(1.0, 3.14);
-  // figure[1]->setPos(CPoint(-8.5, 2));
-  // figure[1]->setColor(XAM_BLUE);
-  // figure[1]->setVisible(true);
-  // figure[1]->setFill(true);
-  //
-  // figure[1]->draw(draft);
+
+  figure[1] = new CRectangle(1.0, 3.14);
+  figure[1]->setPos(CPoint(-8.5, 2));
+  figure[1]->setColor(XAM_BLUE);
+  figure[1]->setVisible(true);
+  figure[1]->setFill(true);
+
+  figure[1]->draw(draft);
+
+  figure[2] = new CSquare(1.8);
+  figure[2]->setPos(CPoint(-3, -0.5));
+  figure[2]->setColor(XAM_VIOLET);
+  figure[2]->setVisible(true);
+
+  figure[2]->draw(draft);
+
+  figure[3] = new CLozenge(4.0, 2.4);
+  figure[3]->setPos(CPoint(0, 6));
+  figure[3]->setColor(XAM_DARK_CYAN);
+  figure[3]->setVisible(true);
+  figure[3]->setFill(false);
+
+  figure[3]->draw(draft);
 
   figure[4] = new CLabel("MY_CLABEL2");
   figure[4]->setColor(XAM_GREEN);
@@ -100,6 +115,12 @@ int main(int argc, char **argv) {
   figure[4]->setVisible(true);
 
   figure[4]->draw(draft);
+
+  figure[5] = new CButton(CPoint(-8.0, 6.3), 5.0, 0.8, "MY_CBUTTON2");
+  figure[5]->setColor(XAM_ORANGE);
+  figure[5]->setVisible(true);
+
+  figure[5]->draw(draft);
 
   draft.updateScreen();
   draft.draw(v1);
