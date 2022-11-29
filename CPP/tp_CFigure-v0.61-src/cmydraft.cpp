@@ -67,17 +67,6 @@ void CVector::draw(CDraft &dr) const {
   dr.line(getPos(), getEnd(), getColor());
 }
 
-void CRectangle::draw(CDraft &dr) const {
-  if (!isVisible())
-    return;
-  CPoint tab[4]{CPoint(CRectangle::getX(), CRectangle::getY()),
-                CPoint(CRectangle::getX(), CRectangle::getYEnd()),
-                CPoint(CRectangle::getXEnd(), CRectangle::getYEnd()),
-                CPoint(CRectangle::getXEnd(), CRectangle::getY())};
-  dr.poly(CPoint(CRectangle::getX(), CRectangle::getY()), 4, tab,
-          CRectangle::getColor(), isFill());
-}
-
 void CLozenge::draw(CDraft &dr) const {
   if (!isVisible())
     return;
@@ -91,6 +80,5 @@ void CLozenge::draw(CDraft &dr) const {
              CLozenge::getYEnd()),
       CPoint(CLozenge::getXEnd(),
              CLozenge::getY() + (CLozenge::getYEnd() - CLozenge::getY()) / 2)};
-  dr.poly(CPoint(CLozenge::getPos()), 4, tab, CLozenge::getColor(),
-          CLozenge::isFill());
+  dr.poly(CPoint(CLozenge::getPos()), 4, tab, CLozenge::getColor(), getFill());
 }

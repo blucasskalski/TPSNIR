@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.5"/>
+<title>Doc Modbus Serial:  Fichier source de jbus.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Doc Modbus Serial
+   &#160;<span id="projectnumber">v2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.5 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">jbus.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef JBUS_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define JBUS_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span><span class="comment">//PM V2</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//20/2/13 Modif gestion parite</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;rs232.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;fcntl.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classjbus.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classjbus.html">jbus</a>:<span class="keyword">public</span> <a class="code" href="classrs232.html">rs232</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="keyword">private</span> :</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *trame_JBUS_Cde;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *trame_JBUS_Rpse;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">//unsigned char valeur[256];</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment"></span>        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> valeur_C[256];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> valeur_R[256];</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">public</span> :</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;     <a class="code" href="classjbus.html#a607fa5a14aaff1fe19f6bab1016bafde">jbus</a>( <span class="keywordtype">char</span> *line , <span class="keywordtype">int</span> b_rate , <span class="keywordtype">int</span> nb_bit_data ,<span class="keywordtype">int</span> n_bit_stop, <span class="keywordtype">int</span> parity_yes_no, <span class="keywordtype">int</span> odd_even_ms);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;     <span class="comment">/**************************************************************************************************/</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;     <span class="keywordtype">int</span> <a class="code" href="classjbus.html#ae8cf111c9a7da12ab854a7b732dfd1c4">API_Module_Read_Nbits</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> slave_adress, <span class="keywordtype">short</span> adresse_variable_tor, <span class="keywordtype">short</span> N);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;     <span class="comment">/******************************************************************************************/</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;     <span class="keywordtype">int</span> <a class="code" href="classjbus.html#a34e99b5995c53cac450c78377d53ba93">API_Module_Read_Nwords</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> slave_adress, <span class="keywordtype">short</span> adresse_mot, <span class="keywordtype">short</span> N);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;     <span class="comment">/********************************************************************************************************/</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;     <span class="keywordtype">int</span> <a class="code" href="classjbus.html#a1f1c12cedc4f722654442cc87cdd63e4">API_Module_Write_1word</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> slave_adress, <span class="keywordtype">short</span> adresse_variable_tor, <span class="keywordtype">short</span> valeur);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;     <span class="comment">//accesseur pour lire  valeur trame commande</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;     <span class="comment">/**********************************************************************/</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classjbus.html#a0972f3b51e3d5e2d18aa804a4b4dbbe3">read_value_C</a>( <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> *res,<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;     <span class="comment">//accesseur pour lire  valeur trame reponse</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;     <span class="comment">/**********************************************************************/</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;     <span class="keywordtype">void</span> <a class="code" href="classjbus.html#a12f3a58b537cbd2c393e4682bc11f420">read_value_R</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">char</span>*res,<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;     </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;     <span class="comment">/*  methode de gestion des codes d&#39;exceptions *********/</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;     <span class="keywordtype">void</span> API_Exception_affiche();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    ~<a class="code" href="classjbus.html">jbus</a>();   <span class="comment">// code destructeur de liaison serie/usb MAJ 17/5/11</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor"></span></div>
+<div class="ttc" id="classjbus_html_a1f1c12cedc4f722654442cc87cdd63e4"><div class="ttname"><a href="classjbus.html#a1f1c12cedc4f722654442cc87cdd63e4">jbus::API_Module_Write_1word</a></div><div class="ttdeci">int API_Module_Write_1word(unsigned char slave_adress, short adresse_variable_tor, short valeur)</div><div class="ttdoc">methode d&amp;#39;ecriture de 1 mot sur un module de l&amp;#39;API </div></div>
+<div class="ttc" id="classjbus_html"><div class="ttname"><a href="classjbus.html">jbus</a></div><div class="ttdoc">classe d&amp;#39;exploitation de requetes modbus (mode RTU) sur liaison serie Copyright P.Maylaender contact: patrick Maylaender    </div><div class="ttdef"><b>Definition:</b> jbus.h:17</div></div>
+<div class="ttc" id="classrs232_html"><div class="ttname"><a href="classrs232.html">rs232</a></div><div class="ttdoc">classe d&amp;#39;exploitation d&amp;#39;une liaison serie Copyright P.Maylaender contact: patrick Maylaender    ...</div><div class="ttdef"><b>Definition:</b> rs232.h:16</div></div>
+<div class="ttc" id="classjbus_html_a607fa5a14aaff1fe19f6bab1016bafde"><div class="ttname"><a href="classjbus.html#a607fa5a14aaff1fe19f6bab1016bafde">jbus::jbus</a></div><div class="ttdeci">jbus(char *line, int b_rate, int nb_bit_data, int n_bit_stop, int parity_yes_no, int odd_even_ms)</div><div class="ttdoc">constructeur permettant de creer des objets avec les reglages serie adaptés </div></div>
+<div class="ttc" id="classjbus_html_a34e99b5995c53cac450c78377d53ba93"><div class="ttname"><a href="classjbus.html#a34e99b5995c53cac450c78377d53ba93">jbus::API_Module_Read_Nwords</a></div><div class="ttdeci">int API_Module_Read_Nwords(unsigned char slave_adress, short adresse_mot, short N)</div><div class="ttdoc">methode de lecture de N mots internes sur module esclave </div></div>
+<div class="ttc" id="classjbus_html_ae8cf111c9a7da12ab854a7b732dfd1c4"><div class="ttname"><a href="classjbus.html#ae8cf111c9a7da12ab854a7b732dfd1c4">jbus::API_Module_Read_Nbits</a></div><div class="ttdeci">int API_Module_Read_Nbits(unsigned char slave_adress, short adresse_variable_tor, short N)</div><div class="ttdoc">methode de lecture de N bits interne sur module esclave </div></div>
+<div class="ttc" id="classjbus_html_a0972f3b51e3d5e2d18aa804a4b4dbbe3"><div class="ttname"><a href="classjbus.html#a0972f3b51e3d5e2d18aa804a4b4dbbe3">jbus::read_value_C</a></div><div class="ttdeci">void read_value_C(unsigned char *res, int n)</div><div class="ttdoc">methode pour lire trame reponse en ecriture </div></div>
+<div class="ttc" id="classjbus_html_a12f3a58b537cbd2c393e4682bc11f420"><div class="ttname"><a href="classjbus.html#a12f3a58b537cbd2c393e4682bc11f420">jbus::read_value_R</a></div><div class="ttdeci">void read_value_R(unsigned char *res, int n)</div><div class="ttdoc">methode pour lire trame reponse en lecture </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré le Mardi Novembre 30 2021 16:20:23 pour Doc Modbus Serial par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.5
+</small></address>
+</body>
+</html>

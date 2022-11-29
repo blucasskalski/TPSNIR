@@ -3,8 +3,11 @@
 #ifndef CRECTANGLE_H
 #define CRECTANGLE_H
 
+#include "cdraft.h"
 #include "cvector.h"
 #include <cmath>
+
+class CDraft;
 
 class CRectangle : public CVector {
 private:
@@ -12,8 +15,7 @@ private:
 
 public:
   CRectangle();
-  CRectangle(double width, double height)
-      : CVector(width, -height), fill(false) {}
+  CRectangle(double width, double height) : CVector(width, -height) {}
 
   void setFill(bool v) { fill = v; }
   bool isFill() const { return fill; }

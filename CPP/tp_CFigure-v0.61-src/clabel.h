@@ -15,7 +15,7 @@ public:
   CLabel(const std::string &s) : text(s) {}
 
   virtual std::string draw() { return "CLabel::draw()"; }
-  void draw(CDraft &dr) const {}
+  void draw(CDraft &dr) const;
 
   virtual double area() const { return 0; /* todo */ }
   virtual std::string className() const { return "CLabel"; }

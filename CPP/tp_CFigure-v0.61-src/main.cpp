@@ -90,13 +90,14 @@ int main(int argc, char **argv) {
   figure[1]->setPos(CPoint(-8.5, 2));
   figure[1]->setColor(XAM_BLUE);
   figure[1]->setVisible(true);
-  figure[1]->setFill(true);
+  figure[1]->setFill(false);
 
   figure[1]->draw(draft);
 
   figure[2] = new CSquare(1.8);
   figure[2]->setPos(CPoint(-3, -0.5));
   figure[2]->setColor(XAM_VIOLET);
+  figure[2]->setFill(true);
   figure[2]->setVisible(true);
 
   figure[2]->draw(draft);
@@ -111,7 +112,7 @@ int main(int argc, char **argv) {
 
   figure[4] = new CLabel("MY_CLABEL2");
   figure[4]->setColor(XAM_GREEN);
-  figure[4]->setPos(CPoint(-6.5, 2.0));
+  figure[4]->setPos(CPoint(6.5, 2.0));
   figure[4]->setVisible(true);
 
   figure[4]->draw(draft);
@@ -119,6 +120,7 @@ int main(int argc, char **argv) {
   figure[5] = new CButton(CPoint(-8.0, 6.3), 5.0, 0.8, "MY_CBUTTON2");
   figure[5]->setColor(XAM_ORANGE);
   figure[5]->setVisible(true);
+  figure[5]->setFill(false);
 
   figure[5]->draw(draft);
 

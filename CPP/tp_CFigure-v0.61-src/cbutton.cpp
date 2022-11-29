@@ -6,7 +6,7 @@ void CButton::draw(CDraft &dr) const {
   CRectangle r(getXEnd() - getX(), getYEnd() - getY() * 0.75);
   CPoint tab[4]{CPoint(getX(), getY()), CPoint(getXEnd(), getY()),
                 CPoint(getXEnd(), getYEnd()), CPoint(getX(), getYEnd())};
-  dr.poly(getPos(), 4, tab, getColor(), isFill());
+  dr.poly(getPos(), 4, tab, getColor(), getFill());
 
   r.setVisible(true);
   r.setPos(getPos());

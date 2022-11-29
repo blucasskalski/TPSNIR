@@ -36,7 +36,7 @@ public:
   virtual std::string className() const = 0;
 
   void setFill(bool v) { fill = v; }
-  bool isFill() const { return fill; }
+  bool getFill() const { return fill; }
 
   int color = 0;
   int getColor() const { return this->color; }
