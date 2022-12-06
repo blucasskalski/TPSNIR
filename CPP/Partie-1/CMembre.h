@@ -1,54 +1,57 @@
-/*------------------------------------------------------------------------
- *  Nom         :   CMembre.h
+/*--------------------------------------------------------------------------
+ *  Nom         :   cmembre.h
  *  Type        :   INTERFACE
- *  Sujet       :   Definition de la classe CMembre
+ *  Sujet       :   Définition de la classe CDATE
  *
  *  Auteur      :   Bryan LUCAS SKALSKI
  *  Version     :   0.1
- *  Creation    :   20/10/2022
+ *  Création    :   03/02/2022
  *
  *  Fabrication :
- *------------------------------------------------------------------------
+ *--------------------------------------------------------------------------
  */
-
 #ifndef CMEMBRE_H
 #define CMEMBRE_H
-#include "cdate.h"
-#include <iomanip>
-#include <iostream>
-#include <ostream>
-#include <sstream>
+
+#include "tdate.h"
 #include <string>
+#include <ostream>
 
-class CMembre {
+class CMembre{
+	private:
+		char[10] nom;
+		char[10] prenom;
+		CDate dateNaiss;
+	public:
 
-private:
-  CDate dateNaiss;
-  std::string nom;
-  std::string prenom;
 
-public:
-  CMembre() { set("?", "?", CDate(1, JAN, 1900)); }
-  CMembre(std::string nom, std::string prenom, CDate dateNaiss) {
-    set(nom, prenom, dateNaiss);
-  }
+class CDate {
+	private:
+		unsigned	day;
+		unsigned	month;
+		unsigned	year;
 
-  std::string print() const;
+	public:
+		CDate(){set(1, JAN, 1900);}
 
-  std::string printlong() const;
+		CDate(unsigned day, TMonth month, unsigned year){
+			set(day, month, year);
+		}
 
-  std::string getNOM() const;
-  void setNOM(std::string nom);
+		TMonth	getMonth() const;
+		void	setMonth(TMonth month);
 
-  std::string getPRENOM() const;
-  void setPRENOM(std::string prenom);
 
-  CDate getDATENAISS() const;
-  void setDATENAISS(CDate dateNaiss);
+		unsigned getDay() const;
+		void setDay(unsigned day);
 
-  void set(std::string nom, std::string prenom, CDate dateNaiss);
+		unsigned getYear() const;
+		void setYear(unsigned year);
+
+		void set(unsigned day, TMonth month, unsigned year);
+		std::string print() const;
+		std::string printLong() const;
 };
-
-std::ostream &operator<<(std::ostream &s, const CMembre &date);
-
+std::ostream& operator << (std::ostream& s, const CDate& date);
 #endif
+
