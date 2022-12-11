@@ -151,15 +151,15 @@ int main(int argc, char **argv) {
   // Install a signal handler : ne pas retirer
   std::signal(SIGINT, arret);
 
-  while (1) /* boucle IHM requetes MODBUS*/
-  {
-    clrnl();
-    clrnl();
+  /* boucle IHM requetes MODBUS*/
+  while (1){
+    //clrnl();
+    //clrnl();
     //L1();
     cout << "Lecture Module BBES n°3 Registre n°3" << endl;
     j1->API_Module_Read_Nbits(3, 3, 16);
-    j1->read_value_R(buf, 8);
-
+    j1->read_value_R(buf, 16);
+    cout << buf << endl;
     // TODO
   }
 }
