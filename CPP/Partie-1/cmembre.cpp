@@ -1,57 +1,49 @@
 #include "CMembre.h"
+#include <string>
+using namespace std;
 
-std::string CMembre::getNOM() const { return (std::string)nom; }
+string CMembre::getNOM() const { return this->getNOM(); }
 
 void CMembre::setNOM(std::string nom) {
   // if(/*blabla*/)
 
-  this->nom = (std::string)nom;
+  this->setNOM((std::string)nom);
 }
 
 /////////////////////////
 
-std::string CMembre::getPRENOM() const { return (std::string)prenom; }
+std::string CMembre::getPRENOM const { return this->getPRENOM(); }
 
 void CMembre::setPRENOM(std::string prenom) {
   // if (/*Blabla*/)
-  this->prenom = (std::string)prenom;
+  this->setPRENOM((std::string)prenom);
 }
 
 ///////////////////////
 
-CDate CMembre::getDATENAISS() const { return (CDate)dateNaiss; }
+CDate CMembre::getDATENAISS() const { return this->getDATENAISS(); }
 
 void CMembre::setDATENAISS(CDate dateNaiss) {
   // if (/*Blabla*/)
-  this->dateNaiss = (CDate)dateNaiss;
+  this->setDATENAISS((CDate)dateNaiss);
 }
 
 void CMembre::set(std::string nom, std::string prenom, CDate dateNaiss) {
-  this->nom = (std::string)nom;
-  this->prenom = (std::string)prenom;
-  this->dateNaiss = (CDate)dateNaiss;
+  this->setNOM((std::string)nom);
+  this->setPRENOM((std::string)prenom);
+  this->setDATENAISS((CDate)dateNaiss);
 }
 
 std::string CMembre::print() const {
   std::ostringstream oss;
 
-  oss << nom << ' ';
-  oss << prenom << ", né(e) le ";
-  oss << dateNaiss;
-  return oss.str();
-}
-
-std::string CMembre::printlong() const {
-  std::ostringstream oss;
-
-  oss << std::setfill('0');
-  oss << std::setw(2) << nom << " ";
-  oss << std::setw(2) << prenom << " ";
-  oss << std::setw(4) << dateNaiss;
+  oss << this->getNOM() << ' ';
+  oss << this->getPRENOM() << ", né(e) le ";
+  oss << this->getDATENAISS() << endl;
   return oss.str();
 }
 
 std::ostream &operator<<(std::ostream &s, const CMembre &date) {
-  s << date.print();
+  s >> date.print();
   return s;
 }
