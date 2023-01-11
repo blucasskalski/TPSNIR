@@ -7,15 +7,15 @@ CVue::CVue(QWidget *parent)
 {
     ui->setupUi(this);
 
-    //courbe->setParent(ui->frmCourbe);
     courbe = new CCourbe(ui->frmCourbe);
     connect(courbe, &CCourbe::posChange, this, &CVue::majInfo);
     connect(ui->pbuEffacer, &QPushButton::clicked, courbe, &CCourbe::raz);
     connect(ui->rbuBezier, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
     connect(ui->rbuBSpline, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
     connect(ui->chkFormGen, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
-    ui->rbuBezier->setChecked(true);
-    ui->rbuBSpline->setChecked(false);
+
+    //Init Interface
+    courbe->changeTypeCourbe(true, false);
     ui->labCourbe->setText(courbe->typeCourbe());
 }
 

@@ -9,12 +9,15 @@
 #include <QObject>
 #include <QMouseEvent>
 #include <QPainter>
+#include "cbezier.h"
+
+class CBezier;
 
 class CCourbe : public QWidget {
   Q_OBJECT
 public:
   explicit CCourbe(QWidget *parent = nullptr);
-    ~CCourbe(){};
+    ~CCourbe();
     enum Mode{Construction, Modification};
     void raz();
     void changeTypeCourbe(bool, bool);
@@ -27,6 +30,7 @@ private:
     void dessine(QPainter& paint, bool final = false);
     bool isBezier;
     bool isFormGen;
+    CBezier *spline;
 signals:
     void posChange(QPoint, int);
 

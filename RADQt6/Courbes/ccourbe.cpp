@@ -5,8 +5,12 @@ CCourbe::CCourbe(QWidget *parent)
 {
     setMouseTracking(true);
     mode = Mode::Construction;
+    spline = new CBezier(this);
 }
 
+CCourbe::~CCourbe(){
+    delete spline;
+}
 void CCourbe::mouseMoveEvent(QMouseEvent* event)
 {
     QPoint point;
@@ -98,6 +102,9 @@ void CCourbe::dessine(QPainter& paint, bool final)
                 paint.drawLine(pt, *it);
             pt = *it;
         }
+    if(!points.isEmpty()){
+                spline->traceCourbe(paint, points, isFormGen);
+            }
     paint.restore();
 }
 
