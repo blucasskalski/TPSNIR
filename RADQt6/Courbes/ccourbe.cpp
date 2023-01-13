@@ -119,6 +119,11 @@ void CCourbe::raz()
 void CCourbe::changeTypeCourbe(bool bezier, bool formGen){
     isBezier = bezier;
     isFormGen = formGen;
+
+    delete spline ;
+    if ( isBezier ) spline = new CBezier ;
+    else spline = new CBSpline ;
+    update() ;
 }
 
 QString CCourbe::typeCourbe(){

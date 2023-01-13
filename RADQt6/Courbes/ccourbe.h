@@ -10,6 +10,9 @@
 #include <QMouseEvent>
 #include <QPainter>
 #include "cbezier.h"
+#include "cbspline.h"
+
+class CBSpline;
 
 class CBezier;
 

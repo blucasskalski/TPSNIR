@@ -10,12 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     cbezier.cpp \
+    cbspline.cpp \
     ccourbe.cpp \
     main.cpp \
     cvue.cpp
 
 HEADERS += \
     cbezier.h \
+    cbspline.h \
     ccourbe.h \
     cvue.h
 
