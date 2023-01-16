@@ -14,8 +14,8 @@ CCourbe::~CCourbe(){
 void CCourbe::mouseMoveEvent(QMouseEvent* event)
 {
     QPoint point;
-    point.setX(LX(event->position().x()));
-    point.setY(LY(event->position().y()));
+    point.setX(LX(event->x()));
+    point.setY(LY(event->y()));
     //emit posChange(point, 0);
     if (points.isEmpty()) return;
     if (mode == Construction) {
@@ -33,8 +33,8 @@ void CCourbe::mouseMoveEvent(QMouseEvent* event)
 
 void CCourbe::mousePressEvent(QMouseEvent* event){
     QPoint point;
-    point.setX(LX(event->position().x()));
-    point.setY(LY(event->position().y()));
+    point.setX(LX(event->x()));
+    point.setY(LY(event->y()));
     emit posChange(point, 0);
     if (mode == Construction) {
             if (!points.isEmpty()) points.removeLast();
@@ -60,8 +60,8 @@ void CCourbe::mousePressEvent(QMouseEvent* event){
 
 void CCourbe::mouseReleaseEvent(QMouseEvent* event){
     QPoint point;
-    point.setX(LX(event->position().x()));
-    point.setY(LY(event->position().y()));
+    point.setX(LX(event->x()));
+    point.setY(LY(event->y()));
     emit posChange(point, 0);
     if (mode == Modification) {
             if (event->button() == Qt::LeftButton) {
