@@ -1,57 +1,26 @@
-/*--------------------------------------------------------------------------
- *  Nom         :   cmembre.h
- *  Type        :   INTERFACE
- *  Sujet       :   Définition de la classe CDATE
- *
- *  Auteur      :   Bryan LUCAS SKALSKI
- *  Version     :   0.1
- *  Création    :   03/02/2022
- *
- *  Fabrication :
- *--------------------------------------------------------------------------
- */
-#ifndef CMEMBRE_H
-#define CMEMBRE_H
+#include "cdate.h"
+class CMembre {
+private:
+  std::string nom;
+  std::string prenom;
+  CDate dateNaiss;
 
-#include "tdate.h"
-#include <string>
-#include <ostream>
+public:
+  // Constructeurs
+  CMembre();
+  CMembre(std::string nom, std::string prenom);
+  CMembre(std::string nom, std::string prenom, CDate dateNaiss);
+  // Accesseurs en lecture et en écriture pour les attributs privés
+  inline std::string getNom() const { return nom; }
+  inline void setNom(std::string nom) { this->nom = nom; }
 
-class CMembre{
-	private:
-		char[10] nom;
-		char[10] prenom;
-		CDate dateNaiss;
-	public:
+  inline std::string getPrenom() const { return prenom; }
+  inline void setPrenom(std::string prenom) { this->prenom = prenom; }
 
+  inline CDate getDateNaiss() const { return dateNaiss; }
+  inline void setDateNaiss(CDate dateNaiss) { this->dateNaiss = dateNaiss; }
 
-class CDate {
-	private:
-		unsigned	day;
-		unsigned	month;
-		unsigned	year;
-
-	public:
-		CDate(){set(1, JAN, 1900);}
-
-		CDate(unsigned day, TMonth month, unsigned year){
-			set(day, month, year);
-		}
-
-		TMonth	getMonth() const;
-		void	setMonth(TMonth month);
-
-
-		unsigned getDay() const;
-		void setDay(unsigned day);
-
-		unsigned getYear() const;
-		void setYear(unsigned year);
-
-		void set(unsigned day, TMonth month, unsigned year);
-		std::string print() const;
-		std::string printLong() const;
+  // Méthode print() retournant les 3 attributs sous forme d’une unique chaîne
+  std::string print();
+  std::string printLong();
 };
-std::ostream& operator << (std::ostream& s, const CDate& date);
-#endif
-

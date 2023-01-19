@@ -35,7 +35,7 @@ void CCourbe::mousePressEvent(QMouseEvent* event){
     QPoint point;
     point.setX(LX(event->x()));
     point.setY(LY(event->y()));
-    emit posChange(point, 0);
+    emit posChange(point, 1);
     if (mode == Construction) {
             if (!points.isEmpty()) points.removeLast();
             points << point;
@@ -64,11 +64,11 @@ void CCourbe::mouseReleaseEvent(QMouseEvent* event){
     point.setY(LY(event->y()));
     emit posChange(point, 0);
     if (mode == Modification) {
-            if (event->button() == Qt::LeftButton) {
-                itPoint = points.end();
-            }
+        if (event->button() == Qt::LeftButton) {
+            itPoint = points.end();
         }
-        update();
+    }
+    update();
 }
 
 QRect CCourbe::poignee(const QPoint& point)

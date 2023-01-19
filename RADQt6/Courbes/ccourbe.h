@@ -22,7 +22,6 @@ public:
   explicit CCourbe(QWidget *parent = nullptr);
     ~CCourbe();
     enum Mode{Construction, Modification};
-    void raz();
     void changeTypeCourbe(bool, bool);
     QString typeCourbe();
 private:
@@ -42,6 +41,8 @@ protected:
     void mousePressEvent(QMouseEvent* event) override;
     void mouseReleaseEvent(QMouseEvent* event) override;
     void paintEvent(QPaintEvent* event) override;
+public slots:
+    void raz();
 };
 
 

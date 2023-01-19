@@ -30,6 +30,7 @@ void CBSpline::casParticulier(QPainter& paint, QList<QPoint>& pts)
     paint.restore();
 }
 
+
 void CBSpline::formuleGenerale(QPainter& paint, QList<QPoint>& pts) {
     //...
 }
