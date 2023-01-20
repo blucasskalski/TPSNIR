@@ -14,7 +14,7 @@ CVue::CVue(QWidget *parent)
     connect(ui->rbuBezier, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
     connect(ui->rbuBSpline, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
     connect(ui->chkFormGen, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
-    connect(ui->pbuImprimer, SIGNAL(clicked()), this, SLOT(imprime()));
+    connect(ui->pbuImprimer, &QPushButton::clicked, courbe, &CCourbe::imprime);
 
     //Init Interface
     courbe->changeTypeCourbe(true, false);

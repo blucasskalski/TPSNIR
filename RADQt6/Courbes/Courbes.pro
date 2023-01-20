@@ -19,7 +19,8 @@ HEADERS += \
     cbezier.h \
     cbspline.h \
     ccourbe.h \
-    cvue.h
+    cvue.h \
+    ui_cvue.h
 
 FORMS += \
     cvue.ui
