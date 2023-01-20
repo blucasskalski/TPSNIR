@@ -1,5 +1,6 @@
 #include "cvue.h"
 #include "ui_cvue.h"
+#include "ccourbe.h"
 
 CVue::CVue(QWidget *parent)
     : QWidget(parent)
@@ -13,6 +14,7 @@ CVue::CVue(QWidget *parent)
     connect(ui->rbuBezier, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
     connect(ui->rbuBSpline, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
     connect(ui->chkFormGen, SIGNAL(clicked()), this, SLOT(changeTypeCourbe()));
+    connect(ui->pbuImprimer, SIGNAL(clicked()), this, SLOT(imprime()));
 
     //Init Interface
     courbe->changeTypeCourbe(true, false);

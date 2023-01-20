@@ -14,10 +14,10 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_NO_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -O2 -flto -fno-fat-lto-objects -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -O2 -std=gnu++1z -flto -fno-fat-lto-objects -Wall -Wextra -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../Courbes -I. -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I. -I/usr/lib/qt/mkspecs/linux-g++
+INCPATH       = -I../Courbes -I. -I/usr/include/qt -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I. -I/usr/lib/qt/mkspecs/linux-g++
 QMAKE         = /usr/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -40,7 +40,7 @@ DISTNAME      = Courbes1.0.0
 DISTDIR = /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/.tmp/Courbes1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -pipe -O2 -std=gnu++1z -flto=8 -fno-fat-lto-objects -fuse-linker-plugin -fPIC
-LIBS          = $(SUBLIBS) /usr/lib/libQt5Widgets.so /usr/lib/libQt5Gui.so /usr/lib/libQt5Core.so -lGL -lpthread   
+LIBS          = $(SUBLIBS) /usr/lib/libQt5PrintSupport.so /usr/lib/libQt5Widgets.so /usr/lib/libQt5Gui.so /usr/lib/libQt5Core.so -lGL -lpthread   
 AR            = gcc-ar cqs
 RANLIB        = 
 SED           = sed
@@ -102,13 +102,24 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_location.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_location_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimedia.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimedia_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_networkauth.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_networkauth_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_openglextensions.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_openglextensions_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_pdf.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_pdf_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_pdfwidgets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_pdfwidgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_positioning.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_positioning_private.pri \
@@ -126,12 +137,17 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qmltest_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qmlworkerscript.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quick.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quick_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickparticles_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickshapes_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_script.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_service_support_private.pri \
@@ -141,14 +157,25 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/modules/qt_lib_svg_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_testlib_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_texttospeech.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_texttospeech_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_theme_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_vulkan_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webchannel.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webchannel_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webengine.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webengine_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginecore.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_websockets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_websockets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -161,6 +188,7 @@ DIST          = /usr/lib/qt/mkspecs/features/spec_pre.prf \
 		/usr/lib/qt/mkspecs/features/qt_config.prf \
 		/usr/lib/qt/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/qt/mkspecs/features/spec_post.prf \
+		../Courbes/.qmake.stash \
 		/usr/lib/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/qt/mkspecs/features/toolchain.prf \
 		/usr/lib/qt/mkspecs/features/default_pre.prf \
@@ -235,13 +263,24 @@ Makefile: ../Courbes/Courbes.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/l
 		/usr/lib/qt/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_location.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_location_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimedia.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimedia_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimediagsttools_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_networkauth.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_networkauth_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_opengl_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_openglextensions.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_openglextensions_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_packetprotocol_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_pdf.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_pdf_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_pdfwidgets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_pdfwidgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_platformcompositor_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_positioning.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_positioning_private.pri \
@@ -259,12 +298,17 @@ Makefile: ../Courbes/Courbes.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/l
 		/usr/lib/qt/mkspecs/modules/qt_lib_qmltest_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qmlworkerscript.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_qmlworkerscript_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quick.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quick_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickparticles_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickshapes_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_script.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_service_support_private.pri \
@@ -274,14 +318,25 @@ Makefile: ../Courbes/Courbes.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/l
 		/usr/lib/qt/mkspecs/modules/qt_lib_svg_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_testlib.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_testlib_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_texttospeech.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_texttospeech_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_theme_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_vulkan_support_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webchannel.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webchannel_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webengine.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webengine_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginecore.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets_private.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_websockets.pri \
+		/usr/lib/qt/mkspecs/modules/qt_lib_websockets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_widgets.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_widgets_private.pri \
 		/usr/lib/qt/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri \
@@ -294,6 +349,7 @@ Makefile: ../Courbes/Courbes.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/l
 		/usr/lib/qt/mkspecs/features/qt_config.prf \
 		/usr/lib/qt/mkspecs/linux-g++/qmake.conf \
 		/usr/lib/qt/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/usr/lib/qt/mkspecs/features/exclusive_builds.prf \
 		/usr/lib/qt/mkspecs/features/toolchain.prf \
 		/usr/lib/qt/mkspecs/features/default_pre.prf \
@@ -351,13 +407,24 @@ Makefile: ../Courbes/Courbes.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/l
 /usr/lib/qt/mkspecs/modules/qt_lib_linuxaccessibility_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_location.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_location_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_multimedia.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_multimedia_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_multimediagsttools_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_network.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_network_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_networkauth.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_networkauth_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_opengl.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_opengl_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_openglextensions.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_openglextensions_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_packetprotocol_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_pdf.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_pdf_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_pdfwidgets.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_pdfwidgets_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_platformcompositor_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_positioning.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_positioning_private.pri:
@@ -375,12 +442,17 @@ Makefile: ../Courbes/Courbes.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/l
 /usr/lib/qt/mkspecs/modules/qt_lib_qmltest_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_qmlworkerscript.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_qmlworkerscript_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_qtmultimediaquicktools_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quick.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quick_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quickparticles_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quickshapes_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_script.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_script_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_scripttools.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_scripttools_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_sensors.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_sensors_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_service_support_private.pri:
@@ -390,14 +462,25 @@ Makefile: ../Courbes/Courbes.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/l
 /usr/lib/qt/mkspecs/modules/qt_lib_svg_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_testlib.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_testlib_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_texttospeech.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_texttospeech_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_theme_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_vulkan_support_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webchannel.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webchannel_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webengine.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webengine_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webenginecore.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webenginecore_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webkit.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webkit_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_webkitwidgets_private.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_websockets.pri:
+/usr/lib/qt/mkspecs/modules/qt_lib_websockets_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_widgets.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_widgets_private.pri:
 /usr/lib/qt/mkspecs/modules/qt_lib_xcb_qpa_lib_private.pri:
@@ -410,6 +493,7 @@ Makefile: ../Courbes/Courbes.pro /usr/lib/qt/mkspecs/linux-g++/qmake.conf /usr/l
 /usr/lib/qt/mkspecs/features/qt_config.prf:
 /usr/lib/qt/mkspecs/linux-g++/qmake.conf:
 /usr/lib/qt/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /usr/lib/qt/mkspecs/features/exclusive_builds.prf:
 /usr/lib/qt/mkspecs/features/toolchain.prf:
 /usr/lib/qt/mkspecs/features/default_pre.prf:
@@ -488,20 +572,20 @@ compiler_moc_header_clean:
 moc_cbezier.cpp: ../Courbes/cbezier.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/bryanls/TPSNIR/RADQt6/Courbes -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/12.2.0 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed -I/usr/include ../Courbes/cbezier.h -o moc_cbezier.cpp
+	/usr/bin/moc $(DEFINES) --include /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/bryanls/TPSNIR/RADQt6/Courbes -I/usr/include/qt -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/12.2.0 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed -I/usr/include ../Courbes/cbezier.h -o moc_cbezier.cpp
 
 moc_cbspline.cpp: ../Courbes/cbspline.h \
 		../Courbes/cbezier.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/bryanls/TPSNIR/RADQt6/Courbes -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/12.2.0 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed -I/usr/include ../Courbes/cbspline.h -o moc_cbspline.cpp
+	/usr/bin/moc $(DEFINES) --include /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/bryanls/TPSNIR/RADQt6/Courbes -I/usr/include/qt -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/12.2.0 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed -I/usr/include ../Courbes/cbspline.h -o moc_cbspline.cpp
 
 moc_ccourbe.cpp: ../Courbes/ccourbe.h \
 		../Courbes/cbezier.h \
 		../Courbes/cbspline.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/bryanls/TPSNIR/RADQt6/Courbes -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/12.2.0 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed -I/usr/include ../Courbes/ccourbe.h -o moc_ccourbe.cpp
+	/usr/bin/moc $(DEFINES) --include /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/bryanls/TPSNIR/RADQt6/Courbes -I/usr/include/qt -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/12.2.0 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed -I/usr/include ../Courbes/ccourbe.h -o moc_ccourbe.cpp
 
 moc_cvue.cpp: ../Courbes/cvue.h \
 		../Courbes/ccourbe.h \
@@ -509,7 +593,7 @@ moc_cvue.cpp: ../Courbes/cvue.h \
 		../Courbes/cbspline.h \
 		moc_predefs.h \
 		/usr/bin/moc
-	/usr/bin/moc $(DEFINES) --include /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/bryanls/TPSNIR/RADQt6/Courbes -I/usr/include/qt -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/12.2.0 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed -I/usr/include ../Courbes/cvue.h -o moc_cvue.cpp
+	/usr/bin/moc $(DEFINES) --include /home/bryanls/TPSNIR/RADQt6/build-Courbes-Desktop-Release/moc_predefs.h -I/usr/lib/qt/mkspecs/linux-g++ -I/home/bryanls/TPSNIR/RADQt6/Courbes -I/usr/include/qt -I/usr/include/qt/QtPrintSupport -I/usr/include/qt/QtWidgets -I/usr/include/qt/QtGui -I/usr/include/qt/QtCore -I. -I/usr/include/c++/12.2.0 -I/usr/include/c++/12.2.0/x86_64-pc-linux-gnu -I/usr/include/c++/12.2.0/backward -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include -I/usr/local/include -I/usr/lib/gcc/x86_64-pc-linux-gnu/12.2.0/include-fixed -I/usr/include ../Courbes/cvue.h -o moc_cvue.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -554,7 +638,7 @@ cvue.o: ../Courbes/cvue.cpp ../Courbes/cvue.h \
 		../Courbes/ccourbe.h \
 		../Courbes/cbezier.h \
 		../Courbes/cbspline.h \
-		ui_cvue.h
+		../Courbes/ui_cvue.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o cvue.o ../Courbes/cvue.cpp
 
 moc_cbezier.o: moc_cbezier.cpp 
