@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<RCC version="1.0">
+    <qresource prefix="/Pow211">
+        <file alias="main.qml">../Pow211/main.qml</file>
+    </qresource>
+</RCC>
