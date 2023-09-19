@@ -1,0 +1,114 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2): ModipAsker</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="qam47.ico" type="image/x-icon" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Modbus-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ModipAsker </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Application Qt client Modbus TCP/IP bas niveau</p>
+<p>ModipAsker est un outil de test permettant d'établir une communication avec un équipement de type serveur Modbus TCP/IP. L'application offre à l'utilisateur la possibilité de fabriquer des trames Modbus au plus bas niveau, y compris des trames volontairement erronées à titre d'évaluation du traitement des erreurs par l'équipement distant. <br/>
+ Pour de plus amples renseignements sur la constitution des trames Modbus, voir l'extrait de documentation officielle <a href="ModbusHelpPage.html">Modbus Help Page</a>.</p>
+<h2>Manuel utilisateur</h2>
+<p>L'interface utilisateur de ModipAsker est réduite à une unique boite de dialogue constituée de trois groupes de paramétrage et d'une console de suivi des échanges réseau.</p>
+<div class="image">
+<img src="ModipAsker_ui.png" alt="ModipAsker_ui.png"/>
+</div>
+<p><br/>
+ Le bouton <b>Clear</b> permet d'effacer le contenu de la console de suivi d'exploitation. <br/>
+ Un clic sur le logo en haut à gauche provoque l'affichage d'une fenêtre "à propos..." montrant la version de l'application.</p>
+<h3>Internet Protocol</h3>
+<p>Ce groupe permet de fixer l'adresse IP du serveur à contacter et le port sur lequel est installé le service Modbus (normalement 502). Bien que l'application propose le choix entre les couches de transport TCP et UDP, les équipements industriels utilisent en général le mode connecté ; TCP est donc sélectionné par défaut. <br/>
+ Le bouton <b>Connect</b> permet de lancer la demande de connexion, le résultat est visible sur la console. Une fois la connexion établie, le bouton se transforme en <b>Close</b> et permet ainsi de mettre fin à la communication.</p>
+<h3>Modbus Application Protocol (MBAP)</h3>
+<p>Ce groupe sert à construire le <em>header</em> Modbus. L'utilisateur peut laisser les paramétrages par défaut (auto-incrémentation du numéro de transaction, identificateur de protocole, calcul automatique de la longueur de trame et identificateur d'esclave) ; mais il peut aussi volontairement modifier les paramètres à des fins de test.</p>
+<h3>Protocol Data Unit (PDU)</h3>
+<p>Ce groupe permet de choisir le type de requête (lecture/écriture de bits ou de mots), l'adresse de base des données à traiter, le nombre de données, et le cas échéant, les valeurs à transmettre. Les champs adresse, nombre et valeur peuvent être spécifiés en décimal ou en hexadécimal. Le champ <em>Data</em> utilisé par les requêtes d'écritures multiples est obligatoirement renseigné sous forme d'une suite d'octets hexadécimaux (avec ou sans séparateurs) ; logiquement, le nombre de symboles hexadécimaux de ce champ doit être égal à 4 fois la valeur indiquée par le champ <em>Number</em>. <br/>
+ Le bouton <b>Send</b> provoque l'émission effective de la requête à destination du serveur. <br/>
+ Losque l'application détecte une incohérence dans la trame à envoyer, elle le signale sous forme d'avertissement (affichage d'un message de couleur rouge sur la console), mais la trame est néanmoins envoyée au serveur. <br/>
+ Le bouton <b>Send</b> est utilisable hors connexion, ceci permet de visualiser les trames construites sans provoquer d'incidence dur le serveur. <br/>
+ Les trames sont montrées sur la console sous forme d'une succession d'octets exprimés en hexadécimal ; en vert pour l'émission et en bleu pour la réception. </p>
+</div></div><!-- contents -->
+<HR size="1">
+<address style="text-align: right;">
+<small><i>Doxygen version 1.8.6</i> - Modbus over TCP/IP Project - (c)2014-2016 by 
+<a href=mailto:alain.menu@ac-creteil.fr>Alain Menu</a>&nbsp;&nbsp;
+</small>
+</address>
+</BODY>
+</HTML>

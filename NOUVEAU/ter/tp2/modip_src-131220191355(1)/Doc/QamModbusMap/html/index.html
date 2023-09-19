@@ -1,0 +1,105 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2): Page principale</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="qam47.ico" type="image/x-icon" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Modbus-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">&#160;&#160;&#160;Qam Modbus over TCP/IP Project (v2) Documentation</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Le projet <em>Qam Modbus over TCP/IP</em> regroupe un ensemble de classes Qt/C++ destiné à la mise en oeuvre rapide d'applications Qt nécessitant l'implémentation de clients et/ou de serveurs sur un réseau Modbus. Le projet contient également des applications d'exemple de mise en oeuvre.</p>
+<p>Modbus est un protocole permettant à deux entités d'échanger des données codées sur 1 bit ou sur 16 bits. Ces <b>données primaires</b> constituent la <b>cartographie</b> d'un équipement, elles sont reparties dans quatre <b>tables</b> :</p>
+<ul>
+<li>table <em>Coils</em> : données 1 bit accessibles en lecture et écriture ;</li>
+<li>table <em>Discrete Inputs</em> : données 1 bit en lecture seule ;</li>
+<li>table <em>Input Registers</em> : données 16 bits en lecture seule ;</li>
+<li>table <em>Holding Registers</em> : données 16 bits en lecture/écriture.</li>
+</ul>
+<p>L'acès à une donnée se fait par son adresse dans sa table ; cette adresse est codée sur 16 bits.</p>
+<p>Le répertoire <code>ModipMap</code> contient des classes permettant de modéliser d'un <b>point de vue métier</b> une cartographie Modbus. La vue métier permet de manipuler les données d'une cartographie non plus directement par leur adresse mais par un <b>nom de rôle</b> en rapport avec celui qu'elles occupent au sein de l'équipement.</p>
+<p>Dans la vue métier, une donnée primaire 16 bits peut aussi se voir associer des <b>données secondaires</b> correspondant à un sous-ensemble de bits de la donnée primaire. Chaque donnée secondaire est aussi manipulable par son nom de rôle ; l'application métier n'a donc plus nécessité d'appliquer les techniques de bas niveau de masquage et de décalage... Plusieurs données primaires 16 bits peuvent aussi être associées pour former une donnée sur 32 bits, 64 bits ou plus. On parle alors de <b>données composées</b>.</p>
+<p>La vue métier permet enfin de choisir un <b>format</b> pour chacune des données primaires, secondaires et composées ; elles deviennent alors manipulables en tant que grandeurs physiques (valeurs entières, valeurs réelles, chaines de caractères, ...).</p>
+<p>Le répertoire <code>ModipTcp</code> propose un ensemble de classes relatives aux couches réseaux TCP/IP qui permettent de construire des serveurs multi-thread et des clients. Ces deux entités peuvent partager la même description de cartographie Modbus ; deux entités connectées, un client et un serveur, peuvent ainsi partager la même vue métier. </p>
+</div></div><!-- contents -->
+<HR size="1">
+<address style="text-align: right;">
+<small><i>Doxygen version 1.8.6</i> - Modbus over TCP/IP Project - (c)2014-2016 by 
+<a href=mailto:alain.menu@ac-creteil.fr>Alain Menu</a>&nbsp;&nbsp;
+</small>
+</address>
+</BODY>
+</HTML>

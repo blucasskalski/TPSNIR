@@ -1,0 +1,93 @@
+TP CtoPOO part2 : fichiers d'entête issus de CtoPOO part1
+---------------
+
+// ----------------------------------------------------------------------------
+// tmonth.h
+// ----------------------------------------------------------------------------
+
+#ifndef TMONTH_H
+#define TMONTH_H
+
+typedef enum { JAN=1, FEV, MAR, AVR, MAI, JUI, JUL, AOU, SEP, OCT, NOV, DEC }	TMonth ;
+
+const char*	strMonth(TMonth month ) ;
+
+#endif
+
+// ----------------------------------------------------------------------------
+// cdate.h
+// ----------------------------------------------------------------------------
+
+#ifndef CDATE_H
+#define CDATE_H
+
+#include "tmonth.h"
+#include <string>
+#include <ostream>
+
+class CDate {
+
+  private :
+  	unsigned	day ;
+  	unsigned	month ;
+  	unsigned	year ;
+  	
+  public :
+	CDate() { set(1, JAN, 1900 ) ; }
+	CDate(unsigned day, TMonth month, unsigned year ) { set(day,month, year ) ; }
+ 	
+	unsigned	getDay() const ;
+	void		setDay(unsigned day ) ;
+
+	TMonth		getMonth() const ;
+	void		setMonth(TMonth month ) ;
+
+	unsigned	getYear() const ;
+	void		setYear(unsigned year ) ;
+
+	void		set(unsigned day, TMonth month, unsigned year ) ;
+
+	std::string		print() const ;
+	std::string		printLong() const ;
+	
+} ;
+
+std::ostream& operator << (std::ostream& s, const CDate& date ) ;
+
+#endif
+
+// ----------------------------------------------------------------------------
+// cmembre.h
+// ----------------------------------------------------------------------------
+
+#ifndef CMEMBRE_H
+#define CMEMBRE_H
+
+#include "cdate.h"
+#include <string>
+using namespace std ;
+
+class CMembre {
+
+  private :
+  	string	nom ;
+  	string	prenom ;
+  	CDate	dateNaiss ;
+  	
+  public :
+  	CMembre() ;
+  	CMembre(string nom, string prenom ) ;
+  	
+  	string	getNom() const { return nom ; }
+  	void	setNom(string nom ) { this->nom = nom ; }
+  	
+  	string	getPrenom() const { return prenom ; }
+  	void	setPrenom(string prenom ) { this->prenom = prenom ; }
+  	
+  	CDate	getDateNaiss() const { return dateNaiss ; }
+  	void	setDateNaiss(CDate dateNaiss ) { this->dateNaiss = dateNaiss ; }
+  	
+  	string	print() const ;
+} ;
+
+#endif

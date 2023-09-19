@@ -1,0 +1,122 @@
+TCThread
+v7
+r0
+t320944952.518991
+cCheck dependencies
+cCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o /Users/af/Documents/src/CThread/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o /Users/af/Documents/src/CThread/CThread.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o /Users/af/Documents/src/CThread/maThread.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cLd /Users/af/Documents/src/CThread/build/Debug/CThread normal x86_64
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004CAA740B00000000000000EE
+t1286239243
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h
+c000000004BBD2CE900000000000038F0
+t1270689001
+s14576
+
+N/Users/af/Documents/src/CThread/CThread.cpp
+c000000004D7102B1000000000000009E
+t1299251889
+s158
+i"CThread.h"
+
+N/Users/af/Documents/src/CThread/CThread.h
+c000000004D7102A00000000000000253
+t1299251872
+s595
+
+N/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.LinkFileList
+c000000004D70FF3D0000000000000136
+t1299251005
+s310
+
+N/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o
+t1299251996
+s1776
+
+N/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o
+t1299252049
+s1780
+
+N/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o
+t1299252149
+s74544
+
+N/Users/af/Documents/src/CThread/build/Debug/CThread
+t1299252152
+s17176
+
+N/Users/af/Documents/src/CThread/maThread.cpp
+c000000004D70FCCC000000000000009E
+t1299250380
+s158
+i"maThread.h"
+
+N/Users/af/Documents/src/CThread/maThread.h
+c000000004D7103D300000000000000EA
+t1299252179
+s234
+
+N/Users/af/Documents/src/CThread/main.cpp
+c000000004D7103B50000000000000136
+t1299252149
+s310
+i<iostream>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies320944952#320944952#0(0"0(0#1#0"8613857440#0"0#
+
+CCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o /Users/af/Documents/src/CThread/CThread.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s320944796.039775
+e320944796.094809
+r1
+xCompileC
+xbuild/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o
+x/Users/af/Documents/src/CThread/CThread.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /Users/af/Documents/src/CThread/CThread.cpp320944796#320944796#0(0"0(0#0#43"/Users/af/Documents/src/CThread/CThread.cpp8612915392#1220"    cd /Users/af/Documents/src/CThread    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-generated-files.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-own-target-headers.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-all-target-headers.hmap -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-project-headers.hmap -F/Users/af/Documents/src/CThread/build/Debug -I/Users/af/Documents/src/CThread/build/Debug/include -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources/x86_64 -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources -c /Users/af/Documents/src/CThread/CThread.cpp -o /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o0#
+
+CCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o /Users/af/Documents/src/CThread/maThread.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s320944849.545396
+e320944849.586128
+r1
+xCompileC
+xbuild/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o
+x/Users/af/Documents/src/CThread/maThread.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@52"Compile /Users/af/Documents/src/CThread/maThread.cpp320944849#320944849#0(0"0(0#0#44"/Users/af/Documents/src/CThread/maThread.cpp8613740640#1222"    cd /Users/af/Documents/src/CThread    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-generated-files.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-own-target-headers.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-all-target-headers.hmap -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-project-headers.hmap -F/Users/af/Documents/src/CThread/build/Debug -I/Users/af/Documents/src/CThread/build/Debug/include -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources/x86_64 -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources -c /Users/af/Documents/src/CThread/maThread.cpp -o /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o0#
+
+CCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o /Users/af/Documents/src/CThread/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s320944952.495237
+e320944952.496262
+r1
+xCompileC
+xbuild/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o
+x/Users/af/Documents/src/CThread/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@48"Compile /Users/af/Documents/src/CThread/main.cpp320944952#320944952#0(0"0(0#0#40"/Users/af/Documents/src/CThread/main.cpp8613464128#1214"    cd /Users/af/Documents/src/CThread    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-generated-files.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-own-target-headers.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-all-target-headers.hmap -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-project-headers.hmap -F/Users/af/Documents/src/CThread/build/Debug -I/Users/af/Documents/src/CThread/build/Debug/include -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources/x86_64 -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources -c /Users/af/Documents/src/CThread/main.cpp -o /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/af/Documents/src/CThread/build/Debug/CThread normal x86_64
+s320944952.496460
+e320944952.518945
+r1
+xLd
+x/Users/af/Documents/src/CThread/build/Debug/CThread
+xnormal
+xx86_64
+lSLF07#2@56"Link /Users/af/Documents/src/CThread/build/Debug/CThread320944952#320944952#0(0"0(0#0#0"8612992832#463"    cd /Users/af/Documents/src/CThread    setenv MACOSX_DEPLOYMENT_TARGET 10.6    /Developer/usr/bin/g++-4.2 -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -L/Users/af/Documents/src/CThread/build/Debug -F/Users/af/Documents/src/CThread/build/Debug -filelist /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.LinkFileList -mmacosx-version-min=10.6 -o /Users/af/Documents/src/CThread/build/Debug/CThread0#
+

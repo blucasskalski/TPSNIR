@@ -1,0 +1,25 @@
+#adresse ip du serveur a remplacer par automate reel !
+HOST;127.0.0.1
+PORT;502
+INFO;Roll a boat
+
+# holding registers
+
+40001;2; FFFF ; lect-roulis ; position roulis (deg) ; Float ;4.2
+40003;2; FFFF ; lect-tangage ; position tangage (deg) ; Float ;0.4
+40005;2; FFFF ; lect-ventr; position baume (deg) - consigne pour la bome physique; Float ;0
+40007;2; FFFF ; lect-vitazimut ; vitesse azimut (deg/s) ; Float ;0
+40009;2; FFFF ; lect-posazimut ; position azimut (deg) ; Float ;0
+
+40011;2; FFFF ; cons-etat ; prise en main a distance 0 = jeu 1 = manu; Float ;0
+40013;2; FFFF ; cons-gouv ; position gouvernail (+/-deg) ; Float ;120
+40015;2; FFFF ; cons-roulis ; consigne de position roulis (deg) ; Float ;0
+40017;2; FFFF ; cons-tangage ; consigne de position tangage (deg) ; Float ;0
+40019;2; FFFF ; cons-anglebome;' consigne de position baume (deg) angle r�el bome, resultant de l''ecart avec lect-ventr'; Float ;0.5
+40021;2; FFFF ; cons-vitazimut ; consigne de vitesse azimut (+/-deg/s) ; Float ;0
+40023;2; FFFF ; cons-acc ;' consigne de l''acceleration (-1 a 1) '; Float ;0
+40025;2;FFFF;cons-forcevent;consigne de la force du vent en n�uds; Float ;25
+40027;2;FFFF;cons-anglevent;consigne de la direction du vent (absolue, renseign�e � la pom); Float ;0
+40029;2;FFFF;cons-hautvague;consigne de hauteur de vague (m); Float ;0
+40031;2;FFFF;cons-vitvague;consigne vitesse de vague (m/s); Float ;0
+40033;2;FFFF;cons-intervague;consigne de distance inter vagues (m inter cr�tes); Float ;0.2

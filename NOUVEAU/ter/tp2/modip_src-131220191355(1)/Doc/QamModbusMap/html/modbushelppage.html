@@ -1,0 +1,1896 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2): Modbus Protocol</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="qam47.ico" type="image/x-icon" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Modbus-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Modbus Protocol </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Modbus over IP Protocol</p>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.3.2 (MacOSX)">
+	<META NAME="AUTHOR" CONTENT="Alain Menu">
+	<META NAME="CREATED" CONTENT="20140116;1196894104">
+	<META NAME="CHANGEDBY" CONTENT="Alain Menu">
+	<META NAME="CHANGED" CONTENT="20140117;141847462881000">
+	<META NAME="CHANGEDBY" CONTENT="Alain Menu">
+	<META NAME="CHANGEDBY" CONTENT="Alain Menu">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin: 2cm }
+		TD P { margin-bottom: 0cm }
+		P { margin-bottom: 0cm }
+		H2 { margin-top: 0.12cm; margin-bottom: 0.1cm }
+		H2.western { font-family: "Arial", sans-serif; font-size: 14pt; font-style: italic }
+		H2.cjk { font-family: "SimSun"; font-size: 14pt; font-style: italic }
+		H2.ctl { font-family: "Lucida Sans"; font-size: 14pt; font-style: italic }
+		A:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="fr-FR" DIR="LTR">
+<P ALIGN=CENTER STYLE="margin-bottom: 0.5cm; page-break-after: avoid">
+<FONT COLOR="#008080"><FONT FACE="Arial, sans-serif"><FONT SIZE=5><B>Modbus
+over IP Help Page</B></FONT></FONT></FONT></P>
+<P STYLE="margin-bottom: 0.5cm"><BR><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">What
+is Modbus?</H2>
+<P STYLE="margin-bottom: 0.5cm">Modbus is a serial communication
+protocol developed by Modicon and published by Modicon® in 1979 for
+use with its programmable logic controllers (PLCs). In simple terms,
+it is a method used for transmitting information over serial lines
+between electronic devices. The device requesting the information is
+called the Modbus Master and the devices supplying information are
+Modbus Slaves.</P>
+<P STYLE="margin-bottom: 0.5cm">In a standard Modbus network, there
+is one Master and up to 247 Slaves, each with a unique Slave Address
+from 1 to 247. The Master can also write information to the Slaves.</P>
+<P STYLE="margin-bottom: 0.5cm">The official Modbus specification can
+be found at <A HREF="http://www.modbus-ida.org/">www.modbus-ida.org</A>.</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">What
+is it used for?</H2>
+<P STYLE="margin-bottom: 0.5cm">Modbus is an open protocol, meaning
+that it's free for manufacturers to build into their equipment
+without having to pay royalties. It has become a standard
+communications protocol in industry, and is now the most commonly
+available means of connecting industrial electronic devices. It is
+used widely by many manufacturers throughout many industries. Modbus
+is typically used to transmit signals from instrumentation and
+control devices back to a main controller or data gathering system,
+for example a system that measures temperature and humidity and
+communicates the results to a computer. 
+</P>
+<P STYLE="margin-bottom: 0.5cm">Modbus is often used to connect a
+supervisory computer with a remote terminal unit (RTU) in supervisory
+control and data acquisition (SCADA) systems. Versions of the Modbus
+protocol exist for serial lines (Modbus RTU and Modbus ASCII) and for
+Ethernet (Modbus TCP).</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">How
+is data stored in Standard Modbus?</H2>
+<P STYLE="margin-bottom: 0.5cm">Information is stored in the Slave
+device in four different tables. Two tables store on/off discrete
+values (coils) and two store numerical values (registers). The coils
+and registers each have a read-only table and read-write table.</P>
+<P STYLE="margin-bottom: 0.5cm">Each table has 9999 values. Each coil
+or contact is 1 bit and assigned a data address between <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+and <FONT COLOR="#008080"><FONT FACE="Courier, monospace">270E</FONT></FONT>.
+Each register is 1 word (16 bits = 2 bytes) and also has data address
+between <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+and <FONT COLOR="#008080"><FONT FACE="Courier, monospace">270E</FONT></FONT>.</P>
+<TABLE WIDTH=100% CELLPADDING=5 CELLSPACING=0>
+	<COL WIDTH=64*>
+	<COL WIDTH=52*>
+	<COL WIDTH=42*>
+	<COL WIDTH=97*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><I>Coil/Register Numbers</I></P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><I>Data Addresses</I></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><I>Type</I></P>
+		</TD>
+		<TD WIDTH=38% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=CENTER><I>Table Name</I></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>1-9999</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+			to <FONT COLOR="#008080"><FONT FACE="Courier, monospace">270E</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Read-Write</P>
+		</TD>
+		<TD WIDTH=38% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Discrete Output Coils</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>10001-19999</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+			to <FONT COLOR="#008080"><FONT FACE="Courier, monospace">270E</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Read-Only</P>
+		</TD>
+		<TD WIDTH=38% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Discrete Input Contacts</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>30001-39999</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+			to <FONT COLOR="#008080"><FONT FACE="Courier, monospace">270E</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Read-Only</P>
+		</TD>
+		<TD WIDTH=38% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Analog Input Registers</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>40001-49999</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+			to <FONT COLOR="#008080"><FONT FACE="Courier, monospace">270E</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Read-Write</P>
+		</TD>
+		<TD WIDTH=38% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Analog Output Holding Registers</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Coil/Register Numbers can be thought
+of as location names since they do not appear in the actual messages.
+The Data Addresses are used in the messages. For example, the first
+Holding Register, number 40001, has the Data Address <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>.</P>
+<P STYLE="margin-bottom: 0.5cm">The difference between these two
+values is the offset. Each table has a different offset: 1, 10001,
+30001 and 40001.</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">What
+is a function code?</H2>
+<P STYLE="margin-bottom: 0.5cm">This number tells the slave which
+table to access and whether to read from or write to the table.</P>
+<TABLE WIDTH=100% CELLPADDING=5 CELLSPACING=0>
+	<COL WIDTH=65*>
+	<COL WIDTH=65*>
+	<COL WIDTH=126*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><I>Function Code</I></P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><I>Action</I></P>
+		</TD>
+		<TD WIDTH=49% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P ALIGN=CENTER><I>Table Name</I></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>1 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">01</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Read</P>
+		</TD>
+		<TD WIDTH=49% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Discrete Output Coils</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>5 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">05</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Write single</P>
+		</TD>
+		<TD WIDTH=49% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Discrete Output Coil</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>15 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Write multiple</P>
+		</TD>
+		<TD WIDTH=49% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Discrete Output Coils</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>2 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">02</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Read</P>
+		</TD>
+		<TD WIDTH=49% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Discrete Input Contacts</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>4 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">04</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Read</P>
+		</TD>
+		<TD WIDTH=49% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Analog Input Registers</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>3 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Read</P>
+		</TD>
+		<TD WIDTH=49% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Analog Output Holding Registers</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>6 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">06</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Write single</P>
+		</TD>
+		<TD WIDTH=49% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Analog Output Holding Register</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>16 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">10</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=25% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>Write multiple</P>
+		</TD>
+		<TD WIDTH=49% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P ALIGN=CENTER>Analog Output Holding Registers</P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm"><BR><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">What
+are data types?</H2>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: function 3 shows that
+register 40108 contains <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41</FONT></FONT>,
+which converts to the 16 bits 1010 1110 0100 0001</P>
+<P STYLE="margin-bottom: 0.5cm">Great! But what does it mean? Well,
+it could mean a few things.</P>
+<P STYLE="margin-bottom: 0.5cm">Register 40108 could be defined as
+any of these 16-bit data types:</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm">A <B>16-bit unsigned integer</B>
+	(a whole number between 0 and 65,535), register 40108 contains <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41</FONT></FONT>
+	= 44,609 (hex to decimal conversion)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">A <B>16-bit signed integer</B>
+	(a whole number between -32,768 and 32,767), <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41</FONT></FONT>
+	= -20,927 (hex to decimal conversion that wraps, if its over 32,767
+	then subtract 65,536)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">A <B>two character ASCII string</B>
+	(2 typed letters), <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41</FONT></FONT>
+	= ® A</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">A <B>discrete on/off value</B>
+	(this works the same as 16-bit integers with a value of 0 or 1. The
+	hex data would be <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+	or <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0001</FONT></FONT>)</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Register 40108 could also be combined
+with 40109 to form any of these 32-bit data types:</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm">A <B>32-bit unsigned integer</B>
+	(a number between 0 and 4,294,967,295), 40108,40109 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41
+	5652</FONT></FONT> = 2,923,517,522</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">A <B>32-bit signed integer</B>
+	(a number between -2,147,483,648 and 2,147,483,647), <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41
+	5652</FONT></FONT> = -1,371,449,774</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">A <B>32-bit single precision
+	IEEE floating point number</B><SPAN STYLE="font-weight: normal">.</SPAN>
+	This is a mathematical formula that allows any real number (a number
+	with decimal points) to represented by 32 bits with an accuracy of
+	about seven digits. <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41
+	5652</FONT></FONT> = -4.395978 E-11</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">A <B>four character ASCII string</B>
+	(4 typed letters), <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41
+	5652</FONT></FONT> = ® A V R</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">More registers can be combined to
+form longer ASCII strings. Each register being used to store two
+ASCII characters (two bytes).</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">What
+is a Modbus Map?</H2>
+<P STYLE="margin-bottom: 0.5cm">A modbus map is simply a list for an
+individual slave device that defines:</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm">what the data is (eg. pressure
+	or temperature readings)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">where the data is stored (which
+	tables and data addresses)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">how the data is stored (data
+	types, byte and word ordering)</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Some devices are built with a fixed
+map that is defined by the manufacturer. While other devices allow
+the operator to configure or program a custom map to fit their needs.</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">Modbus
+RTU over TCP</H2>
+<P STYLE="margin-bottom: 0.5cm">TCP is Transmission Control Protocol
+and IP is Internet Protocol. These protocols are used together and
+are the transport protocol for the internet. When modbus information
+is sent using these protocols, the data is passed to TCP where
+additional information is attached and given to IP. IP then places
+the data in a packet (or datagram) and transmits it.</P>
+<P STYLE="margin-bottom: 0.5cm">TCP must establish a connection
+before transferring data, since it is a connection-based protocol.
+The Master (or Client in Modbus TCP) establishes a connection with
+the Slave (or Server). The Server waits for an incoming connection
+from the Client. Once a connection is established, the Server then
+responds to the queries from the Client until the client closes the
+connection.</P>
+<P STYLE="margin-bottom: 0.5cm">Simply put, this is a Modbus RTU
+message transmitted with a TCP/IP wrapper and sent over a network
+instead of serial lines. The Server does not have a SlaveID since it
+uses an IP Address instead.</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">ADU &amp;
+PDU</H2>
+<P STYLE="margin-bottom: 0.5cm">Aside from the main differences
+between serial and network connections stated above, there are a few
+differences in the message content.</P>
+<P STYLE="margin-bottom: 0.5cm">Starting with the Modbus RTU message
+and removing the SlaveID from the beginning and the CRC from the end
+results in the PDU, Protocol Data Unit.</P>
+<P STYLE="margin-bottom: 0.5cm">Here is an example of a Modbus RTU
+request for the content of analog output holding registers #40108 to
+40110 from the slave device with address 17&nbsp;: 
+</P>
+<P STYLE="margin-bottom: 0.5cm">Application Data Unit (ADU) =  <FONT COLOR="#008080"><FONT FACE="Courier, monospace">11
+03 00 6B 00 03 76 87</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">11</FONT></FONT>:
+	The SlaveID Address (17 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">11</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT>:
+	The Function Code (read Analog Output Holding Registers)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">006B</FONT></FONT>:
+	The Data Address of the first register requested. (40108-40001 = 107
+	= <FONT COLOR="#008080"><FONT FACE="Courier, monospace">6B</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0003</FONT></FONT>:
+	The total number of registers requested. (read 3 registers 40108 to
+	40110) 
+	</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">7687</FONT></FONT>:
+	The CRC (cyclic redundancy check) for error checking.</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Removing the SlaveID and CRC gives
+the PDU:  <FONT COLOR="#008080"><FONT FACE="Courier, monospace">03 00
+6B 00 03</FONT></FONT></P>
+<TABLE WIDTH=100% CELLPADDING=5 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COL WIDTH=43*>
+	<COL WIDTH=43*>
+	<COL WIDTH=43*>
+	<COL WIDTH=43*>
+	<COL WIDTH=43*>
+	<COL WIDTH=43*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P><FONT FACE="Courier, monospace"><I>Serial RTU</I></FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P><BR>
+			</P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P><BR>
+			</P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=33% STYLE="border: none; padding: 0cm">
+			<P><FONT FACE="Courier, monospace"><I>TCP/IP (port 502)</I></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">SlaveID</FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace"><B>PDU</B></FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">CRC</FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=17% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">MBAP</FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace"><B>PDU</B></FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1 byte</FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2 bytes</FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">7 bytes</FONT></P>
+		</TD>
+		<TD WIDTH=17% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+	</TR>
+</TABLE>
+<P><BR>
+</P>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">MBAP
+Header</H2>
+<P STYLE="margin-bottom: 0.5cm">Over IP, a new 7-byte header called
+the MBAP header (Modbus Application Header) is added to the start of
+the message. This header has the following data:</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><B>Transaction Identifier</B>: 2
+	bytes set by the Client to uniquely identify each request. These
+	bytes are echoed by the Server since its responses may not be
+	received in the same order as the requests.</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><B>Protocol Identifier</B>: 2
+	bytes set by the Client, always = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">00
+	00</FONT></FONT></P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><B>Length</B>: 2 bytes
+	identifying the number of bytes in the message to follow.</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><B>Unit Identifier</B>: 1 byte
+	set by the Client and echoed by the Server for identification of a
+	remote slave connected on a serial line or on other buses.</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">The equivalent request to this Modbus
+RTU example: <FONT COLOR="#008080"><FONT FACE="Courier, monospace">11
+03 00 6B 00 03 76 87</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.5cm">in Modbus TCP is: <FONT COLOR="#008080"><FONT FACE="Courier, monospace">00
+01 00 00 00 06 11 03 00 6B 00 03</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0001</FONT></FONT>:
+	Transaction Identifier</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>:
+	Protocol Identifier</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0006</FONT></FONT>:
+	Message Length (6 bytes to follow)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">11</FONT></FONT>:
+	The Unit Identifier (17 = 11 hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT>:
+	The Function Code (read Analog Output Holding Registers)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">006B</FONT></FONT>:
+	The Data Address of the first register requested. (40108-40001 = 107
+	=6B hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0003</FONT></FONT>:
+	The total number of registers requested. (read 3 registers 40108 to
+	40110)</P>
+</UL>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">PDU
+Transaction Formats</H2>
+<P STYLE="margin-bottom: 0.5cm"><B>Read Coil Status (FC=01)</B></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm 0.05cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">..</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">01</FONT></FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">number</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">01</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">N</FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=27% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">data (N bytes)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">number = 1..2000
+			(<FONT COLOR="#008080"><FONT FACE="Courier, monospace">07D0</FONT></FONT>)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">N = number / 8 + (
+			number % 8 ? 1 : 0 )</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: Request = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">01
+00 13 00 25</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.5cm">This command is requesting the ON/OFF
+status of discrete coils # 20 to 56.</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">01</FONT></FONT>:
+	The Function Code (read Coil Status)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0013</FONT></FONT>:
+	The Data Address of the first coil to read. (Coil 20 - 1 = 19 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">13</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0025</FONT></FONT>:
+	The total number of coils requested. (coils 20 to 56 = 37 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">25</FONT></FONT>
+	hex) 
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Response = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">01
+05 CD 6B B2 0E 1B</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">01</FONT></FONT>:
+	The Function Code (read Coil Status)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">05</FONT></FONT>:
+	The number of data bytes to follow (37 Coils / 8 bits per byte = 5
+	bytes)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">CD</FONT></FONT>:
+	Coils 27 - 20 (1100 1101)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">6B</FONT></FONT>:
+	Coils 35 - 28 (0110 1011)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">B2</FONT></FONT>:
+	Coils 43 - 36 (1011 0010)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0E</FONT></FONT>:
+	Coils 51 - 44 (0000 1110)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">1B</FONT></FONT>:
+	3 space holders &amp; Coils 56 - 52 (0001 1011)</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">The more significant bits contain the
+higher coil variables. This shows that coil 36 is off (0) and 43 is
+on (1). Due to the number of coils requested, the last data field <FONT COLOR="#008080"><FONT FACE="Courier, monospace">1B</FONT></FONT>
+contains the status of only 5 coils. The three most significant bits
+in this data field are filled in with zeroes.</P>
+<P STYLE="margin-bottom: 0.5cm"><B>Read Input Status (FC=02)</B></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm 0.05cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">..</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">02</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">number</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">02</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">N</FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=27% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">data (N bytes)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">number = 1..2000
+			(<FONT COLOR="#008080"><FONT FACE="Courier, monospace">07D0</FONT></FONT>)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">N = number / 8 + (
+			number % 8 ? 1 : 0 )</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: Request = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">02
+00 C4 00 16 </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0.5cm">This command is requesting the ON/OFF
+status of discrete inputs # 10197 to 10218.</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">02</FONT></FONT>:
+	The Function Code (read Input Status)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">00C4</FONT></FONT>:
+	The Data Address of the first input to read. (10197 - 10001 = 196 =
+	<FONT COLOR="#008080"><FONT FACE="Courier, monospace">C4</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0016</FONT></FONT>:
+	The total number of coils requested. (197 to 218 = 22 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">16</FONT></FONT>
+	hex) 
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Response = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">02
+03 AC DB 35</FONT></FONT></P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">02</FONT></FONT>:
+	The Function Code (read Input Status)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT>:
+	The number of data bytes to follow (22 Inputs / 8 bits per byte = 3
+	bytes)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">AC</FONT></FONT>:
+	Discrete Inputs 10204 -10197 (1010 1100)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">DB</FONT></FONT>:
+	Discrete Inputs 10212 - 10205 (1101 1011)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">35</FONT></FONT>:
+	2 space holders &amp; Discrete Inputs 10218 - 10213 (0011 0101)</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">The more significant bits contain the
+higher Discrete inputs. This shows that input 10197 is off (0) and
+10204 is on (1). Due to the number of inputs requested, the last data
+field <FONT COLOR="#008080"><FONT FACE="Courier, monospace">35</FONT></FONT>
+contains the status of only 6 inputs. The two most significant bits
+in this data field are filled in with zeroes.</P>
+<P STYLE="margin-bottom: 0.5cm"><B>Read Holding Registers (FC=03)</B></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm 0.05cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">..</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">number</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">N</FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=27% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">data (N bytes)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">number = 1..125
+			(<FONT COLOR="#008080"><FONT FACE="Courier, monospace">007D</FONT></FONT>)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">N = number * 2</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: Request = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">03
+00 6B 00 03 </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0.5cm">This command is requesting the
+content of analog output holding registers # 40108 to 40110.</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT>:
+	The Function Code (read Analog Output Holding Registers)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">006B</FONT></FONT>:
+	The Data Address of the first register requested. (40108-40001 = 107
+	= <FONT COLOR="#008080"><FONT FACE="Courier, monospace">6B</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0003</FONT></FONT>:
+	The total number of registers requested. (read 3 registers 40108 to
+	40110) 
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Response = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">03
+06 AE 41 56 52 43 40 </FONT></FONT>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT>:
+	The Function Code (read Analog Output Holding Registers)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">06</FONT></FONT>:
+	The number of data bytes to follow (3 registers x 2 bytes each = 6
+	bytes)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">AE41</FONT></FONT>:
+	The contents of register 40108</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">5652</FONT></FONT>:
+	The contents of register 40109</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">4340</FONT></FONT>:
+	The contents of register 40110</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm"><B>Read Input Registers (FC=04)</B></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm 0.05cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">..</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">04</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">number</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">04</FONT></FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">N</FONT></P>
+		</TD>
+		<TD COLSPAN=3 WIDTH=27% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">data (N bytes)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">number = 1..125
+			(<FONT COLOR="#008080"><FONT FACE="Courier, monospace">007D</FONT></FONT>)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">N = number * 2</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: Request = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">04
+00 08 00 01</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.5cm">This command is requesting the
+content of analog input register # 30009.</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">04</FONT></FONT>:
+	The Function Code (read Analog Input Registers)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0008</FONT></FONT>:
+	The Data Address of the first register requested. (30009-30001 = 8)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0001</FONT></FONT>:
+	The total number of registers requested. (read 1 register) 
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Response = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">04
+02 00 0A </FONT></FONT>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">04</FONT></FONT>:
+	The Function Code (read Analog Input Registers)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">02</FONT></FONT>:
+	The number of data bytes to follow (1 registers x 2 bytes each = 2
+	bytes)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">000A</FONT></FONT>:
+	The contents of register 30009</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm"><B>Force Single Coil (FC=05)</B></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">05</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">value</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD COLSPAN=5 WIDTH=45% STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">response = echo of
+			the request</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">value = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+			or <FONT COLOR="#008080"><FONT FACE="Courier, monospace">FF00</FONT></FONT></FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: Request = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">05
+00 AC FF 00 </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0.5cm">This command is writing the contents
+of discrete coil # 173 to ON.</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">05</FONT></FONT>:
+	The Function Code (Force Single Coil)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">00AC</FONT></FONT>:
+	The Data Address of the coil. (coil# 173 - 1 = 172 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AC</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">FF00</FONT></FONT>:
+	The status to write ( <FONT COLOR="#008080"><FONT FACE="Courier, monospace">FF00</FONT></FONT>
+	= ON, <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+	= OFF ) 
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Response = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">05
+00 AC FF 00 </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0.5cm">The normal response is an echo of the
+query, returned after the coil has been written.</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">05</FONT></FONT>:
+	The Function Code (Force Single Coil)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">00AC</FONT></FONT>:
+	The Data Address of the coil. (coil# 173 - 1 = 172 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">AC</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">FF00</FONT></FONT>:
+	The status written ( <FONT COLOR="#008080"><FONT FACE="Courier, monospace">FF00</FONT></FONT>
+	= ON, <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0000</FONT></FONT>
+	= OFF ) 
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm"><B>Preset Single Register (FC=06)</B></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<COLGROUP>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+		<COL WIDTH=23*>
+	</COLGROUP>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=9% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">06</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=18% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">value</FONT></P>
+		</TD>
+		<TD WIDTH=9% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD COLSPAN=5 WIDTH=45% STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">response = echo of
+			the request</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=11 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">value = 0..65535
+			(<FONT COLOR="#008080"><FONT FACE="Courier, monospace">FFFF</FONT></FONT>)</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: Request = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">06
+00 01 00 03 </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0.5cm">This command is writing the contents
+of analog output holding register # 40002.</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">06</FONT></FONT>:
+	The Function Code (Preset Single Register)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0001</FONT></FONT>:
+	The Data Address of the register. (# 40002 - 40001 = 1 )</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0003</FONT></FONT>:
+	The value to write</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Response = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">06
+00 01 00 03 </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0.5cm">The normal response is an echo of the
+query, returned after the register contents have been written.</P>
+<P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">06</FONT></FONT>:
+The Function Code (Preset Single Register)</P>
+<P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0001</FONT></FONT>:
+The Data Address of the register. (# 40002 - 40001 = 1 )</P>
+<P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0003</FONT></FONT>:
+The value written</P>
+<P STYLE="margin-bottom: 0.5cm"><B>Force Multiple Coils (FC=15)</B></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">5</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">6</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm 0.05cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">..</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm 0.05cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=7% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">number</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">N</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">data</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">number</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=14 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P><FONT FACE="Courier, monospace">number = 1..2000 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">07D0</FONT></FONT>)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=14 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">N = number / 8 + (
+			number % 8 ? 1 : 0 )</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: Request = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F
+00 13 00 0A 02 CD 01</FONT></FONT></P>
+<P STYLE="margin-bottom: 0.5cm">This command is writing the contents
+of a series of 10 discrete coils from #20 to #29.</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F</FONT></FONT>:
+	The Function Code (Force Multiple Coil, 15 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0013</FONT></FONT>:
+	The Data Address of the first coil. (coil# 20 - 1 = 19 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">13</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">000A</FONT></FONT>:
+	The number of coils to written (10 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0A</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">02</FONT></FONT>:
+	The number of data bytes to follow (10 Coils / 8 bits per byte = 2
+	bytes)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">CD</FONT></FONT>:
+	Coils 27 - 20 (1100 1101) 
+	</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">01</FONT></FONT>:
+	6 space holders &amp; Coils 29 - 28 (0000 0001) 
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">The more significant bits contain the
+higher coil variables. This shows that coil 20 is on (1) and 21 is
+off (0). Due to the number of coils requested, the last data field <FONT COLOR="#008080"><FONT FACE="Courier, monospace">01</FONT></FONT>
+contains the status of only 2 coils. The unused bits in the last data
+byte are filled in with zeroes.</P>
+<P STYLE="margin-bottom: 0.5cm">Response = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F
+00 13 00 0A </FONT></FONT>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F</FONT></FONT>:
+	The Function Code (Force Multiple Coil, 15 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0F</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0013</FONT></FONT>:
+	The Data Address of the first coil. (coil# 20 - 1 = 19 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">13</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">000A</FONT></FONT>:
+	The number of coils to written (10 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">0A</FONT></FONT>
+	hex)</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm"><B>Preset Multiple Registers (FC=16)</B></P>
+<TABLE WIDTH=100% CELLPADDING=3 CELLSPACING=1 STYLE="page-break-before: auto; page-break-after: auto; page-break-inside: avoid">
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<COL WIDTH=18*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">5</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">6</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm 0.05cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">..</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">0</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">1</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">2</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0cm; padding-left: 0.05cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">3</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: none; border-bottom: none; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0cm 0.05cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">4</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=7% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">10</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">number</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">N</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">data</FONT></P>
+		</TD>
+		<TD WIDTH=7% STYLE="border: none; padding: 0cm">
+			<P ALIGN=CENTER><BR>
+			</P>
+		</TD>
+		<TD WIDTH=7% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT COLOR="#008080"><FONT FACE="Courier, monospace">10</FONT></FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border-top: 1px double #008080; border-bottom: 1px double #008080; border-left: 1px double #008080; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">address</FONT></P>
+		</TD>
+		<TD COLSPAN=2 WIDTH=14% STYLE="border: 1px double #008080; padding: 0.1cm">
+			<P ALIGN=CENTER><FONT FACE="Courier, monospace">number</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=14 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P><FONT FACE="Courier, monospace">number = 1..120 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">0078</FONT></FONT>)</FONT></P>
+		</TD>
+	</TR>
+	<TR>
+		<TD COLSPAN=14 WIDTH=100% VALIGN=TOP STYLE="border: none; padding: 0cm">
+			<P ALIGN=LEFT><FONT FACE="Courier, monospace">N = number * 2</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm">Example&nbsp;: Request = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">10
+00 01 00 02 04 00 0A 01 02 </FONT></FONT>
+</P>
+<P STYLE="margin-bottom: 0.5cm">This command is writing the contents
+of two analog output holding registers # 40002 &amp; 40003 .</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">10</FONT></FONT>:
+	The Function Code (Preset Multiple Registers 16 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">10</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0001</FONT></FONT>:
+	The Data Address of the first register. (# 40002 - 40001 = 1 )</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0002</FONT></FONT>:
+	The number of registers to write</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">04</FONT></FONT>:
+	The number of data bytes to follow (2 registers x 2 bytes each = 4
+	bytes)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">000A</FONT></FONT>:
+	The value to write to register 40002</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0102</FONT></FONT>:
+	The value to write to register 40003</P>
+</UL>
+<P STYLE="margin-bottom: 0.5cm">Response = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">10
+00 01 00 02 </FONT></FONT>
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">10</FONT></FONT>:
+	The Function Code (Preset Multiple Registers 16 = <FONT COLOR="#008080"><FONT FACE="Courier, monospace">10</FONT></FONT>
+	hex)</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0001</FONT></FONT>:
+	The Data Address of the first register. (# 40002 - 40001 = 1 )</P>
+	<LI><P STYLE="margin-bottom: 0.5cm"><FONT COLOR="#008080"><FONT FACE="Courier, monospace">0002</FONT></FONT>:
+	The number of registers written.</P>
+</UL>
+<H2 CLASS="western" STYLE="margin-top: 0cm; margin-bottom: 0cm">Exception
+Responses</H2>
+<P STYLE="margin-bottom: 0.5cm">Following a request, there are 4
+possible outcomes from the slave.</P>
+<OL>
+	<LI><P STYLE="margin-bottom: 0.5cm">The request is successfully
+	processed by the slave and a valid response is sent.</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">The request is not received by
+	the slave therefore no response is sent.</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">The request is received by the
+	slave with a parity, CRC or LRC error. The slave ignores the request
+	and sends no response.</P>
+	<LI><P STYLE="margin-bottom: 0.5cm">The request is received without
+	an error, but cannot be processed by the slave for another reason.
+	The slave replies with an exception response.</P>
+</OL>
+<P STYLE="margin-bottom: 0.5cm">In a normal response, the slave
+echoes the function code. The first sign of an exception response is
+that the function code is shown in the echo with its highest bit set.
+All function codes have 0 for their most significant bit. Therefore,
+setting this bit to 1 is the signal that the slave cannot process the
+request. In this case, following the Function Code is the Exception
+Code. The exception code gives an indication of the nature of the
+problem.</P>
+<P STYLE="margin-bottom: 0.5cm">The exception codes as explained in
+the Modbus specification are:</P>
+<TABLE WIDTH=100% CELLPADDING=5 CELLSPACING=0>
+	<COL WIDTH=28*>
+	<COL WIDTH=51*>
+	<COL WIDTH=177*>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER><I>Code</I></P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0.1cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P><I>Name</I></P>
+		</TD>
+		<TD WIDTH=69% STYLE="border: 1px solid #000000; padding: 0.1cm">
+			<P><I>Meaning</I></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>1 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">01</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Illegal Function</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>The function code received in the query is not an
+			allowable action for the slave. This may be because the function
+			code is only applicable to newer devices, and was not implemented
+			in the unit selected. It could also indicate that the slave is in
+			the wrong state to process a request of this type, for example
+			because it is unconfigured and is being asked to return register
+			values. If a Poll Program Complete command was issued, this code
+			indicates that no program function preceded it.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>2 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">02</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Illegal Data Address</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>The data address received in the query is not an
+			allowable address for the slave. More specifically, the
+			combination of reference number and transfer length is invalid.
+			For a controller with 100 registers, a request with offset 96 and
+			length 4 would succeed, a request with offset 96 and length 5 will
+			generate exception 02.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>3 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">03</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Illegal Data Value</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>A value contained in the query data field is not
+			an allowable value for the slave. This indicates a fault in the
+			structure of remainder of a complex request, such as that the
+			implied length is incorrect. It specifically does NOT mean that a
+			data item submitted for storage in a register has a value outside
+			the expectation of the application program, since the MODBUS
+			protocol is unaware of the significance of any particular value of
+			any particular register.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>4 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">04</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Slave Device Failure</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>An unrecoverable error occurred while the slave
+			was attempting to perform the requested action.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>5 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">05</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Acknowledge</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>Specialized use in conjunction with programming
+			commands. The slave has accepted the request and is processing it,
+			but a long duration of time will be required to do so. This
+			response is returned to prevent a timeout error from occurring in
+			the master. The master can next issue a Poll Program Complete
+			message to determine if processing is completed.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>6 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">06</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Slave Device Busy</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>Specialized use in conjunction with programming
+			commands. The slave is engaged in processing a long-duration
+			program command. The master should retransmit the message later
+			when the slave is free..</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>7 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">07</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Negative Acknowledge</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>The slave cannot perform the program function
+			received in the query. This code is returned for an unsuccessful
+			programming request using function code 13 or 14 decimal. The
+			master should request diagnostic or error information from the
+			slave.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>8 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">08</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Memory Parity Error</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>Specialized use in conjunction with function codes
+			20 and 21 and reference type 6, to indicate that the extended file
+			area failed to pass a consistency check. The slave attempted to
+			read extended memory or record file, but detected a parity error
+			in memory. The master can retry the request, but service may be
+			required on the slave device.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>10 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">0A</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Gateway Path Unavailable</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>Specialized use in conjunction with gateways,
+			indicates that the gateway was unable to allocate an internal
+			communication path from the input port to the output port for
+			processing the request. Usually means the gateway is misconfigured
+			or overloaded.</FONT></P>
+		</TD>
+	</TR>
+	<TR VALIGN=TOP>
+		<TD WIDTH=11% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P ALIGN=CENTER>11 (<FONT COLOR="#008080"><FONT FACE="Courier, monospace">0B</FONT></FONT>
+			hex)</P>
+		</TD>
+		<TD WIDTH=20% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: none; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0cm">
+			<P>Gateway Target Device Failed to Respond</P>
+		</TD>
+		<TD WIDTH=69% STYLE="border-top: none; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; padding-top: 0cm; padding-bottom: 0.1cm; padding-left: 0.1cm; padding-right: 0.1cm">
+			<P><FONT SIZE=3>Specialized use in conjunction with gateways,
+			indicates that no response was obtained from the target device.
+			Usually means that the device is not present on the network.</FONT></P>
+		</TD>
+	</TR>
+</TABLE>
+<P STYLE="margin-bottom: 0.5cm"><BR><BR>
+</P>
+<P STYLE="margin-bottom: 0.5cm"><I>sources&nbsp;:</I></P>
+<P STYLE="margin-bottom: 0.5cm"><A HREF="http://www.modbus-ida.org/">http://www.modbus-ida.org/</A>
+</P>
+<P STYLE="margin-bottom: 0.5cm"><A HREF="http://www.simplymodbus.ca/">http://www.simplymodbus.ca</A></P>
+<P STYLE="margin-bottom: 0.5cm"><BR><BR>
+</P>
+</BODY>
+</HTML> </div></div><!-- contents -->
+<HR size="1">
+<address style="text-align: right;">
+<small><i>Doxygen version 1.8.6</i> - Modbus over TCP/IP Project - (c)2014-2016 by 
+<a href=mailto:alain.menu@ac-creteil.fr>Alain Menu</a>&nbsp;&nbsp;
+</small>
+</address>
+</BODY>
+</HTML>

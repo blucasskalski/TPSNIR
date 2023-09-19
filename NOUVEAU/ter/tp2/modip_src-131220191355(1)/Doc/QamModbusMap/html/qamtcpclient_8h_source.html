@@ -1,0 +1,167 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2):  Fichier source de qamtcpclient.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="qam47.ico" type="image/x-icon" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Modbus-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">qamtcpclient.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="qamtcpclient_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*  ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  filename    :   qamtcpclient.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *  description :   INTERFACE de la classe QamTcpClient</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  project     :   QamSockets Library</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  start date  :   fév 2006</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  Copyright 2006-2016 by Alain Menu   &lt;alain.menu@ac-creteil.fr&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *  This file is part of &quot;QamSockets Library&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *  This program is free software ;  you can  redistribute it and/or  modify it</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  under the terms of the  GNU General Public License as published by the Free</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  Software Foundation ; either version 3 of the License, or  (at your option)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *  This program is distributed in the hope that it will be useful, but WITHOUT</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  ANY WARRANTY ; without even the  implied  warranty  of  MERCHANTABILITY  or</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *  FITNESS FOR  A PARTICULAR PURPOSE. See the  GNU General Public License  for</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *  more details.</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *  You should have  received  a copy of the  GNU General Public License  along</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#ifndef QAMTCPCLIENT_H</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define QAMTCPCLIENT_H</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#include &quot;_ABOUT&quot;</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#include &lt;QTcpSocket&gt;</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="qamabstractserver_8h.html">qamabstractserver.h</a>&quot;</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_qam_tcp_client.html">   59</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_qam_tcp_client.html">QamTcpClient</a> : <span class="keyword">public</span> QTcpSocket</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_qam_tcp_client.html#a015dddab4090a208ceedf85277231909">QamTcpClient</a>(<a class="code" href="class_qam_abstract_server.html">QamAbstractServer</a>* server = 0, QObject* parent = 0 ) ;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_tcp_client.html#a21a9a8365cb2f0e7d9e37c110bdcf52b">sockConnect</a>(<span class="keyword">const</span> QString&amp; hostName, quint16 port ) ;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keyword">public</span> slots :</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_tcp_client.html#acf460f3541b8e50ec2fb15abe4a63770">sockClose</a>() ;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_tcp_client.html#a4332e5b45fa0654fef43cfe1768b67c4">sockWrite</a>(<span class="keyword">const</span> QByteArray&amp; data ) ;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  signals :</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_tcp_client.html#ad66c963012d358b3a0ed10410a6c6d8d">sockReceived</a>(<span class="keyword">const</span> QByteArray&amp; ) ;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_tcp_client.html#a1259f3d14ce60ca3a3e3a442e6869fec">sockInfo</a>(<span class="keyword">const</span> QString&amp; ) ;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">private</span> slots :</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> sockRead() ;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> sockError(QAbstractSocket::SocketError error ) ;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> sockConnected() ;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">void</span> sockDisconnected() ;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_qam_abstract_server.html">QamAbstractServer</a>*  m_server ;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;} ;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">#endif // QAMTCPCLIENT_H</span></div>
+<div class="ttc" id="class_qam_tcp_client_html_a4332e5b45fa0654fef43cfe1768b67c4"><div class="ttname"><a href="class_qam_tcp_client.html#a4332e5b45fa0654fef43cfe1768b67c4">QamTcpClient::sockWrite</a></div><div class="ttdeci">void sockWrite(const QByteArray &amp;data)</div><div class="ttdef"><b>Definition:</b> qamtcpclient.cpp:95</div></div>
+<div class="ttc" id="class_qam_tcp_client_html_acf460f3541b8e50ec2fb15abe4a63770"><div class="ttname"><a href="class_qam_tcp_client.html#acf460f3541b8e50ec2fb15abe4a63770">QamTcpClient::sockClose</a></div><div class="ttdeci">void sockClose()</div><div class="ttdef"><b>Definition:</b> qamtcpclient.cpp:79</div></div>
+<div class="ttc" id="class_qam_tcp_client_html"><div class="ttname"><a href="class_qam_tcp_client.html">QamTcpClient</a></div><div class="ttdoc">Client TCP. </div><div class="ttdef"><b>Definition:</b> qamtcpclient.h:59</div></div>
+<div class="ttc" id="class_qam_tcp_client_html_a015dddab4090a208ceedf85277231909"><div class="ttname"><a href="class_qam_tcp_client.html#a015dddab4090a208ceedf85277231909">QamTcpClient::QamTcpClient</a></div><div class="ttdeci">QamTcpClient(QamAbstractServer *server=0, QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> qamtcpclient.cpp:37</div></div>
+<div class="ttc" id="class_qam_tcp_client_html_ad66c963012d358b3a0ed10410a6c6d8d"><div class="ttname"><a href="class_qam_tcp_client.html#ad66c963012d358b3a0ed10410a6c6d8d">QamTcpClient::sockReceived</a></div><div class="ttdeci">void sockReceived(const QByteArray &amp;)</div></div>
+<div class="ttc" id="class_qam_abstract_server_html"><div class="ttname"><a href="class_qam_abstract_server.html">QamAbstractServer</a></div><div class="ttdoc">Classe modèle &quot;client/serveur métier TCP&quot;. </div><div class="ttdef"><b>Definition:</b> qamabstractserver.h:143</div></div>
+<div class="ttc" id="class_qam_tcp_client_html_a1259f3d14ce60ca3a3e3a442e6869fec"><div class="ttname"><a href="class_qam_tcp_client.html#a1259f3d14ce60ca3a3e3a442e6869fec">QamTcpClient::sockInfo</a></div><div class="ttdeci">void sockInfo(const QString &amp;)</div></div>
+<div class="ttc" id="class_qam_tcp_client_html_a21a9a8365cb2f0e7d9e37c110bdcf52b"><div class="ttname"><a href="class_qam_tcp_client.html#a21a9a8365cb2f0e7d9e37c110bdcf52b">QamTcpClient::sockConnect</a></div><div class="ttdeci">void sockConnect(const QString &amp;hostName, quint16 port)</div><div class="ttdef"><b>Definition:</b> qamtcpclient.cpp:70</div></div>
+<div class="ttc" id="qamabstractserver_8h_html"><div class="ttname"><a href="qamabstractserver_8h.html">qamabstractserver.h</a></div><div class="ttdoc">Classe modèle &quot;client/serveur métier TCP&quot;. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<HR size="1">
+<address style="text-align: right;">
+<small><i>Doxygen version 1.8.6</i> - Modbus over TCP/IP Project - (c)2014-2016 by 
+<a href=mailto:alain.menu@ac-creteil.fr>Alain Menu</a>&nbsp;&nbsp;
+</small>
+</address>
+</BODY>
+</HTML>

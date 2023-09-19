@@ -1,0 +1,115 @@
+TCThread
+v7
+r0
+t320943806.290257
+cCheck dependencies
+cCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o /Users/af/Documents/src/CThread/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o /Users/af/Documents/src/CThread/CThread.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+cCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o /Users/af/Documents/src/CThread/maThread.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+
+N/Developer/SDKs/MacOSX10.6.sdk
+c000000004CAA740B00000000000000EE
+t1286239243
+s238
+
+N/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h
+c000000004BBD2CE900000000000038F0
+t1270689001
+s14576
+
+N/Users/af/Documents/src/CThread/CThread.cpp
+c000000004D70FF38000000000000012B
+t1299251000
+s299
+i"CThread.h"
+i<pthread.h>
+
+N/Users/af/Documents/src/CThread/CThread.h
+c000000004D70FE9300000000000000C4
+t1299250835
+s196
+
+N/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.LinkFileList
+c000000004D70FF3D0000000000000136
+t1299251005
+s310
+
+N/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o
+t2
+s0
+
+N/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o
+t1299251005
+s1412
+
+N/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o
+t1299251006
+s66968
+
+N/Users/af/Documents/src/CThread/build/Debug/CThread
+t2
+s0
+
+N/Users/af/Documents/src/CThread/maThread.cpp
+c000000004D70FCCC000000000000009E
+t1299250380
+s158
+i"maThread.h"
+
+N/Users/af/Documents/src/CThread/maThread.h
+c000000004D70FCCC0000000000000085
+t1299250380
+s133
+
+N/Users/af/Documents/src/CThread/main.cpp
+c000000004D70FCA1000000000000008F
+t1299250337
+s143
+i<iostream>
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies320943805#320943805#0(0"0(0#1#0"3343187568374212096#0"0#
+
+CCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o /Users/af/Documents/src/CThread/CThread.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s320943805.743165
+e320943805.746324
+r0
+xCompileC
+xbuild/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o
+x/Users/af/Documents/src/CThread/CThread.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@51"Compile /Users/af/Documents/src/CThread/CThread.cpp320943805#320943805#0(1585"In file included from /Users/af/Documents/src/CThread/CThread.cpp:10:/Users/af/Documents/src/CThread/CThread.h:13: error: ISO C++ forbids declaration of 'run' with no type/Users/af/Documents/src/CThread/CThread.h:14: error: ISO C++ forbids declaration of 'start' with no type/Users/af/Documents/src/CThread/CThread.h:14: error: member 'start' cannot be declared both virtual and static/Users/af/Documents/src/CThread/CThread.h: In member function 'virtual int CThread::run()':/Users/af/Documents/src/CThread/CThread.h:13: warning: no return statement in function returning non-voidIn file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/machine/_types.h:34,                 from /Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h:33,                 from /Developer/SDKs/MacOSX10.6.sdk/usr/include/_types.h:27,                 from /Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h:55,                 from /Users/af/Documents/src/CThread/CThread.cpp:11:/Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h: At global scope:/Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h:37: error: two or more data types in declaration of '__int8_t'/Users/af/Documents/src/CThread/CThread.cpp:13: error: ISO C++ forbids declaration of 'start' with no type/Users/af/Documents/src/CThread/CThread.cpp: In member function 'virtual int CThread::start()':/Users/af/Documents/src/CThread/CThread.cpp:19: error: argument of type 'int (CThread::)()' does not match 'void* (*)(void*)'/Users/af/Documents/src/CThread/CThread.cpp:16: warning: unused variable 'res'9(4@49"ISO C++ forbids declaration of 'run' with no type320943805#70#103#2(7@65"In file included from /Users/af/Documents/src/CThread/CThread.cpp320943805#18446744073709551615#0#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#10#0#10#0#0"0(13@94"ISO C++ forbids declaration of 'run' with no type in /Users/af/Documents/src/CThread/CThread.h320943805#18446744073709551615#0#0(6@41"/Users/af/Documents/src/CThread/CThread.h320943635#13#0#13#0#0"0(6@41"/Users/af/Documents/src/CThread/CThread.h320943635#13#0#13#0#47"ISO C++ forbids declaration of '*' with no type0(4@51"ISO C++ forbids declaration of 'start' with no type320943805#173#105#2(7@65"In file included from /Users/af/Documents/src/CThread/CThread.cpp320943805#18446744073709551615#0#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#10#0#10#0#0"0(13@96"ISO C++ forbids declaration of 'start' with no type in /Users/af/Documents/src/CThread/CThread.h320943805#18446744073709551615#0#0(6@41"/Users/af/Documents/src/CThread/CThread.h320943635#14#0#14#0#0"0(6@41"/Users/af/Documents/src/CThread/CThread.h320943635#14#0#14#0#47"ISO C++ forbids declaration of '*' with no type0(4@57"Member 'start' cannot be declared both virtual and static320943805#278#111#2(7@65"In file included from /Users/af/Documents/src/CThread/CThread.cpp320943805#18446744073709551615#0#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#10#0#10#0#0"0(13@102"Member 'start' cannot be declared both virtual and static in /Users/af/Documents/src/CThread/CThread.h320943805#18446744073709551615#0#0(6@41"/Users/af/Documents/src/CThread/CThread.h320943635#14#0#14#0#0"0(6@41"/Users/af/Documents/src/CThread/CThread.h320943635#14#0#14#0#0"0(22@50"No return statement in function returning non-void320943805#481#106#2(7@65"In file included from /Users/af/Documents/src/CThread/CThread.cpp320943805#18446744073709551615#0#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#10#0#10#0#0"0(13@95"No return statement in function returning non-void in /Users/af/Documents/src/CThread/CThread.h320943805#18446744073709551615#0#0(6@41"/Users/af/Documents/src/CThread/CThread.h320943635#13#0#13#0#0"0(6@41"/Users/af/Documents/src/CThread/CThread.h320943635#13#0#13#0#50"no return statement in function returning non-void0(23@16"At global scope:320943805#982#75#6(7@65"In file included from /Users/af/Documents/src/CThread/CThread.cpp320943805#18446744073709551615#0#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#11#0#11#0#0"0(7@74"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h320943805#18446744073709551615#0#0(6@52"/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h292381801#55#0#55#0#0"0(7@73"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/_types.h320943805#18446744073709551615#0#0(6@51"/Developer/SDKs/MacOSX10.6.sdk/usr/include/_types.h292381801#27#0#27#0#0"0(7@77"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h320943805#18446744073709551615#0#0(6@55"/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h299094217#33#0#33#0#0"0(7@81"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/machine/_types.h320943805#18446744073709551615#0#0(6@59"/Developer/SDKs/MacOSX10.6.sdk/usr/include/machine/_types.h299094213#34#0#34#0#0"0(13@76"At global scope: in /Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h320943805#18446744073709551615#0#0(6@56"/Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h299094229#0#0#0#0#0"0(6@56"/Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h299094229#0#0#0#0#0"0(4@51"Two or more data types in declaration of '__int8_t'320943805#1057#120#6(7@65"In file included from /Users/af/Documents/src/CThread/CThread.cpp320943805#18446744073709551615#0#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#11#0#11#0#0"0(7@74"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h320943805#18446744073709551615#0#0(6@52"/Developer/SDKs/MacOSX10.6.sdk/usr/include/pthread.h292381801#55#0#55#0#0"0(7@73"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/_types.h320943805#18446744073709551615#0#0(6@51"/Developer/SDKs/MacOSX10.6.sdk/usr/include/_types.h292381801#27#0#27#0#0"0(7@77"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h320943805#18446744073709551615#0#0(6@55"/Developer/SDKs/MacOSX10.6.sdk/usr/include/sys/_types.h299094217#33#0#33#0#0"0(7@81"In file included from /Developer/SDKs/MacOSX10.6.sdk/usr/include/machine/_types.h320943805#18446744073709551615#0#0(6@59"/Developer/SDKs/MacOSX10.6.sdk/usr/include/machine/_types.h299094213#34#0#34#0#0"0(13@111"Two or more data types in declaration of '__int8_t' in /Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h320943805#18446744073709551615#0#0(6@56"/Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h299094229#37#0#37#0#0"0(6@56"/Developer/SDKs/MacOSX10.6.sdk/usr/include/i386/_types.h299094229#37#0#37#0#0"0(4@51"ISO C++ forbids declaration of 'start' with no type320943805#1177#107#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#13#0#13#0#47"ISO C++ forbids declaration of '*' with no type0(4@70"Argument of type 'int (CThread::)()' does not match 'void* (*)(void*)'320943805#1380#126#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#19#0#19#0#0"0(22@21"Unused variable 'res'320943805#1506#79#0(6@43"/Users/af/Documents/src/CThread/CThread.cpp320943800#16#0#16#0#19"unused variable '*'0(0#0#43"/Users/af/Documents/src/CThread/CThread.cpp8613115360#1220"    cd /Users/af/Documents/src/CThread    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-generated-files.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-own-target-headers.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-all-target-headers.hmap -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-project-headers.hmap -F/Users/af/Documents/src/CThread/build/Debug -I/Users/af/Documents/src/CThread/build/Debug/include -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources/x86_64 -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources -c /Users/af/Documents/src/CThread/CThread.cpp -o /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/CThread.o1#
+
+CCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o /Users/af/Documents/src/CThread/maThread.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s320943805.746393
+e320943805.783281
+r1
+xCompileC
+xbuild/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o
+x/Users/af/Documents/src/CThread/maThread.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@52"Compile /Users/af/Documents/src/CThread/maThread.cpp320943805#320943805#0(0"0(0#0#44"/Users/af/Documents/src/CThread/maThread.cpp8612814496#1222"    cd /Users/af/Documents/src/CThread    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-generated-files.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-own-target-headers.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-all-target-headers.hmap -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-project-headers.hmap -F/Users/af/Documents/src/CThread/build/Debug -I/Users/af/Documents/src/CThread/build/Debug/include -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources/x86_64 -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources -c /Users/af/Documents/src/CThread/maThread.cpp -o /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/maThread.o0#
+
+CCompileC build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o /Users/af/Documents/src/CThread/main.cpp normal x86_64 c++ com.apple.compilers.gcc.4_2
+s320943805.722780
+e320943806.290172
+r1
+xCompileC
+xbuild/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o
+x/Users/af/Documents/src/CThread/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@48"Compile /Users/af/Documents/src/CThread/main.cpp320943805#320943806#0(0"0(0#0#40"/Users/af/Documents/src/CThread/main.cpp3401403401131030528#1214"    cd /Users/af/Documents/src/CThread    setenv LANG en_US.US-ASCII    /Developer/usr/bin/gcc-4.2 -x c++ -arch x86_64 -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -fvisibility-inlines-hidden -mmacosx-version-min=10.6 -gdwarf-2 -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-generated-files.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-own-target-headers.hmap -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-all-target-headers.hmap -iquote /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/CThread-project-headers.hmap -F/Users/af/Documents/src/CThread/build/Debug -I/Users/af/Documents/src/CThread/build/Debug/include -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources/x86_64 -I/Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/DerivedSources -c /Users/af/Documents/src/CThread/main.cpp -o /Users/af/Documents/src/CThread/build/CThread.build/Debug/CThread.build/Objects-normal/x86_64/main.o0#
+
+CLd /Users/af/Documents/src/CThread/build/Debug/CThread normal x86_64
+r0
+

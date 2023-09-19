@@ -1,0 +1,173 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2): ModipButler</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="qam47.ico" type="image/x-icon" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Modbus-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ModipButler </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Application Qt serveur Modbus TCP/IP (vue métier)</p>
+<p>ModipButler est une application permettant de matérialiser un serveur Modbus TCP/IP. Elle peut être utilisée pour simuler un équipement de processus d'automatisme ou servir de modèle de développement pour la conception d'une application métier.</p>
+<p>La cartographie Modbus du serveur est définie sous forme d'un fichier texte de type CSV (encodage UTF-8) avec séparateur point-virgule. Le fichier doit respecter les contraintes suivantes :</p>
+<ul>
+<li>lignes de commentaire introduites par un symbole # en première colonne ;</li>
+<li>lignes vides acceptées ;</li>
+<li>adresse IP du serveur (étiquette HOST) : nécessaire en mode Client. En cas d'absence de cette information, le serveur est considéré local à la machine hôte du client ;</li>
+<li>port de service (étiquette PORT) : nécessaire en modes Client et Serveur. En cas d'absence de cette information, le service est supposé sur le port 502 ;</li>
+<li>description du serveur sous forme de texte libre (étiquette INFO) ;</li>
+<li>entrées de table spécifiées par <b>exactement</b> 7 champs :<ul>
+<li>champ 1 : numéro dans la table (décimal) ;</li>
+<li>champ 2 : taille en nombre de mots (décimal) en cohérence avec le format d'affichage, peut être laissé à 0 pour les données de taille 1 bit ;</li>
+<li>champ 3 : masque (hexadécimal), FFFF pour les données primaires, peut être laissé à 0 pour les données de taille 1 bit ;</li>
+<li>champ 4 : nom (texte libre) ;</li>
+<li>champ 5 : commentaire (texte libre) ;</li>
+<li>champ 6 : format d'affichage, à choisir parmi Hex, Bool, Uint, Int, Ascii, Bcd (champ 2 = 1) ; Float, Long (champ 2 = 2) ; Str8 (champ 2 = 4) ou Str16 (champ 2 = 8) ;</li>
+<li>champ 7 : valeur, exprimée conformément au format d'affichage.</li>
+</ul>
+</li>
+</ul>
+<p>La valeur décimale du premier champ détermine la table d'appartenance de l'entrée :</p>
+<ul>
+<li>00001 à 09999 : table "Coils", plage d'adresses $0000..$2F0E ;</li>
+<li>10001 à 19999 : table "Discret Inputs", plage d'adresses $0000..$2F0E ;</li>
+<li>30001 à 39999 : table "Input Registers", plage d'adresses $0000..$2F0E ;</li>
+<li>40001 à 105536 : table "Holding Registers", plage d'adresses $0000..$FFFF.</li>
+</ul>
+<p>Exemple de fichier CSV : <small> </p>
+<pre class="fragment"># configuration file for QamModbusMap
+
+# 2 fields for server address, port and short description
+
+HOST;192.168.1.15
+PORT;502
+INFO;my Modbus server description
+
+# 7 fields for entries: number; size; mask; name; comment; display; value
+
+# 0xxxx - coils
+00001;0;0;      Moteur_X;       arrêt/marche moteur axe X;              Bool;   0
+00002;0;0;      Sens_X;         sens moteur axe X (X+ si 1);            Bool;   0
+
+# 1xxxx - discrete inputs
+10101;0;0;      Fdc_X-;         capteur FDC axe X-;                     Bool;   0
+10102;0;0;      Fdc_X+;         capteur FDC axe X+;                     Bool;   0
+10103;0;0;      Pom_X;          capteur POM axe X;                      Bool;   0
+
+# 3xxxx - input registers
+30001;1;FFFF;   Cons_X;         position axe X (mm);                    Uint;   1664
+30011;1;FFFF;   Etat_Arm;       état armoire de puissance;              Hex;    0200
+30011;1;0FFF;   Temp;           température en 1/10 de degrés Celsius;  Bcd;    200
+30011;1;1000;   Alim;           présence tension;                       Bool;   0
+
+# 4xxxx - holding registers
+40001;1;FFFF;   Cons_X;         consigne de position axe X (mm);        Uint;   1664
+40108;1;FFFF;   C_Loc;          poste Contrôle (local);                 Hex;    01FE
+40108;1;0001;   C_Mon;          demande de traitement (montage);        Bool;   0
+40108;1;01FE;   C_Tab_Num;      numéro de pièce 0..19;                  Uint;   255
+40108;1;0600;   C_Tab_Ori;      orientation pièce 0..3;                 Uint;   0
+40108;1;0800;   C_Def;          défaut reconnaissance pièce;            Bool;   0
+40203;1;FFFF;   MyAscii;        ;                                       Ascii;  AM
+40204;1;FFFF;   MyBcd;          ;                                       Bcd;    1492
+40206;2;FFFF;   MyFloat;        ;                                       Float;  -3.14159
+40208;2;FFFF;   MyLong;         ;                                       Long;   -987654321
+40701;4;FFFF;   Hello;          message de bienvenue;                   Str8;   Bonjour
+</pre><p> </small> <br/>
+ Les entrées 00001, 00002, 10101, 10102 et 10103 sont des données de taille 1 bit, leur format est obligatoirement Bool. <br/>
+ Les données primaires 30011 et 40108 sont décomposées en données secondaires représentant chacune un certain nombre de bits de leur donnée primaire. <br/>
+ Les données MyFloat et MyLong occupent respectivement les emplacements 40206-40207 et 40208-40209 (formats 32 bits). <br/>
+ La donnée composée nommée "Hello" occupe en réalité les emplacements 40701, 40702, 40703 et 40704 de la table Holding Registers.</p>
+<h2>Manuel utilisateur</h2>
+<p>L'interface utilisateur de ModipButler est réduite à une unique boite de dialogue occupée essentiellement par la vue arborescente de la cartographie Modbus.</p>
+<div class="image">
+<img src="ModipButler_ui.png" alt="ModipButler_ui.png"/>
+</div>
+<p><br/>
+ Après démarrage de l'application, l'utilisateur doit charger un fichier de configuration (bouton <b>Load conf.</b>). Le chargement alimente automatiquement la vue de la cartographie. Les éventuelles erreurs rencontrées lors de la lecture du fichier de configuration sont reportées dans la console de suivi située en haut à droite de la fenêtre d'application. <br/>
+ L'utilisateur doit ensuite choisir le port de service (502 par défaut) et démarrer le serveur au moyen du bouton <b>Start</b> ; le serveur est alors susceptible d'accepter les demandes de connexion... <br/>
+ Le suivi d'exploitation est envoyé sur la console, l'utilisateur est donc informé de toutes les opérations de connexion, déconnexion et requêtes effectuées par les clients. En tant que serveur, l'utilisateur peut éditer et modifier les valeurs des données des quatre tables primaires ; l'édition se fait simplement par double-clic sur le champ valeur de la donnée. <br/>
+ Une fois le serveur démarré, le bouton <b>Start</b> se transforme en <b>Close</b> ; la fermeture du serveur n'interrompt pas les connexions en cours, elle interdit simplement les nouvelles connexions entrantes (suivant le concept réseau client/serveur, une connexion est normalement fermée par l'équipement qui en est à l'origine, donc le client...). <br/>
+ Un clic sur le logo en haut à gauche provoque l'affichage d'une fenêtre "à propos..." montrant la version de l'application. </p>
+</div></div><!-- contents -->
+<HR size="1">
+<address style="text-align: right;">
+<small><i>Doxygen version 1.8.6</i> - Modbus over TCP/IP Project - (c)2014-2016 by 
+<a href=mailto:alain.menu@ac-creteil.fr>Alain Menu</a>&nbsp;&nbsp;
+</small>
+</address>
+</BODY>
+</HTML>

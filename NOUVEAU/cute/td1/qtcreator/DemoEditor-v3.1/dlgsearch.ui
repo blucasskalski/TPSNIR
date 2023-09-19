@@ -1,0 +1,284 @@
+<ui version="4.0" >
+ <class>DlgSearch</class>
+ <widget class="QDialog" name="DlgSearch" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>175</height>
+   </rect>
+  </property>
+  <property name="sizePolicy" >
+   <sizepolicy vsizetype="Preferred" hsizetype="Preferred" >
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle" >
+   <string>Rechercher...</string>
+  </property>
+  <layout class="QGridLayout" >
+   <property name="margin" >
+    <number>8</number>
+   </property>
+   <property name="spacing" >
+    <number>6</number>
+   </property>
+   <item row="1" column="1" colspan="2" >
+    <widget class="QComboBox" name="cbxReplace" >
+     <property name="minimumSize" >
+      <size>
+       <width>180</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="editable" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="1" colspan="2" >
+    <widget class="QComboBox" name="cbxSearch" >
+     <property name="minimumSize" >
+      <size>
+       <width>180</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="editable" >
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" >
+    <widget class="QLabel" name="labReplace" >
+     <property name="minimumSize" >
+      <size>
+       <width>80</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="text" >
+      <string>Remplacer par :</string>
+     </property>
+     <property name="buddy" >
+      <cstring>cbxReplace</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" >
+    <widget class="QLabel" name="labSearch" >
+     <property name="maximumSize" >
+      <size>
+       <width>50</width>
+       <height>16777215</height>
+      </size>
+     </property>
+     <property name="text" >
+      <string>&amp;Texte :</string>
+     </property>
+     <property name="buddy" >
+      <cstring>cbxSearch</cstring>
+     </property>
+    </widget>
+   </item>
+   <item rowspan="3" row="0" column="4" >
+    <layout class="QVBoxLayout" >
+     <property name="spacing" >
+      <number>6</number>
+     </property>
+     <property name="margin" >
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pbuOk" >
+       <property name="text" >
+        <string>&amp;Valider</string>
+       </property>
+       <property name="autoDefault" >
+        <bool>true</bool>
+       </property>
+       <property name="default" >
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pbuCancel" >
+       <property name="text" >
+        <string>&amp;Annuler</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer>
+       <property name="orientation" >
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0" >
+        <size>
+         <width>20</width>
+         <height>81</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item row="2" column="2" >
+    <widget class="QGroupBox" name="grpDirection" >
+     <property name="title" >
+      <string>Direction</string>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="margin" >
+       <number>8</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item row="1" column="0" >
+       <widget class="QRadioButton" name="rbuBackward" >
+        <property name="text" >
+         <string>Vers l'arrière</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" >
+       <widget class="QRadioButton" name="rbuForward" >
+        <property name="text" >
+         <string>Vers l'avant</string>
+        </property>
+        <property name="checked" >
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="2" column="0" colspan="2" >
+    <widget class="QGroupBox" name="grpOptions" >
+     <property name="title" >
+      <string>Options</string>
+     </property>
+     <layout class="QGridLayout" >
+      <property name="margin" >
+       <number>8</number>
+      </property>
+      <property name="spacing" >
+       <number>6</number>
+      </property>
+      <item row="1" column="0" >
+       <widget class="QCheckBox" name="chkCaseSensitive" >
+        <property name="text" >
+         <string>Respecter la &amp;Casse</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" >
+       <widget class="QCheckBox" name="chkEntireDocument" >
+        <property name="text" >
+         <string>&amp;Tout le document</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" >
+       <widget class="QCheckBox" name="chkWholeWords" >
+        <property name="text" >
+         <string>&amp;Mots entiers seulement</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item row="0" column="3" >
+    <spacer>
+     <property name="orientation" >
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0" >
+      <size>
+       <width>21</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+  <widget class="QWidget" native="1" name="layoutWidget" >
+   <property name="geometry" >
+    <rect>
+     <x>20</x>
+     <y>190</y>
+     <width>351</width>
+     <height>33</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>pbuOk</tabstop>
+  <tabstop>pbuCancel</tabstop>
+  <tabstop>cbxSearch</tabstop>
+  <tabstop>cbxReplace</tabstop>
+  <tabstop>chkWholeWords</tabstop>
+  <tabstop>chkCaseSensitive</tabstop>
+  <tabstop>chkEntireDocument</tabstop>
+  <tabstop>rbuForward</tabstop>
+  <tabstop>rbuBackward</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pbuCancel</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgSearch</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>341</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>341</x>
+     <y>93</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pbuOk</sender>
+   <signal>clicked()</signal>
+   <receiver>DlgSearch</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>359</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>375</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chkEntireDocument</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>grpDirection</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel" >
+     <x>92</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel" >
+     <x>206</x>
+     <y>66</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

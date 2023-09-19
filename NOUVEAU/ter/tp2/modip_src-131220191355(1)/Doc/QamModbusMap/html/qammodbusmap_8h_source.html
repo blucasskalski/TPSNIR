@@ -1,0 +1,342 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2):  Fichier source de qammodbusmap.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="qam47.ico" type="image/x-icon" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Modbus-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">qammodbusmap.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="qammodbusmap_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*  ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> *  filename    :   qammodbusmap.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *  description :   INTERFACE de la classe QamModbusMap</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> *                  Modélisation des tables primaires Modbus</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  project     :   Qam Modbus over TCP/IP</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  start date  :   janvier 2014</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Copyright 2014-2016 by Alain Menu   &lt;alain.menu@ac-creteil.fr&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *  This file is part of &quot;Qam Modbus over IP Project&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *  This program is free software ;  you can  redistribute it and/or  modify it</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *  under the terms of the  GNU General Public License as published by the Free</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *  Software Foundation ; either version 3 of the License, or  (at your option)</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *  any later version.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> *  This program is distributed in the hope that it will be useful, but WITHOUT</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> *  ANY WARRANTY ; without even the  implied  warranty  of  MERCHANTABILITY  or</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> *  FITNESS FOR  A PARTICULAR PURPOSE. See the  GNU General Public License  for</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> *  more details.</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment"> *  You should have  received  a copy of the  GNU General Public License  along</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment"> *  with this program. If not, see &lt;http://www.gnu.org/licenses/&gt;.</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment"> *  ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifndef QAMMODBUSMAP_H</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define QAMMODBUSMAP_H</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="comment">//#include &quot;qamabstractserver.h&quot;</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#include &quot;../QamSockets/qamabstractserver.h&quot;</span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="qammodbusdata_8h.html">qammodbusdata.h</a>&quot;</span></div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;<span class="preprocessor">#include &lt;QMutex&gt;</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;<span class="preprocessor">#include &lt;QEventLoop&gt;</span></div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="preprocessor">#include &lt;QStringList&gt;</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="preprocessor">#include &lt;QList&gt;</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="preprocessor">#include &lt;QFile&gt;</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;<span class="preprocessor">#include &lt;QFileInfo&gt;</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="preprocessor">#include &lt;QTextStream&gt;</span></div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;<span class="comment">//#define MODBUSMAP_VERSION_MAJOR   1</span></div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="comment">//#define MODBUSMAP_VERSION_MINOR   4</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="preprocessor">#include &quot;_ABOUT&quot;</span></div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="preprocessor">#define MODBUSMAP_ENTRY_SIZE    7</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html">  149</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_qam_modbus_map.html">QamModbusMap</a> : <span class="keyword">public</span> <a class="code" href="class_qam_abstract_server.html">QamAbstractServer</a></div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533">  155</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533ac011e2541e31b741a3459a761a87fed0">  157</a></span>&#160;        <a class="code" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533ac011e2541e31b741a3459a761a87fed0">ServerMode</a>,</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533a1fcabd96076660f0d165a8e90dc6f0d9">  159</a></span>&#160;        <a class="code" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533a1fcabd96076660f0d165a8e90dc6f0d9">ClientMode</a></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    } <a class="code" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533">Mode</a> ;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">  163</a></span>&#160;    <span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431acfae760d86159c07e6d45f345b73e954">  165</a></span>&#160;        <a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431acfae760d86159c07e6d45f345b73e954">Coil</a> = 0,</div>
+<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431a42cbc82c38cb8c80710124c14b13a2b7">  167</a></span>&#160;        <a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431a42cbc82c38cb8c80710124c14b13a2b7">DiscretInput</a> = 1,</div>
+<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431ad20414a79f57c0b66ac6ad050088e1d9">  169</a></span>&#160;        <a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431ad20414a79f57c0b66ac6ad050088e1d9">InputRegister</a> = 3,</div>
+<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431aea2d8056f5755ce3443f15fbdbedb0f0">  171</a></span>&#160;        <a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431aea2d8056f5755ce3443f15fbdbedb0f0">HoldingRegister</a> = 4</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    } <a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> ;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="class_qam_modbus_map.html#abdfd3c71f5257073cbfbcb152046b030">QamModbusMap</a>(<a class="code" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533">Mode</a> <a class="code" href="class_qam_modbus_map.html#a06cd5b2b5ac42a555b6fb39279c49edb">mode</a> = <a class="code" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533ac011e2541e31b741a3459a761a87fed0">ServerMode</a>, QObject* parent = 0 ) ;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="class_qam_modbus_map.html#a71dd32378cc934a2fa5b971e6fc35870">version</a>() ;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">static</span> QString <a class="code" href="class_qam_modbus_map.html#a3fcd62a55aa76daabc7632c56241a31e">tableAsString</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table ) ;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="class_qam_modbus_map_viewer.html">QamModbusMapViewer</a> ;   <span class="comment">// accès aux méthodes data()</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
+<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#af577f2757cabede986d090c9b8a14e13">  185</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="class_qam_modbus_map.html#af577f2757cabede986d090c9b8a14e13">setVerbose</a>(<span class="keywordtype">bool</span> verbose = <span class="keyword">true</span> ) { m_verbose = verbose ; }</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#a06cd5b2b5ac42a555b6fb39279c49edb">  189</a></span>&#160;    <a class="code" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533">Mode</a> <a class="code" href="class_qam_modbus_map.html#a06cd5b2b5ac42a555b6fb39279c49edb">mode</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_mode ; }</div>
+<div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#addeefeadc856f509293f695d6df18603">  191</a></span>&#160;    QString <a class="code" href="class_qam_modbus_map.html#addeefeadc856f509293f695d6df18603">host</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_host ; }</div>
+<div class="line"><a name="l00193"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#a65d86fc478631871344fc41c26cca6d8">  193</a></span>&#160;    quint16 <a class="code" href="class_qam_modbus_map.html#a65d86fc478631871344fc41c26cca6d8">port</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_port ; }</div>
+<div class="line"><a name="l00195"></a><span class="lineno"><a class="line" href="class_qam_modbus_map.html#afcba97f5d975313791ff1040bdaba8de">  195</a></span>&#160;    QString <a class="code" href="class_qam_modbus_map.html#afcba97f5d975313791ff1040bdaba8de">description</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> m_desc ; }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  signals:</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="comment">// signal de synchro. requête client / réponse serveur</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordtype">void</span> responseDone() ;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_modbus_map.html#aadcc993c17cdacf1685a83019b4c8aff">valueChanged</a>(<span class="keywordtype">int</span> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="comment">// dialogue réseau mode serveur</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="comment">//  virtual QByteArray responseToRequest(QByteArray&amp; request ) ;</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keyword">virtual</span> QByteArray <a class="code" href="class_qam_modbus_map.html#a274f7b8bfb010f41f5d7a99a15352100">responseToClientRequest</a>(QByteArray&amp; <a class="code" href="class_qam_abstract_server.html#ac643e998177e5f0b03207a3373d669dc">request</a> ) ;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">bool</span> isRangeAvailable(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, quint16 addrBegin, quint16 addrEnd ) ;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    QByteArray  exceptionResponse(QByteArray&amp; <a class="code" href="class_qam_abstract_server.html#ac643e998177e5f0b03207a3373d669dc">request</a>, quint8 exceptionCode, <span class="keyword">const</span> QString&amp; message ) ;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">// dialogue réseau mode client</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="comment">//  virtual void response(QByteArray response ) ;</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_qam_modbus_map.html#aeec484faa3add8c762d7b25c4752d4f3">responseFromServer</a>(QByteArray response ) ;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> setServerAvailable(<span class="keywordtype">bool</span> serverAvailable ) ;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="comment">// accesseurs tables/données/formats</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    QStringList <a class="code" href="class_qam_modbus_map.html#a15e7db35560ef02a9605d756f7feb4e4">nameList</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keywordtype">bool</span> withComposite = <span class="keyword">false</span> ) ;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    QStringList <a class="code" href="class_qam_modbus_map.html#a5dcf2979baf6068f356fd34076797b22">itemList</a>(<span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    QStringList <a class="code" href="class_qam_modbus_map.html#a5dcf2979baf6068f356fd34076797b22">itemList</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    QString <a class="code" href="class_qam_modbus_map.html#ad4c8e2a83f7b85b67fc2830ba9cea363">display</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_qam_modbus_map.html#a50e970c672c173aa61a605f4f3f13b57">exists</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_qam_modbus_map.html#a50e970c672c173aa61a605f4f3f13b57">exists</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, quint16 address ) ;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <a class="code" href="class_qam_modbus_data.html">QamModbusData</a>&amp; data(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="class_qam_modbus_data.html">QamModbusData</a>&amp; data(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, quint16 address ) ;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordtype">bool</span> checkPrimaryName(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">bool</span> checkFormattedValue(<span class="keyword">const</span> <a class="code" href="class_qam_modbus_data.html">QamModbusData</a>&amp; data, <span class="keyword">const</span> QString&amp; <a class="code" href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">value</a> ) ;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">// modificateurs de données Modbus</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  <span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_modbus_map.html#a9b2d9aa1f520186a5a2668358bd309d6">setValue</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name, <span class="keyword">const</span> QString&amp; <a class="code" href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">value</a> ) ;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_modbus_map.html#a0ed9c9c3c4c1c880d32c336dd8d50ff0">setLocalValue</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name, <span class="keyword">const</span> QString&amp; <a class="code" href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">value</a> ) ;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_modbus_map.html#aa719e9a7992520f266a8908b1e7cb8d7">setRemoteValue</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name, <span class="keyword">const</span> QString&amp; <a class="code" href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">value</a> ) ;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordtype">void</span> buildAndSendWriteFrame() ;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="comment">// sélecteurs de données Modbus</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    QString <a class="code" href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">value</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    QString <a class="code" href="class_qam_modbus_map.html#a90c809c5fbfa3288564a332fe3f9b14c">localValue</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    QString <a class="code" href="class_qam_modbus_map.html#acdd01b2673709681d3fc6550b9aac348">remoteValue</a>(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordtype">void</span> buildAndSendReadFrame() ;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    <span class="comment">// création de la cartographie locale</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_qam_modbus_map.html#afc0064e3211792f0a663f2ed5ee481a0">loadMap</a>(<span class="keyword">const</span> QString&amp; filename ) ;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_qam_modbus_map.html#a77f7bb7df3ee8eb42c88143387db2ca9">addData</a>(<span class="keyword">const</span> QStringList&amp; entry, <span class="keywordtype">int</span> line = 0 ) ;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">bool</span> addBitData(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, quint16 address, <span class="keyword">const</span> QString&amp; name, <span class="keyword">const</span> QString&amp; comment, quint16 <a class="code" href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">value</a> = 0 ) ;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">bool</span> addWordData(<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a> table, quint16 address, quint16 mask, <span class="keyword">const</span> QString&amp; name, <span class="keyword">const</span> QString&amp; comment, <span class="keyword">const</span> QString&amp; <a class="code" href="class_qam_modbus_map.html#ad4c8e2a83f7b85b67fc2830ba9cea363">display</a>, quint16 <a class="code" href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">value</a> = 0 ) ;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="comment">// remontée d&#39;informations</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  signals:</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_qam_modbus_map.html#af225ed278f3d66b298f8ec58c967cb5f">info</a>(<span class="keyword">const</span> QString&amp; source, <span class="keyword">const</span> QString&amp; message ) ;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> networkInfo(<span class="keyword">const</span> QString&amp; message ) ;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordtype">void</span> configInfo(<span class="keyword">const</span> QString&amp; message ) ;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keywordtype">void</span> modbusInfo(<span class="keyword">const</span> QString&amp; message ) ;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">void</span> addDataInfo(<span class="keyword">const</span> QString&amp; message, <span class="keywordtype">int</span> line = 0 ) ;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="comment">// attributs</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="comment">// ---------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">bool</span>        m_verbose ;</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <a class="code" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533">Mode</a>        m_mode ;</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    QString     m_host ;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    quint16     m_port ;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    QString     m_desc ;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">bool</span>        m_isServerAvailable ;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="class_qam_modbus_data.html">QamModbusData</a>*  m_nullData ;</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    QMutex          m_mutex ;</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    QList&lt;QamModbusData&gt;*   m_coils ;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    QList&lt;QamModbusData&gt;*   m_discreteInputs ;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    QList&lt;QamModbusData&gt;*   m_inputRegisters ;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    QList&lt;QamModbusData&gt;*   m_holdingRegisters ;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">PrimaryTable</a>    m_table ;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    QString         m_name ;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordtype">int</span>             m_item ;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    quint16     m_mbapTi ;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    quint16     m_mbapPi ;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    quint16     m_mbapLen ;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    quint8      m_mbapUi ;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    quint8      m_funct ;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    quint16     m_addr ;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    quint16     m_number ;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    quint16     m_value ;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    QByteArray  m_data ;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    quint8      m_exception ;</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;} ;</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;<span class="preprocessor">#endif // QAMMODBUSMAP_H</span></div>
+<div class="ttc" id="class_qam_modbus_map_html_af577f2757cabede986d090c9b8a14e13"><div class="ttname"><a href="class_qam_modbus_map.html#af577f2757cabede986d090c9b8a14e13">QamModbusMap::setVerbose</a></div><div class="ttdeci">void setVerbose(bool verbose=true)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:185</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a77f7bb7df3ee8eb42c88143387db2ca9"><div class="ttname"><a href="class_qam_modbus_map.html#a77f7bb7df3ee8eb42c88143387db2ca9">QamModbusMap::addData</a></div><div class="ttdeci">bool addData(const QStringList &amp;entry, int line=0)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:1277</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_afa34e75547395cdf5aefec1a39614431"><div class="ttname"><a href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">QamModbusMap::PrimaryTable</a></div><div class="ttdeci">PrimaryTable</div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:163</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_afa34e75547395cdf5aefec1a39614431acfae760d86159c07e6d45f345b73e954"><div class="ttname"><a href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431acfae760d86159c07e6d45f345b73e954">QamModbusMap::Coil</a></div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:165</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a06cd5b2b5ac42a555b6fb39279c49edb"><div class="ttname"><a href="class_qam_modbus_map.html#a06cd5b2b5ac42a555b6fb39279c49edb">QamModbusMap::mode</a></div><div class="ttdeci">Mode mode() const </div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:189</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a65d86fc478631871344fc41c26cca6d8"><div class="ttname"><a href="class_qam_modbus_map.html#a65d86fc478631871344fc41c26cca6d8">QamModbusMap::port</a></div><div class="ttdeci">quint16 port() const </div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:193</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a396ecdba1cbd4808cf6cea3eb172c533a1fcabd96076660f0d165a8e90dc6f0d9"><div class="ttname"><a href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533a1fcabd96076660f0d165a8e90dc6f0d9">QamModbusMap::ClientMode</a></div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:159</div></div>
+<div class="ttc" id="class_qam_modbus_map_html"><div class="ttname"><a href="class_qam_modbus_map.html">QamModbusMap</a></div><div class="ttdoc">Modélisation de la cartographie d&#39;un équipement Modbus. </div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:149</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a396ecdba1cbd4808cf6cea3eb172c533"><div class="ttname"><a href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533">QamModbusMap::Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:155</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a71dd32378cc934a2fa5b971e6fc35870"><div class="ttname"><a href="class_qam_modbus_map.html#a71dd32378cc934a2fa5b971e6fc35870">QamModbusMap::version</a></div><div class="ttdeci">static QString version()</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:61</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_acdd01b2673709681d3fc6550b9aac348"><div class="ttname"><a href="class_qam_modbus_map.html#acdd01b2673709681d3fc6550b9aac348">QamModbusMap::remoteValue</a></div><div class="ttdeci">QString remoteValue(PrimaryTable table, const QString &amp;name)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:1114</div></div>
+<div class="ttc" id="class_qam_modbus_data_html"><div class="ttname"><a href="class_qam_modbus_data.html">QamModbusData</a></div><div class="ttdoc">Modélisation d&#39;une donnée de table primaire, 1 ou 16 bits. </div><div class="ttdef"><b>Definition:</b> qammodbusdata.h:123</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_afcba97f5d975313791ff1040bdaba8de"><div class="ttname"><a href="class_qam_modbus_map.html#afcba97f5d975313791ff1040bdaba8de">QamModbusMap::description</a></div><div class="ttdeci">QString description() const </div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:195</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a5dcf2979baf6068f356fd34076797b22"><div class="ttname"><a href="class_qam_modbus_map.html#a5dcf2979baf6068f356fd34076797b22">QamModbusMap::itemList</a></div><div class="ttdeci">QStringList itemList(const QString &amp;name)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:540</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_aa719e9a7992520f266a8908b1e7cb8d7"><div class="ttname"><a href="class_qam_modbus_map.html#aa719e9a7992520f266a8908b1e7cb8d7">QamModbusMap::setRemoteValue</a></div><div class="ttdeci">void setRemoteValue(PrimaryTable table, const QString &amp;name, const QString &amp;value)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:920</div></div>
+<div class="ttc" id="class_qam_abstract_server_html"><div class="ttname"><a href="class_qam_abstract_server.html">QamAbstractServer</a></div><div class="ttdoc">Classe modèle &quot;client/serveur métier TCP&quot;. </div><div class="ttdef"><b>Definition:</b> qamabstractserver.h:143</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a90c809c5fbfa3288564a332fe3f9b14c"><div class="ttname"><a href="class_qam_modbus_map.html#a90c809c5fbfa3288564a332fe3f9b14c">QamModbusMap::localValue</a></div><div class="ttdeci">QString localValue(PrimaryTable table, const QString &amp;name)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:1052</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_afc0064e3211792f0a663f2ed5ee481a0"><div class="ttname"><a href="class_qam_modbus_map.html#afc0064e3211792f0a663f2ed5ee481a0">QamModbusMap::loadMap</a></div><div class="ttdeci">bool loadMap(const QString &amp;filename)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:1197</div></div>
+<div class="ttc" id="qammodbusdata_8h_html"><div class="ttname"><a href="qammodbusdata_8h.html">qammodbusdata.h</a></div><div class="ttdoc">Modélisation d&#39;une donnée de table primaire, 1 ou 16 bits. </div></div>
+<div class="ttc" id="class_qam_modbus_map_viewer_html"><div class="ttname"><a href="class_qam_modbus_map_viewer.html">QamModbusMapViewer</a></div><div class="ttdoc">Visualiseur arborescent de cartographie d&#39;un équipement Modbus. </div><div class="ttdef"><b>Definition:</b> qammodbusmapviewer.h:58</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a3fcd62a55aa76daabc7632c56241a31e"><div class="ttname"><a href="class_qam_modbus_map.html#a3fcd62a55aa76daabc7632c56241a31e">QamModbusMap::tableAsString</a></div><div class="ttdeci">static QString tableAsString(PrimaryTable table)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:73</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a0ed9c9c3c4c1c880d32c336dd8d50ff0"><div class="ttname"><a href="class_qam_modbus_map.html#a0ed9c9c3c4c1c880d32c336dd8d50ff0">QamModbusMap::setLocalValue</a></div><div class="ttdeci">void setLocalValue(PrimaryTable table, const QString &amp;name, const QString &amp;value)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:857</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_abdfd3c71f5257073cbfbcb152046b030"><div class="ttname"><a href="class_qam_modbus_map.html#abdfd3c71f5257073cbfbcb152046b030">QamModbusMap::QamModbusMap</a></div><div class="ttdeci">QamModbusMap(Mode mode=ServerMode, QObject *parent=0)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:39</div></div>
+<div class="ttc" id="class_qam_abstract_server_html_ac643e998177e5f0b03207a3373d669dc"><div class="ttname"><a href="class_qam_abstract_server.html#ac643e998177e5f0b03207a3373d669dc">QamAbstractServer::request</a></div><div class="ttdeci">void request(QByteArray request)</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_aeec484faa3add8c762d7b25c4752d4f3"><div class="ttname"><a href="class_qam_modbus_map.html#aeec484faa3add8c762d7b25c4752d4f3">QamModbusMap::responseFromServer</a></div><div class="ttdeci">virtual void responseFromServer(QByteArray response)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:340</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_addeefeadc856f509293f695d6df18603"><div class="ttname"><a href="class_qam_modbus_map.html#addeefeadc856f509293f695d6df18603">QamModbusMap::host</a></div><div class="ttdeci">QString host() const </div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:191</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_afa34e75547395cdf5aefec1a39614431a42cbc82c38cb8c80710124c14b13a2b7"><div class="ttname"><a href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431a42cbc82c38cb8c80710124c14b13a2b7">QamModbusMap::DiscretInput</a></div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:167</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a9b2d9aa1f520186a5a2668358bd309d6"><div class="ttname"><a href="class_qam_modbus_map.html#a9b2d9aa1f520186a5a2668358bd309d6">QamModbusMap::setValue</a></div><div class="ttdeci">void setValue(PrimaryTable table, const QString &amp;name, const QString &amp;value)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:837</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a274f7b8bfb010f41f5d7a99a15352100"><div class="ttname"><a href="class_qam_modbus_map.html#a274f7b8bfb010f41f5d7a99a15352100">QamModbusMap::responseToClientRequest</a></div><div class="ttdeci">virtual QByteArray responseToClientRequest(QByteArray &amp;request)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:99</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_ad4c8e2a83f7b85b67fc2830ba9cea363"><div class="ttname"><a href="class_qam_modbus_map.html#ad4c8e2a83f7b85b67fc2830ba9cea363">QamModbusMap::display</a></div><div class="ttdeci">QString display(PrimaryTable table, const QString &amp;name)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:591</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a50e970c672c173aa61a605f4f3f13b57"><div class="ttname"><a href="class_qam_modbus_map.html#a50e970c672c173aa61a605f4f3f13b57">QamModbusMap::exists</a></div><div class="ttdeci">bool exists(PrimaryTable table, const QString &amp;name)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:604</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a15e7db35560ef02a9605d756f7feb4e4"><div class="ttname"><a href="class_qam_modbus_map.html#a15e7db35560ef02a9605d756f7feb4e4">QamModbusMap::nameList</a></div><div class="ttdeci">QStringList nameList(PrimaryTable table, bool withComposite=false)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:500</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_aadcc993c17cdacf1685a83019b4c8aff"><div class="ttname"><a href="class_qam_modbus_map.html#aadcc993c17cdacf1685a83019b4c8aff">QamModbusMap::valueChanged</a></div><div class="ttdeci">void valueChanged(int table, const QString &amp;name)</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_af225ed278f3d66b298f8ec58c967cb5f"><div class="ttname"><a href="class_qam_modbus_map.html#af225ed278f3d66b298f8ec58c967cb5f">QamModbusMap::info</a></div><div class="ttdeci">void info(const QString &amp;source, const QString &amp;message)</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_afa34e75547395cdf5aefec1a39614431ad20414a79f57c0b66ac6ad050088e1d9"><div class="ttname"><a href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431ad20414a79f57c0b66ac6ad050088e1d9">QamModbusMap::InputRegister</a></div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:169</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a396ecdba1cbd4808cf6cea3eb172c533ac011e2541e31b741a3459a761a87fed0"><div class="ttname"><a href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533ac011e2541e31b741a3459a761a87fed0">QamModbusMap::ServerMode</a></div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:157</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_a619bc0f33399f4b4632c19afc2348e64"><div class="ttname"><a href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">QamModbusMap::value</a></div><div class="ttdeci">QString value(PrimaryTable table, const QString &amp;name)</div><div class="ttdef"><b>Definition:</b> qammodbusmap.cpp:1036</div></div>
+<div class="ttc" id="class_qam_modbus_map_html_afa34e75547395cdf5aefec1a39614431aea2d8056f5755ce3443f15fbdbedb0f0"><div class="ttname"><a href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431aea2d8056f5755ce3443f15fbdbedb0f0">QamModbusMap::HoldingRegister</a></div><div class="ttdef"><b>Definition:</b> qammodbusmap.h:171</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<HR size="1">
+<address style="text-align: right;">
+<small><i>Doxygen version 1.8.6</i> - Modbus over TCP/IP Project - (c)2014-2016 by 
+<a href=mailto:alain.menu@ac-creteil.fr>Alain Menu</a>&nbsp;&nbsp;
+</small>
+</address>
+</BODY>
+</HTML>

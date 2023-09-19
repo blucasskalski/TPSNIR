@@ -1,0 +1,245 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2): Modbus Slave Development</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="qam47.ico" type="image/x-icon" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Modbus-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Modbus Slave Development </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Serveur Modbus TCP/IP, manuel du développeur</p>
+<h2>Modèle logiciel</h2>
+<p>La mise en oeuvre du serveur Modbus se résume pour la classe d'application à une relation de composition avec 3 objets :</p>
+<ul>
+<li>un objet de classe <a class="el" href="class_qam_modbus_map.html" title="Modélisation de la cartographie d&#39;un équipement Modbus. ">QamModbusMap</a> pour la modélisation de la cartographie Modbus du serveur ;</li>
+<li>un objet de classe <a class="el" href="class_qam_tcp_server.html" title="Serveur TCP multithread. ">QamTcpServer</a> pour la prise en charge du réseau ;</li>
+<li>et un objet (facultatif) de classe <a class="el" href="class_qam_modbus_map_viewer.html" title="Visualiseur arborescent de cartographie d&#39;un équipement Modbus. ">QamModbusMapViewer</a> pour la visualisation arborescente de la cartographie sur l'IHM.</li>
+</ul>
+<p>L'application <a href="modipbutler.html">ModipButler</a> est un exemple d'application graphique Qt mettant en oeuvre les principes précédents. La documentation de cette application montre le format des fichiers de configuration de cartographie.</p>
+<p>La cartographie est initialisée par chargement du contenu d'un fichier CSV grâce à la méthode <a class="el" href="class_qam_modbus_map.html#afc0064e3211792f0a663f2ed5ee481a0">QamModbusMap::loadMap()</a>. <br/>
+ L'objet <a class="el" href="class_qam_modbus_map.html" title="Modélisation de la cartographie d&#39;un équipement Modbus. ">QamModbusMap</a> est agrégé à l'objet <a class="el" href="class_qam_tcp_server.html" title="Serveur TCP multithread. ">QamTcpServer</a> lors de la construction de celui-ci. <br/>
+ Le même objet <a class="el" href="class_qam_modbus_map.html" title="Modélisation de la cartographie d&#39;un équipement Modbus. ">QamModbusMap</a> est associé au <em>widget</em> de visualisation au moyen de la méthode <a class="el" href="class_qam_modbus_map_viewer.html#a7d5ad35f35f55f1b1cba2d04527195a8">QamModbusMapViewer::setModbusMap()</a>.</p>
+<div class="image">
+<img src="ModipButler_class_diag.png" alt="ModipButler_class_diag.png"/>
+</div>
+<p>Les principales interactions entre l'application et les classes <em>Qam Modbus over TCP/IP</em> sont regroupées dans le diagramme de séquence suivant. La classe d'application intercepte les signaux <a class="el" href="class_qam_modbus_map.html#af225ed278f3d66b298f8ec58c967cb5f">QamModbusMap::info()</a> et <a class="el" href="class_qam_modbus_map.html#aadcc993c17cdacf1685a83019b4c8aff">QamModbusMap::valueChanged()</a> ; elle reçoit ainsi toutes les informations relatives au réseau, au traitement des trames Modbus et aux changements de valeurs dans la cartographie. <br/>
+ En mode serveur, l'application accède aux quatre tables primaires en lecture et en écriture ; elle dispose pour cela des méthodes <a class="el" href="class_qam_modbus_map.html#a619bc0f33399f4b4632c19afc2348e64">QamModbusMap::value()</a> et <a class="el" href="class_qam_modbus_map.html#a9b2d9aa1f520186a5a2668358bd309d6">QamModbusMap::setValue()</a>. <br/>
+ L'objet associé de classe <a class="el" href="class_qam_modbus_map_viewer.html" title="Visualiseur arborescent de cartographie d&#39;un équipement Modbus. ">QamModbusMapViewer</a> permet aussi une édition directe des valeurs au niveau de l'IHM d'application ; cette action entraine le même comportement qu'une modification par programme...</p>
+<div class="image">
+<img src="ModipButler_seq_diag.png" alt="ModipButler_seq_diag.png"/>
+</div>
+<p><b>Note de version</b> :</p>
+<ul>
+<li>la méthode virtuelle <b>QamAbstractServer::responseToRequest()</b> est remplacée par <a class="el" href="class_qam_abstract_server.html#aeeaf1d0b6320561eac186811aa48b790">QamAbstractServer::responseToClientRequest()</a></li>
+<li>la méthode virtuelle <b>QamAbstractServer::response()</b> est remplacée par <a class="el" href="class_qam_abstract_server.html#a1cc86fe29b8b19736122c0516e5b54c9">QamAbstractServer::responseFromServer()</a></li>
+</ul>
+<h2>Application minimale</h2>
+<p>Les portions de code ci-dessous montre les fichiers d'un projet Qt de type <b>console</b> (sans interface graphique) mettant en oeuvre un serveur Modbus TCP/IP statique ; autrement dit sans possibilité de modification locale des tables (seuls les clients distants peuvent agir en lecture et en écriture). Rendre le serveur dynamique consisterait simplement à utiliser en plus la méthode <a class="el" href="class_qam_modbus_map.html#a0ed9c9c3c4c1c880d32c336dd8d50ff0">QamModbusMap::setLocalValue()</a> !</p>
+<p>Le fichier de configuration est transmis sur la ligne de commandes ; le format de ce fichier est décrit sur la page de l'application <a href="modipbutler.html">ModipButler</a>.</p>
+<p>La classe d'usage dérive de QObject afin d'autoriser la mise en place du mécanisme <em>signal-slot</em>. Son constructeur prend en charge l'initialisation de la cartographie Modbus et le démarrage du service TCP.</p>
+<p>Le terminal d'exécution affiche les messages remontés par les signaux <a class="el" href="class_qam_modbus_map.html#af225ed278f3d66b298f8ec58c967cb5f">QamModbusMap::info()</a> et <a class="el" href="class_qam_modbus_map.html#aadcc993c17cdacf1685a83019b4c8aff">QamModbusMap::valueChanged()</a> ; pour ce dernier les messages sont mis en forme pour montrer la nouvelle valeur de la donnée. Rien n'est mis en place pour quitter l'application (c'est un serveur !)... reste le traditionnel Ctrl-C.</p>
+<h3>ModipSlaveLight.pro</h3>
+<div class="fragment"><div class="line">QT   += core network</div>
+<div class="line">QT   -= gui</div>
+<div class="line"></div>
+<div class="line">TARGET       = ModipSlaveLight</div>
+<div class="line">CONFIG      += console</div>
+<div class="line">macx:CONFIG -= app_bundle</div>
+<div class="line">TEMPLATE     = app</div>
+<div class="line"></div>
+<div class="line">MOC_DIR      = .moc</div>
+<div class="line">OBJECTS_DIR  = .obj</div>
+<div class="line"></div>
+<div class="line">QAMSOCKETS   = ../../libs/QamSockets</div>
+<div class="line">QAMMODBUSMAP = ../../libs/<a class="code" href="class_qam_modbus_map.html">QamModbusMap</a></div>
+<div class="line"></div>
+<div class="line">INCLUDEPATH +=  . $${QAMSOCKETS} $${QAMMODBUSMAP}</div>
+<div class="line"></div>
+<div class="line">SOURCES  += main.cpp \
+            modipslave.cpp \</div>
+<div class="line">            $${QAMSOCKETS}/qamtcpserver.cpp \</div>
+<div class="line">            $${QAMSOCKETS}/qamtcpconnection.cpp \</div>
+<div class="line">            $${QAMSOCKETS}/qamabstractserver.cpp \</div>
+<div class="line">            $${QAMMODBUSMAP}/qammodbusmap.cpp \</div>
+<div class="line">            $${QAMMODBUSMAP}/qammodbusdata.cpp</div>
+<div class="line"></div>
+<div class="line">HEADERS  += modipslave.h \</div>
+<div class="line">            $${QAMSOCKETS}/qamtcpserver.h \</div>
+<div class="line">            $${QAMSOCKETS}/qamtcpconnection.h \</div>
+<div class="line">            $${QAMSOCKETS}/qamabstractserver.h \</div>
+<div class="line">            $${QAMMODBUSMAP}/qammodbusmap.h \</div>
+<div class="line">            $${QAMMODBUSMAP}/qammodbusdata.h</div>
+</div><!-- fragment --><h3>modipslave.h</h3>
+<div class="fragment"><div class="line"><span class="preprocessor">#ifndef MODIPSLAVE_H</span></div>
+<div class="line"><span class="preprocessor"></span><span class="preprocessor">#define MODIPSLAVE_H</span></div>
+<div class="line"><span class="preprocessor"></span></div>
+<div class="line"><span class="preprocessor">#include &lt;QObject&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="qammodbusmap_8h.html">qammodbusmap.h</a>&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;<a class="code" href="qamtcpserver_8h.html">qamtcpserver.h</a>&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">class </span>ModipSlave : <span class="keyword">public</span> QObject</div>
+<div class="line">{</div>
+<div class="line">    Q_OBJECT</div>
+<div class="line"></div>
+<div class="line">  <span class="keyword">public</span>:</div>
+<div class="line">    <span class="keyword">explicit</span> ModipSlave(<span class="keyword">const</span> QString&amp; configFile, QObject* parent = 0 ) ;</div>
+<div class="line"></div>
+<div class="line">  signals:</div>
+<div class="line">    <span class="keywordtype">void</span> quit() ;   <span class="comment">// signal à émettre pour terminer l&#39;application...</span></div>
+<div class="line"></div>
+<div class="line">  <span class="keyword">public</span> slots:</div>
+<div class="line">    <span class="keywordtype">void</span> info(<span class="keyword">const</span> QString&amp; src, <span class="keyword">const</span> QString&amp; msg ) ;</div>
+<div class="line">    <span class="keywordtype">void</span> valueChanged(<span class="keywordtype">int</span> table, <span class="keyword">const</span> QString&amp; name ) ;</div>
+<div class="line"></div>
+<div class="line">  <span class="keyword">private</span>:</div>
+<div class="line">    <a class="code" href="class_qam_modbus_map.html">QamModbusMap</a>*   m_map ;</div>
+<div class="line">    <a class="code" href="class_qam_tcp_server.html">QamTcpServer</a>*   m_server ;</div>
+<div class="line">} ;</div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#endif // MODIPSLAVE_H</span></div>
+</div><!-- fragment --><h3>modipslave.cpp</h3>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &quot;modipslave.h&quot;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;QCoreApplication&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="keyword">using namespace </span>std ;</div>
+<div class="line"></div>
+<div class="line">ModipSlave::ModipSlave(<span class="keyword">const</span> QString&amp; configFile, QObject* parent )</div>
+<div class="line">    : QObject(parent)</div>
+<div class="line">{</div>
+<div class="line">    <span class="comment">// cartographie Modbus</span></div>
+<div class="line"></div>
+<div class="line">    m_map    = <span class="keyword">new</span> <a class="code" href="class_qam_modbus_map.html">QamModbusMap</a>( <a class="code" href="class_qam_modbus_map.html#a396ecdba1cbd4808cf6cea3eb172c533ac011e2541e31b741a3459a761a87fed0">QamModbusMap::ServerMode</a>, <span class="keyword">this</span> ) ;</div>
+<div class="line"></div>
+<div class="line">    m_map-&gt;setVerbose( <span class="keyword">false</span> ) ;</div>
+<div class="line"></div>
+<div class="line">    connect( m_map, SIGNAL(info(QString,QString)), <span class="keyword">this</span>, SLOT(info(QString,QString)) ) ;</div>
+<div class="line">    connect( m_map, SIGNAL(valueChanged(<span class="keywordtype">int</span>,QString)), <span class="keyword">this</span>, SLOT(valueChanged(<span class="keywordtype">int</span>,QString)) ) ;</div>
+<div class="line"></div>
+<div class="line">    m_map-&gt;loadMap( configFile ) ;</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// serveur TCP</span></div>
+<div class="line"></div>
+<div class="line">    m_server = <span class="keyword">new</span> <a class="code" href="class_qam_tcp_server.html">QamTcpServer</a>( m_map, <span class="keyword">this</span> ) ;</div>
+<div class="line"></div>
+<div class="line">    m_server-&gt;start( m_map-&gt;port() ) ;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ModipSlave::info(<span class="keyword">const</span> QString&amp; src, <span class="keyword">const</span> QString&amp; msg )</div>
+<div class="line">{</div>
+<div class="line">    cout &lt;&lt; qPrintable( src ) &lt;&lt; <span class="stringliteral">&quot;: &quot;</span> &lt;&lt; qPrintable( msg ) &lt;&lt; endl ;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">void</span> ModipSlave::valueChanged(<span class="keywordtype">int</span> table, <span class="keyword">const</span> QString&amp; name )</div>
+<div class="line">{</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot;value : &quot;</span> &lt;&lt; qPrintable( <a class="code" href="class_qam_modbus_map.html#a3fcd62a55aa76daabc7632c56241a31e">QamModbusMap::tableAsString</a>( (<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">QamModbusMap::PrimaryTable</a>)table ) ) ;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; qPrintable( name ) ;</div>
+<div class="line">    cout &lt;&lt; <span class="stringliteral">&quot; : &quot;</span> &lt;&lt; qPrintable( m_map-&gt;localValue( (<a class="code" href="class_qam_modbus_map.html#afa34e75547395cdf5aefec1a39614431">QamModbusMap::PrimaryTable</a>)table, name ) ) ;</div>
+<div class="line">    cout &lt;&lt; endl ;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h3>main.cpp</h3>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;QCoreApplication&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &quot;modipslave.h&quot;</span></div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="keyword">using namespace </span>std ;</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[] )</div>
+<div class="line">{</div>
+<div class="line">    QCoreApplication app(argc, argv ) ;</div>
+<div class="line"></div>
+<div class="line">    QStringList args = QCoreApplication::arguments() ;</div>
+<div class="line">    <span class="keywordflow">if</span> ( args.size() &lt; 2 ) {</div>
+<div class="line">        cerr &lt;&lt; <span class="stringliteral">&quot;usage: &quot;</span> &lt;&lt; qPrintable( args.at(0) ) &lt;&lt; <span class="stringliteral">&quot; &lt;configFile&gt;&quot;</span> &lt;&lt; endl ;</div>
+<div class="line">        <span class="keywordflow">return</span> -1 ;</div>
+<div class="line">    }</div>
+<div class="line"></div>
+<div class="line">    ModipSlave* slave = <span class="keyword">new</span> ModipSlave( args.at(1),  &amp;app ) ;</div>
+<div class="line"></div>
+<div class="line">    QObject::connect(slave, SIGNAL(quit()), &amp;app, SLOT(quit()) ) ;</div>
+<div class="line"></div>
+<div class="line">    <span class="keywordflow">return</span> app.exec() ;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- contents -->
+<HR size="1">
+<address style="text-align: right;">
+<small><i>Doxygen version 1.8.6</i> - Modbus over TCP/IP Project - (c)2014-2016 by 
+<a href=mailto:alain.menu@ac-creteil.fr>Alain Menu</a>&nbsp;&nbsp;
+</small>
+</address>
+</BODY>
+</HTML>

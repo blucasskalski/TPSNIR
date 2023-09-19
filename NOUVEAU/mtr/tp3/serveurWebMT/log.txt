@@ -1,0 +1,369 @@
+Date and local time : 2021/10/01 16:48:48
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+1) File Sent : 2532; file : ./docRoot//a1.jpg, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+2) File Sent : 6039; file : ./docRoot//b1.jpg, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+3) File Sent : 6645; file : ./docRoot//a3.jpg, stat = 0
+4) File Sent : 6298; file : ./docRoot//a4.jpg, stat = 0
+5) File Sent : 6406; file : ./docRoot//b2.jpg, stat = 0
+6) File Sent : 6760; file : ./docRoot//a2.jpg, stat = 0
+7) File Sent : 6772; file : ./docRoot//b3.jpg, stat = 0
+8) File Sent : 6596; file : ./docRoot//b4.jpg, stat = 0
+Signal : 2
+Fermeture des transmission
+Fermeture du serveur
+Date and local time : 2021/10/01 16:49:15
+Signal : 2
+Fermeture des transmission
+Fermeture du serveur
+Date and local time : 2021/10/01 16:49:33
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Signal : 2
+Fermeture des transmission
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+Fermeture du serveur
+
+Date and local time : 2021/10/01 16:49:55
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Signal : 2
+Fermeture des transmission
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+1) File Sent : 2532; file : ./docRoot//a1.jpg, stat = 0
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+Fermeture du serveur
+
+Date and local time : 2021/10/01 16:51:56
+Usage:  ./srvweb <Server Port>
+
+Date and local time : 2021/10/01 16:52:12
+Usage:  ./srvweb <Server Port>
+
+Date and local time : 2021/10/01 17:00:07
+Usage:  ./srvweb <Server Port>
+
+Date and local time : 2021/10/01 17:00:53
+
+Date and local time : 2021/10/01 17:00:55
+Handling client 127.0.0.1
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+1) File Sent : 2532; file : ./docRoot//a1.jpg, stat = 0
+Handling client 127.0.0.1
+2) File Sent : 6039; file : ./docRoot//b1.jpg, stat = 0
+Handling client 127.0.0.1
+3) File Sent : 6406; file : ./docRoot//b2.jpg, stat = 0
+4) File Sent : 6645; file : ./docRoot//a3.jpg, stat = 0
+5) File Sent : 6298; file : ./docRoot//a4.jpg, stat = 0
+6) File Sent : 6760; file : ./docRoot//a2.jpg, stat = 0
+7) File Sent : 6772; file : ./docRoot//b3.jpg, stat = 0
+8) File Sent : 6596; file : ./docRoot//b4.jpg, stat = 0
+Signal : 2
+Fermeture des transmission
+Fermeture du serveur
+
+Date and local time : 2021/10/01 17:02:28
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Client says: --->GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+
+<
+parser :
+--->GET<
+--->/index.html<
+--->HTTP/1.1<
+--->Host:<
+--->localhost:8080<
+--->User-Agent:<
+--->Mozilla/5.0<
+--->(X11;<
+--->Ubuntu;<
+--->Linux<
+--->x86_64;<
+--->rv:91.0)<
+--->Gecko/20100101<
+--->Firefox/91.0<
+--->Accept:<
+--->text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8<
+--->Accept-Language:<
+--->fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3<
+--->Accept-Encoding:<
+--->gzip,<
+--->deflate<
+--->Connection:<
+--->keep-alive<
+--->Upgrade-Insecure-Requests:<
+--->1<
+--->Sec-Fetch-Dest:<
+--->document<
+--->Sec-Fetch-Mode:<
+--->navigate<
+--->Sec-Fetch-Site:<
+--->none<
+--->Sec-Fetch-User:<
+--->?1<
+parser done
+get file : ./docRoot//index.html
+fichier ouvert
+read : 480
+read : 0
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+
+Date and local time : 2021/10/01 17:03:02
+Handling client 127.0.0.1
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+1) File Sent : 2532; file : ./docRoot//a1.jpg, stat = 0
+Handling client 127.0.0.1
+2) File Sent : 6039; file : ./docRoot//b1.jpg, stat = 0
+Handling client 127.0.0.1
+3) File Sent : 6645; file : ./docRoot//a3.jpg, stat = 0
+4) File Sent : 6298; file : ./docRoot//a4.jpg, stat = 0
+5) File Sent : 6406; file : ./docRoot//b2.jpg, stat = 0
+6) File Sent : 6760; file : ./docRoot//a2.jpg, stat = 0
+7) File Sent : 6772; file : ./docRoot//b3.jpg, stat = 0
+8) File Sent : 6596; file : ./docRoot//b4.jpg, stat = 0
+Signal : 2
+Fermeture des transmission
+Fermeture du serveur
+
+Date and local time : 2021/10/01 17:04:54
+Handling client 127.0.0.1
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+1) File Sent : 2532; file : ./docRoot//a1.jpg, stat = 0
+Handling client 127.0.0.1
+2) File Sent : 6039; file : ./docRoot//b1.jpg, stat = 0
+Handling client 127.0.0.1
+3) File Sent : 6645; file : ./docRoot//a3.jpg, stat = 0
+4) File Sent : 6298; file : ./docRoot//a4.jpg, stat = 0
+5) File Sent : 6406; file : ./docRoot//b2.jpg, stat = 0
+6) File Sent : 6760; file : ./docRoot//a2.jpg, stat = 0
+Signal : 2
+Fermeture des transmission
+arrêt prématuré demandé
+erreur d'envoi
+arrêt prématuré demandé
+erreur d'envoi
+Fermeture du serveur
+
+Date and local time : 2021/10/01 17:05:13
+Handling client 127.0.0.1
+Client says: --->GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Cache-Control: max-age=0
+
+<
+parser :
+--->GET<
+--->/index.html<
+--->HTTP/1.1<
+--->Host:<
+--->localhost:8080<
+--->User-Agent:<
+--->Mozilla/5.0<
+--->(X11;<
+--->Ubuntu;<
+--->Linux<
+--->x86_64;<
+--->rv:91.0)<
+--->Gecko/20100101<
+--->Firefox/91.0<
+--->Accept:<
+--->text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8<
+--->Accept-Language:<
+--->fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3<
+--->Accept-Encoding:<
+--->gzip,<
+--->deflate<
+--->Connection:<
+--->keep-alive<
+--->Upgrade-Insecure-Requests:<
+--->1<
+--->Sec-Fetch-Dest:<
+--->document<
+--->Sec-Fetch-Mode:<
+--->navigate<
+--->Sec-Fetch-Site:<
+--->none<
+--->Sec-Fetch-User:<
+--->?1<
+--->Cache-Control:<
+--->max-age=0<
+parser done
+get file : ./docRoot//index.html
+fichier ouvert
+read : 480
+read : 0
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+
+Date and local time : 2021/10/01 17:06:26
+Handling client 127.0.0.1
+Client says: --->GET /index.html HTTP/1.1
+Host: localhost:8080
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:91.0) Gecko/20100101 Firefox/91.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Language: fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: none
+Sec-Fetch-User: ?1
+Cache-Control: max-age=0
+
+<
+parser :
+parser done
+get file : ./docRoot//index.html
+fichier ouvert
+read : 480
+read : 0
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+
+Date and local time : 2021/10/01 17:06:39
+Handling client 127.0.0.1
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+1) File Sent : 2532; file : ./docRoot//a1.jpg, stat = 0
+Handling client 127.0.0.1
+2) File Sent : 6039; file : ./docRoot//b1.jpg, stat = 0
+Handling client 127.0.0.1
+3) File Sent : 6645; file : ./docRoot//a3.jpg, stat = 0
+4) File Sent : 6298; file : ./docRoot//a4.jpg, stat = 0
+5) File Sent : 6406; file : ./docRoot//b2.jpg, stat = 0
+6) File Sent : 6760; file : ./docRoot//a2.jpg, stat = 0
+7) File Sent : 6772; file : ./docRoot//b3.jpg, stat = 0
+8) File Sent : 6596; file : ./docRoot//b4.jpg, stat = 0
+Signal : 2
+Fermeture des transmission
+Fermeture du serveur
+
+Date and local time : 2021/10/01 17:12:16
+Handling client 127.0.0.1
+0) File Sent : 480; file : ./docRoot//index.html, stat = 0
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+Handling client 127.0.0.1
+1) File Sent : 2532; file : ./docRoot//a1.jpg, stat = 0
+Handling client 127.0.0.1
+2) File Sent : 6039; file : ./docRoot//b1.jpg, stat = 0
+Handling client 127.0.0.1
+3) File Sent : 6645; file : ./docRoot//a3.jpg, stat = 0
+4) File Sent : 6298; file : ./docRoot//a4.jpg, stat = 0
+5) File Sent : 6406; file : ./docRoot//b2.jpg, stat = 0
+6) File Sent : 6760; file : ./docRoot//a2.jpg, stat = 0
+7) File Sent : 6772; file : ./docRoot//b3.jpg, stat = 0
+8) File Sent : 6596; file : ./docRoot//b4.jpg, stat = 0
+Signal : 2
+Fermeture des transmission
+Fermeture du serveur

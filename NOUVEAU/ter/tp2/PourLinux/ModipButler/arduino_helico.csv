@@ -1,0 +1,48 @@
+# MODBUS.CSV;;;;;;
+# -----------------------------------------------------------------------------
+# LLF FS configuration file for QamModbusMap;;;;;;
+# adresse reelle a decommenter si dialogue avec simulateur en salle 103;;;;;;
+#HOST  ;192.168.1.201;;;;;
+HOST;127.0.0.1
+PORT;502
+INFO;LLF FS Modbus Slave #1 
+
+# Configuration Esclave
+
+# 4xxxx - holding registers;;;;;;
+40001;1;FFFF; 	Sampling;  	période d''échantillonnage en ms;	Uint;   200
+40002;1;FFFF;	Slow;		période clignotement lent en ms;	Uint;	500
+40003;1;FFFF;	Fast;		période clignotement rapide en ms;	Uint;	250
+40004;1;FFFF;	Short;		durée min. clic court en ms;		Uint;	300
+40005;1;FFFF;	Long;		durée min. clic long en ms;		Uint;	3000
+
+# Module 1 (ALT);;;;;;
+
+# 4xxxx - holding registers;;;;;;
+40010;1;FFFF;	TOR-1;		module 1 - E/S TOR;				Hex;	0
+40010;1;30;	SelD-1;		module 1 - Sélecteur D;				Uint;	0
+40010;1;300;	LedA-1;		module 1 - Led A rouge;				Uint;	0
+40010;1;0C00;	LedB-1;		module 1 - Led B jaune;				Uint;	0
+
+# 3xxxx - input registers;;;;;;
+30010;1;FFFF;	AdjC-1;		module 1 - réglage C;				Uint;	0
+
+# Module 5;;;;;;
+
+# 4xxxx - holding registers;;;;;;
+40050;1;FFFF;	TOR-5;		module 5 - E/S TOR;				Hex;	0
+40050;1;30;	SelD-5;		module 5 - Sélecteur D;				Uint;	0
+40050;1;300;	LedA-5;		module 5 - Led A rouge;				Uint;	0
+40050;1;0C00;	LedB-5;		module 5 - Led B bleue;				Uint;	0
+
+# Module 9;;;;;;
+
+# 4xxxx - holding registers;;;;;;
+40090;1;FFFF;	TOR-9;		module 9 - E/S TOR;				Hex;	0
+40090;1;3;	IntA-9;		module 9 - Interrupteur A;			Uint;	0
+40090;1;000C;	IntB-9;		module 9 - Interrupteur B;			Uint;	0
+40090;1;30;	IntC-9;		module 9 - Interrupteur C;			Uint;	0
+40090;1;00C0;	InvD-9;		module 9 - Inverseur D;				Uint;	0
+40090;1;300;	LedA-9;		module 9 - Led A rouge;				Uint;	0
+40090;1;0C00;	LedB-9;		module 9 - Led B jaune;				Uint;	0
+40090;1;3000;	LedC-9;		module 9 - Led C verte;				Uint;	0

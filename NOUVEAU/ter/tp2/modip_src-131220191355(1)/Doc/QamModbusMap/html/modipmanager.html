@@ -1,0 +1,108 @@
+<!-- HTML header for doxygen 1.8.6-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2): ModipManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link rel="shortcut icon" href="qam47.ico" type="image/x-icon" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Modbus-logo.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">&nbsp;&nbsp;&nbsp;Qam Modbus over TCP/IP Project (v2)
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li class="current"><a href="pages.html"><span>Pages&#160;associées</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ModipManager </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p>Application Qt client Modbus TCP/IP (vue métier)</p>
+<p>ModipManager est une application permettant de matérialiser un maître Modbus susceptible de dialoguer avec plusieurs esclaves. L'application peut servir d'outil de test d'un processus automatisé ou de modèle de développement pour une application dédiée de contrôle-commande. <br/>
+ ModipManager permet de référencer plusieurs serveurs par l'intermédiaire, pour chacun d'eux, de leur fichier de configuration au format CSV (voir documentation de <a href="modipbutler.html">ModipButler</a>).</p>
+<h2>Manuel utilisateur</h2>
+<p>L'interface utilisateur de ModipManager est réduite à une unique boite de dialogue occupée essentiellement par les vues arborescentes des cartographies des serveurs Modbus référencés.</p>
+<div class="image">
+<img src="ModipManager_ui.png" alt="ModipManager_ui.png"/>
+</div>
+<p><br/>
+ Après démarrage de l'application, l'utilisateur doit charger au moyen du bouton <b>New...</b> les fichiers de configuration des serveurs Modbus requis. Chaque référencement de serveur provoque la création d'un nouvel onglet dans la zone des cartographies ; le titre de l'onglet correspond au texte du champ <code>DESC</code> du fichier de configuration. Le bouton <b>Connect</b> permet ensuite d'établir la connexion avec le serveur suivant les informations <code>HOST</code> et <code>PORT</code> du fichier de configuration (ces informations sont montrées dans les champs situés sous le bouton <b>New...</b>, elles peuvent être modifiées manuellement avant la connexion effective). <br/>
+ Tous les messages de suivi d'exploitation sont reportés dans la console située en haut de la fenêtre d'application. <br/>
+ La commande <b>Reset all</b> force localement à 0 les valeurs des tables, cette action est sans incidence sur le serveur distant. La commande <b>Update all</b>, disponible lorsque la connexion est active, provoque un cycle de lecture sur le serveur de toutes les entrées des tables. <br/>
+ L'utilisateur a la possibilité de lire individuellement chacune des données primaires, secondaires ou composées ; il suffit pour cela de sélectionner la ligne concernée dans la vue et de cliquer sur <b>Update selection</b>. Cette action entraine l'émission d'une requête de lecture à destination du serveur. <br/>
+ En tant que client, l'utilisateur peut modifier les valeurs du serveur accessibles en écriture (tables <em>Coils</em> et <em>Holding Registers</em>). L'édition se fait simplement par double-clic sur le champ valeur de la donnée ; la validation par <b>Entrée</b> entraine l'émission d'une requête d'écriture à destination du serveur. <br/>
+ Une fois la connexion établie, le bouton <b>Connect</b> se transforme en <b>Close</b>. Cette action permet de terminer la connexion. <br/>
+ Un clic sur le logo en haut à gauche provoque l'affichage d'une fenêtre "à propos..." montrant la version de l'application. </p>
+</div></div><!-- contents -->
+<HR size="1">
+<address style="text-align: right;">
+<small><i>Doxygen version 1.8.6</i> - Modbus over TCP/IP Project - (c)2014-2016 by 
+<a href=mailto:alain.menu@ac-creteil.fr>Alain Menu</a>&nbsp;&nbsp;
+</small>
+</address>
+</BODY>
+</HTML>
